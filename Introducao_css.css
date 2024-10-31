@@ -1,0 +1,71 @@
+body{
+    /*o body é teg então ele pode ser estilizado  */
+    /* body Ele é o corpo da paz no inteiro devido a isso você consegue colorir ele */
+    background-color: rgb(230, 242, 243);
+}
+h1 {
+    color: red;
+     /* Fonte padrão que executa, Com ordem de prioridade começando com arial */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Isso é uma unidade de medida para dar ao tamanho do texto */
+     font-size: 77px ;/* px é Unidade de medida em pixels */
+
+     /* Tirar o negrito do caracter: font-weight: normal; */
+     /* Colocar em negrito texto: font-weight: bold; */
+     font-weight: normal;
+}
+
+h2{
+    font-size: 40px;
+    /* Você pode escolher um estilo para sua fonte */
+    font-style: italic;
+}
+
+h3{
+    font-size: 30px;
+    /* Você pode escolher um estilo para sua fonte */
+     font-style: oblique; /*Ele faz quase a mesma função all Itálico a diferença que ele Rotacionais caracter */
+
+     /* Deixar O texto com letra maiúscula:uppercase  */
+      /* Deixar O texto com letra maiúscula e minusculas:capitalize */
+     text-transform: capitalize;
+
+     /* Posicionamento de texto */
+     /*Posicionamento que adequa a a tela: justify  */
+     text-align:center;
+
+     /* Fazer o texto ficar sublineado: underline */
+     /* Fazer o texto estar com risco ao meio: line-through*/
+     /* Um traço em cima do texto:overline */
+     text-decoration: overline;
+
+     /* Colorir o fundo */
+     background-color: rgb(227, 220, 195);
+
+}
+
+p{
+/* Espaçamento ao início de frase (parágrafo)*/
+  text-indent:28px;
+  color:#f0f;
+  /* Há uma maneira de fazer abreviado */
+  /* Você tem que colocar sempre 3 caracteres */
+       /* RGB
+  branco  fff        
+  vemenho f00
+  preto   000
+  verde   0f0
+  azulc   0ff
+  amarelo ff0
+  roza    f0f
+  azul    00f */
+
+  /* Ele enfatiza as letras maiúsculas no texto aumentando */
+  font-variant: small-caps;
+}
+
+a{
+    /* Tirando o sublinedo azul que  Padrão dos navegadores */
+    text-decoration: none;
+}
