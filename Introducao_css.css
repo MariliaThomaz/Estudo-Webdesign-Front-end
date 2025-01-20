@@ -68,4 +68,5 @@ p{
 a{
     /* Tirando o sublinedo azul que  Padrão dos navegadores */
     text-decoration: none;
+    font-variant: normal;
 }
