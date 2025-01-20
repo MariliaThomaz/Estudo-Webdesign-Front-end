@@ -70,3 +70,16 @@ a{
     text-decoration: none;
     font-variant: normal;
 }
+
+/* Para todo começo de uma classeé necessário começar comum ponto */
+.destaque{
+color:darkgreen;
+font-weight: bold;
+}
+
+#titulo{
+  font-size: 80px;
+  color: darkred;
+  font-family:fantasy;
+  text-align:center;
+}
