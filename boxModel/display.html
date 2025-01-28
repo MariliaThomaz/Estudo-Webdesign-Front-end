@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        p{
+            width: 50%;
+            background-color: #ccc;
+        }
+        h1{
+            background-color: blueviolet;
+            padding: 16px;
+        }
+        a{
+            background-color: yellow;
+            width: 200px; /* Propriedades de blocos não Fazem alteração em elementos de linha*/
+
+        }
+        strong{
+           
+            padding: 25px;
+            background-color: brown;
+           /* display: block; --> Pedindo para o strong elemento linha se comportar como elemento bloco*/
+            display: inline-block; /*Essa propriedade deixater a propriedade linha e propriedade box modelo */
+            height:60x;
+            width:100px
+
+        
+        }
+
+       
+        b{
+            /*display: none; Quando você estáquerendo sumir algo */
+            visibility: hidden; /*Apaga conteúdo mais a área continua reservada*/
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <h1>Box Sizing</h1>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, blanditiis doloremque velit alias vitae ipsum quod harum neque placeat modi, est ratione architecto
+         quis explicabo, cum rerum labore omnis nihil!
+        Lorem ipsum dolor sit amet <a href="boxModel.html">Box Modek aruivo</a>
+         <!-- Caso queira que apareça teg <b> &lt;b&gt; -->
+        consectetur<b> texto em  negrito com &lt;b&gt;</b> adipisicing elit. 
+         Molestias<strong> texto em negrito com  (strong) </strong> nesciunt consequuntur Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, tempore ipsa eum iusto nihil aperiam quam, alias in nulla sed minima illo quos recusandae 
+         ab accusantium<em> texto em italico com (em) </em> deserunt blanditiis repellendus porro.
+         necessitatibus<i> texto em  italico (i)</i> saepe optio tempora voluptatum u
+         t dignissimos ipsa.</p>
+  
+
+</body>
+</html>
