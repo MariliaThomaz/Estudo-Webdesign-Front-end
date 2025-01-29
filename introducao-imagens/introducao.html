@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com imagens</title>
+    <style>
+        body {
+           
+            font-size: 22px;
+            width: 700px;
+            margin: auto;
+            font-family: sans-serif;
+
+            /*Colocando uma imagem de fundo*/
+            background-image: url(imagens/bg.jpg);
+            background-repeat: no-repeat; /*Tirando a repetição de imagem o padrão sempre é repetir*/
+            /*background-repeat: repeat-y; Repita imagem Tic aumente a imagem*/
+            background-attachment: fixed; /*por padão a imagem ela fica escrolando tira */
+            /*background-size: 100%; A imagem Vem tirar todo o espaçode fundo*/
+            /*background-repeat: repeat; repetindo imaguem*/
+            background-position:  right bottom; /*A imagem ficará fixa na parte de baixo*/
+            /*background-size: contain; Dá preferência a imagem mesmo que duplique*/
+            background-size: /*cover; Culpa toda a área disponível, Esconda algumas partes da imagem */
+        }
+        p{
+            line-height: 1.5; /*altura da linha*/
+            text-align: justify;/* O texto se adequa ao espaço */
+        }
+
+        .img-logo {
+            width: 400px;
+        }
+
+        .img-html{
+            /*A imagem vai flutuar sobre o texto*/
+            float: left;
+        }
+
+        .img-css{
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Trabalho com imagens</h1>
+    <h2>A imagem de vetores vs bitmap</h2>
+
+    <!-- colocar imagem tem que ser em HTML pois ele se trata do conteúdo  -->
+    <img src="imagens/logo_ser-frontend-ico.png" class="img-logo" alt="logo em png">
+    <br>
+    <img src="imagens/logo_ser-frontend-ico.svg" class="img-logo" alt="logo em vetor">
+
+    <h2>Imagens tranparentes</h2>
+    <img src="imagens/logo_ser-frontend-ico-transparente.gif" class="img-logo" alt="logo em gif">
+    <br>
+    <img src="imagens/logo_ser-frontend-ico-transparente.png" class="img-logo" alt="logo em png">
+
+    <h2>gif animado</h2>
+    <img src="imagens/walk.gif" alt="gif">
+
+    <h2>Float</h2>
+    <img src="imagens/html5.png" alt="loho HTML" class="img-html">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dolorum maiores illum quidem, harum voluptas mollitia
+        quae! Consequuntur, facilis. Ipsam, alias voluptas ex libero
+        tempora minima deleniti veniam dolores, quibusdam ad asperiores qui, consequatur
+        repellendus distinctio veritatis quidem. Assumenda, harum ab.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Enim nostrum at incidunt! Repellendus ipsa obcaecati
+        omnis corrupti distinctio eaque libero mollitia vitae cumque
+        maiores est eius voluptatum, fugit commodi adipisci veritatis
+        culpa, illo sapiente? Ea eos earum suscipit unde, aspernatur
+        aperiam ipsum ab aliquam, dignissimos deleniti quia! Maiores
+        placeat consequatur laudantium possimus, reprehenderit modi
+        sed nesciunt odio assumenda. Ea minus enim ipsa omnis velit?
+        Commodi soluta ipsam dignissimos! Esse rerum asperiores iure
+        dicta debitis laboriosam! Cupiditate veritatis deserunt nulla
+        placeat!</p>
+    <img src="imagens/css3.png" alt="logo CSS" class="img-css">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dolorum maiores illum quidem, harum voluptas mollitia
+        quae! Consequuntur, facilis. Ipsam, alias voluptas ex libero
+        tempora minima deleniti veniam dolores, quibusdam ad asperiores qui, consequatur
+        repellendus distinctio veritatis quidem. Assumenda, harum ab.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Enim nostrum at incidunt! Repellendus ipsa obcaecati
+        omnis corrupti distinctio eaque libero mollitia vitae cumque
+        maiores est eius voluptatum, fugit commodi adipisci veritatis
+        culpa, illo sapiente? Ea eos earum suscipit unde, aspernatur
+        aperiam ipsum ab aliquam, dignissimos deleniti quia! Maiores
+        placeat consequatur laudantium possimus, reprehenderit modi
+        sed nesciunt odio assumenda. Ea minus enim ipsa omnis velit?
+        Commodi soluta ipsam dignissimos! Esse rerum asperiores iure
+        dicta debitis laboriosam! Cupiditate veritatis deserunt nulla
+        placeat!</p>
+
+
+
+
+
+</body>
+
+</html>
