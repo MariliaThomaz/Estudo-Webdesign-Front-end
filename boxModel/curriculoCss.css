@@ -30,3 +30,26 @@ a:hover{
    text-decoration: none;
    color: #245513;
 } 
+.menu{
+    text-align: right;/*Como o elementoele é de li 
+    é de linha logicamente que podemos alinhar usando text-align*/
+}
+/* (li) elemento de bloco como eu sei porque ela tem quebra de linha*/
+.menu li{
+    list-style: none;
+    background-color:  rgb(198, 229, 198);
+    /*display: inline; Elementos Um do lado do outro*/
+    display: inline-block; /*Com esta configuração eu consigo dar tamanho*/
+    padding: 0;
+}
+.menu a{
+    background-color: rgb(198, 229, 198);
+    padding: 16px;
+    display: block; /*Com esta configuraçãoeu consigo atribuir 
+    Um elemento linha para um elemento de bloco que toda área agora 
+    Consegue se tornar o ambiente de botão
+    aceitandoum ambiente espaço 16 Pixel no caso*/
+}
+.menu a:hover{
+    background-color: #32761c;
+}
