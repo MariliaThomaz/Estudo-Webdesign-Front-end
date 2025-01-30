@@ -95,3 +95,11 @@ article h2{
     width: -moz-fit-content; /* Compatibilidade com Firefox */
     width: -webkit-fit-content; /* Compatibilidade com versões antigas do WebKit */
 }
+.rodape{
+    color: black;
+    background-color: rgb(202, 200, 200) ;
+    text-align: center;
+    padding: 30px;
+    text-shadow: 2px 2px 2px white;
+    letter-spacing: 2px;
+}
