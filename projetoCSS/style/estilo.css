@@ -1,0 +1,97 @@
+body{
+    margin: 0;/*motivo é colocar zero porque por padrão já vem uma margem*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(141, 140, 139);
+}
+
+.hero{
+    background-image: url(../imagens/bg-1.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: right center ;
+    /*Gambiarra para não afastaro restante do conteúdo*/
+    padding-top:1px;
+}
+.hero-content{
+    margin: 50px auto 0;
+    width: 80%;
+    text-align: center;
+    color: aliceblue;
+
+}
+.hero-content h1{
+    font-size: 80px;
+    /*Pra mim fazer sombra*/
+    text-shadow: 5px 5px 5px black;
+    /*1 valor O quanto 
+    que essa sombra será deslocada lado horizontal */
+    /*Valores positivos vão pra baixo e valores negativos vão pra Clima*/
+    /*Pero valor é representado a esfumaçamento*/
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.hero-content p{
+    /*Transparência */
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    display: inline-block;
+    padding: 16px;
+    border-bottom: 2px solid;
+}
+.hero nav ul{
+    margin: 20px 50px 0 0;
+    text-align:  right;
+}
+.hero nav li{
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid white;
+    margin-left: 16px;
+}
+
+.hero nav a{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;/*Aumentar o espaçamento das letras*/
+}
+
+.hero nav a:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+main{
+    width: 90%;
+    margin: auto;
+    /*para  ajute colodar Mínimo e máximo*/
+    min-width: 600px;
+    max-width: 890px;
+}
+section{
+    padding-top: 32px;
+}
+article{
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 32px;
+}
+article h2{
+    border-bottom:  2px solid rgb(141, 140, 139);
+    background-color: rgb(202, 200, 200);
+    padding: 10px;
+    margin-top: 0;
+}
+.btn{
+    background-color: rgb(202, 200, 200) ;
+    display: block;
+    padding: 12px;
+    border-radius: 6px ; /*Fundamento da gravura */
+    margin-left: auto;
+    width:-moz-fit-content;/*Ele ajusta o conteúdo*/
+    width: -moz-fit-content; /* Compatibilidade com Firefox */
+    width: -webkit-fit-content; /* Compatibilidade com versões antigas do WebKit */
+}
