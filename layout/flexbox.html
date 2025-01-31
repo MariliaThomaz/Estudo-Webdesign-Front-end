@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+
+    <style>
+        .flexbox{
+            height: 250px;
+            border: 3px solid red;
+            display: flex; /*Esticar na verticale ficar tudo em uma linha*/
+            margin-bottom: 16px;
+           
+
+
+        }
+        .flexbox div{
+            border: 2px solid orange;
+            width: 150px;
+             margin: 15px; 
+        }
+        .flex-cotainer1{
+            /* flex-wrap: wrap;  Ele quebra a linha é  padão */
+           /*flex-direction: column ; Transforma em coluna*/ 
+           /*flex-direction: row-reverse; Ele reverte a ordem*/
+           /*flex-direction: column-reverse; Reverte a coluna*/
+           /* flex-flow: wrap; é padrão*/  
+           flex-flow: row wrap; /*Abreviação*/
+        }
+
+        .flex-cotainer2 div{
+            width: 30px;
+
+        }
+        .flex-cotainer2{
+            /*justify-content: flex-end; Blocos conteúdo ao lado direito*/
+            /* justify-content: center;  Centraliza o conteúdo */
+            /* justify-content: space-around ; Distribui o conteúdoconforme espaço dado */
+            /*justify-content: space-between; Alinhamentode começoe do último item */
+            /*justify-content: space-evenly;  A divisão mais exata do espaço que sobra */
+            justify-content: space-between; /* Não deixe espaço algum */
+
+        }
+        .flex-cotainer3 div{
+            width: 30px;
+            margin: 0;
+
+        }
+        .flex-cotainer3{
+            justify-content: space-around; /*horisotal*/
+            align-items: center;/* Alinhando na vertical*/
+            /*align-items: flex-end; final do espaço*/
+            /*align-items: flex-start; Vira pro começo do espaço */
+            /*align-items: stretch; opadrão */
+
+        }
+        .flex-cotainer4 div{
+            width: 30px;
+            margin: 0;
+
+        }
+        .flex-cotainer4{
+            justify-content: space-around;
+            align-items: baseline; /*Eu uso a base do conteúdo para alinhar com o topo*/ 
+            
+        }
+        .flex-cotainer5{
+            justify-content: center;
+            align-items: flex-end; /*Itens abaixo , Galinha quando eu tenho um linha*/
+            align-content: flex-start; /*Serve para alinhar Tenho mais de uma linha */
+            flex-wrap: wrap;/* quebra a  linha*/
+
+        }
+        .flex-cotainer5 div{
+            width: 50px;
+        }
+       
+    </style>
+</head>
+
+<body>
+       
+    <div class="flexbox flex-cotainer1">
+        
+        <div class="div1 ">1</div>
+        <div class="div2 ">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+        
+    </div>
+    <div class="flexbox flex-cotainer2">
+        
+        <div class="div1 ">1</div>
+        <div class="div2 ">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+        
+    </div>
+    <div class="flexbox flex-cotainer3">
+        
+        <div class="div1 ">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+        
+    </div>
+
+    <div class="flexbox flex-cotainer4">
+        
+        <div class="div1 ">1</div>
+        <div class="div2 "style="font-size: 36px">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+        
+    </div>
+    <div class="flexbox flex-cotainer5">
+        
+        <div class="div1 ">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+        <div class="div4">5</div>
+        <div class="div4">6</div>
+        
+        
+    </div>
+      
+
+</body>
+
+</html>
