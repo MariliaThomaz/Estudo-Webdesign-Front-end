@@ -146,7 +146,27 @@
             /* flex: grow shink basis */
             flex: 1 3 200; /*atalho*/ 
         }
-       
+
+        .flex-cotainer10 div{
+            /* Irá trabalhar com a ordem*/
+            background-color: rgb(44, 143, 49);
+            font-size: 26px;
+            color: white;
+         
+           
+            
+        }
+        .flex-cotainer10 .div2{
+            order: 2;
+            /*Trabalho individual*/
+            align-self: center;
+            
+        }
+        .flex-cotainer10 .div1{
+            order: 1;
+            align-self: flex-end;
+            
+        }
     </style>
 </head>
 
@@ -225,6 +245,14 @@
     </div>
 
     <div class="flexbox flex-cotainer9">
+        
+        <div class="div1 ">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+        
+    </div>
+    <div class="flexbox flex-cotainer10">
         
         <div class="div1 ">1</div>
         <div class="div2">2</div>
