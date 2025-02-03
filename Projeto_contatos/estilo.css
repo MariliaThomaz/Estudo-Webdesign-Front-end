@@ -42,6 +42,8 @@ body {
 .list-item__imagem img {
     width: 80px;
     border-radius: 50%;
+    margin-right: 16px;
+   
   
 }
 .list-item__content{
@@ -66,10 +68,13 @@ body {
 
 .list-item__action {
     display: flex;
-    gap: 16px;
+    gap: 16px; 
     align-items: center;
-    opacity: 0;
+    opacity: 0; /*Opacidade: Existe níveis de Opacidade entre 0 e 1  */
+    /*Quanto você quer mais transparente você tem que chegarmais perto do zero*/
 }
 .list-item:hover .list-item__action {
+    /*Esta estilização é para quando estiver com 
+    o mouse sobre a lista ele vaideixar a Opacidade*/
     opacity: 0.3;
 }
