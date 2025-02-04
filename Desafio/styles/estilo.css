@@ -1,9 +1,56 @@
 html,
 body {
     height: 100%;
-}
-
-body {
+    background-image: url(../imagens/bg-2.jpg);
+    background-repeat: no-repeat; /*Tirando a repetição de imagem o padrão sempre é repetir*/
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero{
+
+    height: 500px;
+    background-size: cover;
+    background-position: right center ;
+    /*Gambiarra para não afastaro restante do conteúdo*/
+    padding-top:1px;
+}
+.hero-content{
+    margin: 50px auto 0;
+    width: 80%;
+    text-align: center;
+    color: aliceblue;
+
+}
+.hero-content h1{
+    font-size: 80px;
+    /*Pra mim fazer sombra*/
+    text-shadow: 5px 5px 5px black;
+    /*1 valor O quanto 
+    que essa sombra será deslocada lado horizontal */
+    /*Valores positivos vão pra baixo e valores negativos vão pra Clima*/
+    /*Pero valor é representado a esfumaçamento*/
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.hero-content p{
+    /*Transparência */
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    display: inline-block;
+    padding: 16px;
+    border-bottom: 2px solid;
+}
+
+.list-wrapper{
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    
+
 }
