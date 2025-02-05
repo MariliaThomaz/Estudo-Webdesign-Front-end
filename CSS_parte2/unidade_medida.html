@@ -28,7 +28,7 @@
 
         .portagem {
             width: 60%;
-            height: 60%;
+            height: 500px;
             background-color: yellow;
         }
 
@@ -59,6 +59,17 @@
               um espaço Como exemplo de aumentar 
               o tamanho da letraele também aumenta o espaço */
         }
+        .viewport-container{
+            font-size: 3rem;
+            /*width: 90vw; lagura pelo Viewport 90vw */
+           /* height: 90vh; Altura pelo Viewport 90vw */
+        }
+        .viewport{
+            width: 90vw;
+            height: 90vh;
+            background-color: rgba(145, 135, 222, 0.419);
+            /*Sempre será referenciado pelo Viewport */
+        }
     </style>
 </head>
 
@@ -87,6 +98,12 @@
     </div>
     <div class="padding-em">
         <p> Padding com EM </p>
+    </div>
+
+    <div class="portagem viewport-container">
+        <div class="viewport">
+            <p>viewport</p>
+        </div>
     </div>
 </body>
 
