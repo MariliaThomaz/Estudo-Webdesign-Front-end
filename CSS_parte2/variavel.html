@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis</title>
+</head>
+<style>
+:root{
+    /*Esse root é a mesma coisa pode-se dizer que o HTML */
+    /*Estado muito porque ele não égera especificidade*/
+    --header-height:15rem
+    
+}
+    html{
+        font-size: 62.5%;
+        /*criando uma Variável para o CSS*/
+        
+    }
+    header{
+        width: 100%;
+        background-color: rgba(102, 51, 153, 0.423);
+        height: var(--header-height); /*Usando a variável*/
+        font-size: 2rem;
+        position: fixed;
+        top:0;
+        left: 0;
+    }
+    main{
+        --valor-novo:2rem;
+        min-height: calc(100vh  - var(--header-height) - 2rem);
+        background-color: #d21b1b6b;
+        font-size: 2rem;
+        margin-top: var(--header-height);
+    }
+    p{
+        margin: calc(var(--valor-novo)*2);
+    }
+    footer{
+        height: 10rem;
+        font-size: 2rem;
+        background-color: blue;
+    }
+</style>
+<body>
+    <header>Header</header>
+    <main>Main
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi in, rerum, vel eveniet exercitationem cum autem nostrum eligendi natus laudantium quisquam soluta, debitis doloribus similique incidunt perspiciatis explicabo aut totam.</p>
+    </main>
+    <footer>Footer</footer>
+    
+</body>
+</html>
