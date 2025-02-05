@@ -1,28 +1,54 @@
- <!DOCTYPE html>
- <html lang="pt-br">
- <head>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unidade de medida </title>
     <style>
-      
-        p{
-            font-size: 2em; /*20px - Pai*/
+        html {
+            font-size: 62.5%;
+            /* Para facilitar a conta*/
+            /*Facilitador da conta 1em sera iguel 10px */
         }
-        b{
-            font-size: 1.5em; /*20px*/
+
+        p {
+            font-size: 3em;
+            /*20px - Pai*/
+            width: 10em;
+
+        }
+
+        b {
+            font-size: 1.5em;
+            /*20px*/
             color: red;
         }
+
+        .portagem {
+            width: 60%;
+            height: 60%;
+            background-color: yellow;
+        }
+
+        .portagem p {
+            background-color: transparent;
+
+            padding: 20%;
+            width: 10em;
+            
+        }
     </style>
- </head>
- <body>
+</head>
+
+<body>
     <h1>Unidade de medida</h1>
     <p>Lorem ipsum dolor, sit amet consectetur
-         adipisicing elit. <b>NEGRITO</b>Aliquid soluta culpa 
-         maiores ut quibusdam tenetur totam
-          debitis minima itaque dicta facilis,
-           ipsa, fugiat molestiae eum nam! 
-           Saepe laboriosam maiores in!</p>
+        adipisicing elit. <b>NEGRITO</b>Aliquid soluta culpa
+        maiores ut quibusdam tenetur totam
+        debitis minima itaque dicta facilis,
+        ipsa, fugiat molestiae eum nam!
+        Saepe laboriosam maiores in!</p>
 
     <!-- PX = A unidade de medida peixes é mais recomendado para  Bordas não, mais
       letras pode ter  podedar problema pois 
@@ -31,7 +57,13 @@
       dela e com isso pode afetar o seu layout -->
     <!--  EM = É uma unidade de medida  1EM  = 16PX
      A unidade medida EM é sempre relativa Tamanho de fonte do PAI-->
-<!--  RM= O que é  A ponte vai basicamente funcionar como EM, Certo quando tem algo relacionado à fonte pai-->
-     
- </body>
- </html>
+    <!--  RM= O que é  A ponte vai basicamente funcionar como EM, Certo quando tem algo relacionado à fonte pai-->
+
+    <!-- 1em = 30px
+     15em (15*30 = 450px)  -->
+    <div class="portagem">
+        <p>Unidade de medida %</p><!--  Porcentagem está sempre relacionada a largura Do elemento pai  -->
+    </div>
+</body>
+
+</html>
