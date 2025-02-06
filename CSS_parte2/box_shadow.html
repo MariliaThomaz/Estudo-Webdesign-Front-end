@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shodow</title>
+    <style>
+        .radio-todal{
+            background-color: rgb(91, 185, 14);
+            width: 200px;
+            height:200px;
+            margin: 100px auto;
+            border-radius: 50px    50px 100px  2px   ;
+            box-shadow: 10px 10px 20px black;
+            /*1ª:deslocamento Horizontal = 10px
+              2ª deslocamento Vertical = 0
+              3ª Número de esfumaçamento=0 
+              4ª A cor = blacl */
+          
+        }                               
+        .radio-elipe{
+            /*elipe*/ 
+            border-radius:50px / 20px;
+            box-shadow: -10px 10px 20px rgb(212, 22, 22);
+             /* colocar valore negativo muda lado*/
+           
+
+        }
+        .radio-modificado{
+            border-radius:50px 10pc 50px 20px/ 20px;
+            box-shadow: 10px 0 0  20px rgb(60, 22, 212)  
+            /*Ampliando a sombra*/
+        }
+        .radio-modificado-sobra_dupla{
+            border-radius:150px 200pc 70px 30px/ 200px 800px;
+            box-shadow: 10px 0 0  0 rgb(40, 48, 20), 
+            10px 20px 0 rgb(188, 17, 17), -45px -30px 0 rgb(40, 17, 188)   
+            /*Ampliando a sombra*/
+        }
+
+    </style>
+</head>
+<body>
+    <div class="radio-todal">
+        
+    </div>
+    <div class="radio-todal radio-elipe">
+       
+    </div>
+    <div class="radio-todal radio-modificado">
+       
+    </div>
+    <div class="radio-todal radio-modificado-sobra_dupla">
+       
+    </div>
+</body>
+</html>
