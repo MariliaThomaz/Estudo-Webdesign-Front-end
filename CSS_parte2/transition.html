@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .transition-edicao1 {
+            background-color: orange;
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            /* Transição para suavizar a mudança de largura */
+            transition-property: width;
+            transition-duration: 0.5s; /* Agora será perceptível */
+        }
+        .transition-edicao1:hover {
+            width: 400px;
+        }
+        .transition-edicao2 {
+            background-color: rgb(255, 0, 255);
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            /* Transição para suavizar a mudança de largura */
+            transition-property: width;
+            transition-duration: 0.5s; /* Agora será perceptível */
+            transition-timing-function: ease;
+
+        }
+        .transition-edicao2:hover {
+            width: 400px;
+        }
+        .transition-edicao3 {
+            background-color: rgb(72, 195, 24);
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            /* Transição para suavizar a mudança de largura */
+            transition-property: width;
+            transition-duration: 0.5s; /* Agora será perceptível */
+            transition-timing-function: ease-in;
+
+        }
+        .transition-edicao3:hover {
+            width: 400px;
+        }
+        .transition-edicao4 {
+            background-color: rgb(47, 24, 195);
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            /* Transição para suavizar a mudança de largura */
+            transition-property: width;
+            transition-duration: 0.5s; /* Agora será perceptível */
+            transition-timing-function: ease-out;
+
+        }
+        .transition-edicao4:hover {
+            width: 400px;
+        }
+        .transition-edicao5 {
+            background-color: rgb(195, 24, 24);
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            /* Transição para suavizar a mudança de largura */
+            transition-property: width;
+            transition-duration: 0.5s; /* Agora será perceptível */
+            transition-timing-function: ease-out;
+
+        }
+        .transition-edicao5:hover {
+            width: 400px;
+        }
+        .transition-edicao6 {
+            background-color: rgb(155, 195, 24);
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            /* Transição para suavizar a mudança de largura */
+            transition-property: all; /*all Quem me faz animação com todos os elementos objetos*/
+            transition-duration: 0.5s; /* Agora será perceptível */
+            transition-timing-function: cubic-bezier(1,-0.53,0,1.48);
+            /*Para utilizar esse cubic-bezier tem  site 
+             ajudar que gera  uma  valor*/
+            transition-delay: .5s; /*Atrasa animação*/
+
+        }
+        .transition-edicao6:hover {
+            width: 400px;
+            height:300px ;
+        }
+        .transition-edicao7 {
+            background-color: rgb(106, 107, 102);
+            width: 200px;
+            height: 150px;
+            margin: 100px auto;
+            /* Transição para suavizar a mudança de largura */
+            transition-property: width, height, background-color; /* Especificando para animar cada propriedade separadamente */
+            transition-duration: .5s, 1s; 
+            transition-timing-function: cubic-bezier(1,-0.53,0,1.48);
+        }
+        
+        /* Correção: Ajustando o seletor para corresponder à classe correta */
+        .transition-edicao7:hover {
+            width: 400px;
+            height: 300px;
+            background-color: blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="transition-edicao1"></div>
+    <div class="transition-edicao2"></div>
+    <div class="transition-edicao3"></div>
+    <div class="transition-edicao4"></div>
+    <div class="transition-edicao5"></div>
+    <div class="transition-edicao6"></div>
+    <div class="transition-edicao7"></div>
+</body>
+</html>
