@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font face</title>
+    <style>
+        /*Importando Fontes*/
+        @font-face {
+            
+            font-family: nadia; /*nadia é um apelido*/
+            src: url(./font/nadia/nadia-serif.eot) format(eot), /*format(eot) Utilizado para visaro browser qual é o tipo da fonteque será usado*/
+            local("Nadia Serif"),/*Outro modo de procurar afontee caso ele não acha por essa busca ele vai para busca de baixo */
+            url(./font/nadia/nadia-serif.svg) format(svg),
+            url(./font/nadia/nadia-serif.ttf) format(truetype),
+            url(./font/nadia/nadia-serif.woff) format(woff);
+        }
+        /* Todo final de  de fonte temuma específicidade para navegadores como -->
+          nadia-serif.eot => Internet Explorer
+          nadia-serif.svg => IOS mais atigo
+          nadia-serif.ttf => Assistência em vários navegadores Safare, Android e IOS
+          nadia-serif.woff => Browsers modernos
+          nadia-serif.woff2=> Navegadores mais modernos 
+
+        
+        */
+        /*
+         suficiente para dar suporte aos navegadores são 
+         nadia-serif.ttf
+          nadia-serif.woff 
+          nadia-serif.woff2
+
+          */
+
+       
+
+
+
+        .font-edicao1{
+            font-family:nadia ;
+        }
+        @font-face {
+            font-family:chunkfive;
+            src:url(./font/chunkfive-regular-webfont/ChunkFive-Regular.otf) format(otf),
+            url(./font/chunkfive-regular-webfont/chunkfive-regular-webfont.woff) format(woff),
+            url(./font/chunkfive-regular-webfont/chunkfive-regular-webfont.woff2) format(woff2);
+        }
+        .font-edicao2{
+            font-family:chunkfive;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+   <div class="font-face-edicao">
+    <div class="font-face-edicao font-edicao1">
+        <h1>Font Face 1</h1>
+    </div>
+    <div class="font-face-edicao font-edicao2">
+        <h1>Font Face 2</h1>
+    </div>
+
+   </div>
+
+</body>
+
+</html>
