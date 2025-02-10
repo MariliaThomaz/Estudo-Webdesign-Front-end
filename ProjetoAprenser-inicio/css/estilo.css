@@ -1,0 +1,37 @@
+:root{
+    --primary-color:#FFD001;
+
+}
+html{
+    /*
+    font-size: 62.5%;
+    font-family: "Inter", sans-serif;  
+    font-weight: 400;*/
+
+    /* abreviação */
+    font: 400 64.5% "Inter", sans-serif;
+}
+p, a {
+    font-size: 1.6rem;
+}
+.upper{
+    text-transform: uppercase;
+}
+.wrapperContainer-darck{
+    background-color: #2a2a2a;
+    color: wheat;
+}
+.wrapperContainer-light{
+    background-color:#fafafa;
+}
+.wrapperContainer-dark2{
+    background-color: #003464;
+    color: wheat;
+}
+.container{
+    max-width: 127.6rem;
+    margin: auto;
+}
+
+
+
