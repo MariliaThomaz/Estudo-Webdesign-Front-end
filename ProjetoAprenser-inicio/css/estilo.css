@@ -64,21 +64,34 @@ nav a {
     background-color: #fafafa;
 }
 
-.wrapperContainer-dark2  {
+.wrapperContainer-dark2 {
     background-color: #003464;
     color: wheat;
+}
+
+.wrapperContainer-fixed {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.wrapperContainer-padded {
+    padding-top: 12rem;
 }
 
 .container {
     max-width: 116.6rem;
     margin: auto;
 }
-.section_title{
+
+.section_title {
     padding: 7rem 0;
     text-align: center;
     margin: 0
 }
-.section_btn{
+
+.section_btn {
     margin: 7rem 0;
 }
 
@@ -124,16 +137,18 @@ nav a {
 }
 
 
-.curso_card{
+.curso_card {
     /* border: 1px solid #adadadcc;
     border-radius: 10px; */
     /* overflow: hidden; (imaguem se adeguar  lugar*/
-      flex: 1;
+    flex: 1;
 }
-.curso_card img{
+
+.curso_card img {
     display: block;
     width: 100%;
 }
+
 .cursos {
     text-align: center;
 }
@@ -148,50 +163,58 @@ nav a {
     font-size: 1.9rem;
 }
 
-.cursos_card p{
+.cursos_card p {
     font-size: 1.8rem;
     line-height: 1.5;
 }
-.cursos_card_content{
+
+.cursos_card_content {
     padding: 1rem 1.2rem;
     border: 1px solid #adadadcc;
-    border-radius: 0 0 8px 8px; 
+    border-radius: 0 0 8px 8px;
     border-top: transparent;
 }
-.escola{
+
+.escola {
     display: flex;
     gap: 6rem;
-    padding-top:6rem ;
+    padding-top: 6rem;
 }
-.escoal_title{
-   font-size: 3rem; 
-   margin-top: 3rem;
-   color: #fafafa;
+
+.escoal_title {
+    font-size: 3rem;
+    margin-top: 3rem;
+    color: #fafafa;
 }
+
 .escola p {
     font-size: 1.8rem;
     line-height: 1.5;
     color: #fafafa;
 
 }
-.contatos_title{
-    font-size: 3.5rem; 
+
+.contatos_title {
+    font-size: 3.5rem;
     margin-top: 3rem;
     text-align: center;
- 
+
 }
-.contatos_addres{
+
+.contatos_addres {
     text-align: right;
-    font: normal  1.8rem "Inter", sans-serif ;
+    font: normal 1.8rem "Inter", sans-serif;
     padding: 3rem 0;
 }
-.footer{
+
+.footer {
     font-size: 2rem;
     text-align: center;
     padding: 4.5rem;
     color: white;
 }
-.footer a{
+
+.footer a {
     font-size: 2rem;
     color: white;
 }
