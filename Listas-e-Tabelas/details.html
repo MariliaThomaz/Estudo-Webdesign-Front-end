@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Details</title>
     <style>
+        details{
+            /*Para editar esse details é no CSS ele são visto como gambiarras */
+            color: rgb(231, 22, 164);
+            background-color: #ccc;
+            margin-bottom:1em ;
+            padding: .5em;
+        }
+        details summary{
+            cursor: pointer; /*Muda o cursor para mãozinha para demonstrar que é um ambiente clicável*/
+        }
+        /*Seletor por atributo */
+        details[open]{
+            background-color: cadetblue;
+        }
         
     </style>
 </head>
 <body>
-  
+   <!-- Esse open serve para indicaruma coisa boliviana ele está aberto  -->
+  <details open> 
+    <summary >É requisitopré-requisito </summary>
+    <p>Para fazer esse curso é necessário conhecimento desse sistema operacional  </p>
+  </details>
+  <details>
+    <summary>Carga horária </summary>
+    <p>180 horas</p>
+  </details>
 </body>
 </html>
