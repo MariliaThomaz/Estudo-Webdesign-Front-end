@@ -1,8 +1,9 @@
-:root{
-    --primary-color:#FFD001;
+:root {
+    --primary-color: #FFD001;
 
 }
-html{
+
+html {
     /*
     font-size: 62.5%;
     font-family: "Inter", sans-serif;  
@@ -11,27 +12,186 @@ html{
     /* abreviação */
     font: 400 64.5% "Inter", sans-serif;
 }
-p, a {
+
+h1 {
+    font-size: 4.10rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+p,
+a {
     font-size: 1.6rem;
 }
-.upper{
+
+nav a {
+    color: inherit;
+    /* o que é inherit  significa herança*/
+    /* ele vai herdar a cor acima dele */
+}
+
+.upper {
     text-transform: uppercase;
 }
-.wrapperContainer-darck{
+
+.btn {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 1.6rem 4.6rem;
+    display: inline-block;
+    color: inherit;
+
+}
+
+.wrapperContainer {
+    padding-top: 1px;
+}
+
+.wrapperContainer-darck {
     background-color: #2a2a2a;
     color: wheat;
 }
-.wrapperContainer-light{
-    background-color:#fafafa;
+
+.wrapperContainer-light {
+    background-color: #fafafa;
 }
-.wrapperContainer-dark2{
+
+.wrapperContainer-dark2  {
     background-color: #003464;
     color: wheat;
 }
-.container{
-    max-width: 127.6rem;
+
+.container {
+    max-width: 116.6rem;
     margin: auto;
+}
+.section_title{
+    padding: 7rem 0;
+    text-align: center;
+    margin: 0
+}
+.section_btn{
+    margin: 7rem 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 2rem 0;
+}
+
+.header_nav a {
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+
+}
+
+.header_nav ul {
+    display: flex;
+    gap: .6rem;
+    list-style-type: none;
+}
+
+.header_nav a:hover {
+    background-color: black;
+}
+
+.wrapperContainer-hero {
+    /* background-imagem = trabalhar  com o gradiente */
+    background-image: linear-gradient(transparent, yellow);
+}
+
+.heroBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero_title {
+    margin-bottom: 5rem;
 }
 
 
+.curso_card{
+    /* border: 1px solid #adadadcc;
+    border-radius: 10px; */
+    /* overflow: hidden; (imaguem se adeguar  lugar*/
+      flex: 1;
+}
+.curso_card img{
+    display: block;
+    width: 100%;
+}
+.cursos {
+    text-align: center;
+}
 
+.cursosContainer {
+    display: flex;
+    text-align: left;
+    gap: 2rem;
+}
+
+.cursos_card h3 {
+    font-size: 1.9rem;
+}
+
+.cursos_card p{
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+.cursos_card_content{
+    padding: 1rem 1.2rem;
+    border: 1px solid #adadadcc;
+    border-radius: 0 0 8px 8px; 
+    border-top: transparent;
+}
+.escola{
+    display: flex;
+    gap: 6rem;
+    padding-top:6rem ;
+}
+.escoal_title{
+   font-size: 3rem; 
+   margin-top: 3rem;
+   color: #fafafa;
+}
+.escola p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #fafafa;
+
+}
+.contatos_title{
+    font-size: 3.5rem; 
+    margin-top: 3rem;
+    text-align: center;
+ 
+}
+.contatos_addres{
+    text-align: right;
+    font: normal  1.8rem "Inter", sans-serif ;
+    padding: 3rem 0;
+}
+.footer{
+    font-size: 2rem;
+    text-align: center;
+    padding: 4.5rem;
+    color: white;
+}
+.footer a{
+    font-size: 2rem;
+    color: white;
+}
