@@ -56,3 +56,15 @@ legend{
     color: wheat;
     cursor: pointer;
 }
+.actions{
+    display: flex;
+    gap: 1em;
+}
+.btn2{
+    background-color: #364726;
+    color: wheat;
+    cursor: pointer;
+}
+.btn--apagar{
+    background-color:rgb(232, 8, 8);
+}
