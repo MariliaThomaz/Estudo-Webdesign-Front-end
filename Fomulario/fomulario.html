@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formiario</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+
+            <legend>Introdução</legend>
+            
+            <label for="email">E-mail</label>
+            <br>
+            <input type="email" name="Email" id="email">
+            <br><br>
+            <label for="qtd_f">Quantidade de filhoes</label>
+                <br>
+            <input type="number" name="qtd_f" id="qtd_f" min="0" max="40" >
+            <!-- (min"0")Não deixa colocarvalores abaixode zero pois foi você que atribuiuessa informação  -->
+            <!--(max"100") Você também pode atribuir o máximo de caracteres que pode colocar-->
+            <br><br>
+            <label for="data_nace">Data de nascimento</label>
+            <br>
+            <input type="date" name="data_nace" id="data_nace" min="2022-01-15">
+
+            <br><br>
+            <label>Possui CNG
+            <br>
+            <input type="radio" name="cng" id="cng_n" value="nao">
+            <label for="cng_n">NÃO</label>
+            <!-- Quando tem o mesmo name é a opção do radio é apenas uma  -->
+            <input type="radio" name="cng" id="cng_s" value="sim">
+            <label for="cng_s">SIM</label>
+            </label>
+
+
+
+            <br><br><br>
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

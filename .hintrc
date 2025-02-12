@@ -11,5 +11,15 @@
     "not firefox <= 115",
     "not safari <= 16.5",
     "not samsung <= 21"
-  ]
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "width: fit-content"
+        ]
+      }
+    ]
+  }
 }
