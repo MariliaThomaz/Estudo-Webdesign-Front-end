@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popover</title>
+    <style>
+      :popover-open{
+        width: 300px;
+        padding: 0 12px;
+        border-radius: 12px;
+      }
+      ::backdrop{
+        background-color: rgba(0, 0, 0, 0.32);
+      }
+      /*formatando apenas  uma  popover o que  tem  class*/
+      
+          /* (inset)Trabalhar os atributos apenas de uma vez botam left*/
+        /*(unset)limpo a configuração */
+        
+        .popover-container :popover-open {
+          inset: unset; 
+      }
+        
+        
+    </style>
+</head>
+<body>
+  <!-- Popove  é  um atributo -->
+  <h1>Curso web design - popover</h1>
+   <!-- Esse open serve para indicaruma coisa boliviana ele está aberto  -->
+   <button popovertarget="my-popover">Toggle popover</button>   
+ <!-- Você tem que fazer um vínculo com botão com a divisso será usado id -->
+ <div id="my-popover" popover>Este texto é aberto ao clicar no botão</div>
+ <hr>
+ <!-- Botão que ativa o popover -->
+ <button popovertarget="my-popover">popover auto (default)</button>  
+
+ <!--popover='auto' Quando será clicado no botão será fechado  -->
+ <div id="my-popover" popover="auto">Este texto é aberto ao clicar no botão</div>
+
+ <hr>
+ <!-- Botão que ativa o popover -->
+ <button popovertarget="my-popover3">popover manual</button>  
+
+ <!--popover='auto' Quando será clicado exto não fecha ao clicar fora  -->
+ <div id="my-popover3" popover="manual">Este texto não fecha ao clicar fora</div>
+ <hr>
+<!-- mostra  o botão  -->
+ <button popovertarget="my-popover4"popovertargetaction="show"> Show popover manual</button> 
+<!-- fecha  ou  botão -->
+ <button popovertarget="my-popover4"popovertargetaction="hide"> Hide popover manual</button>  
+ <!--popover='auto' Quando será clicado exto não fecha ao clicar fora  -->
+ <div id="my-popover4" popover="manual">Este texto não fecha ao clicar fora</div>
+ <hr>
+ <div class="popover-container">
+  <button popovertarget="my-popover5">Toggle popover dentro da div</button>   
+  <div id="my-popover5" popover>Texto de ajuda do popover</div>
+</div>
+  
+ </div>
+</body>
+</html>
