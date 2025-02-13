@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACCENT COLOR</title>
+    <style>
+        input, progress{
+            accent-color:#bcbcbc;
+        /* A nova atualidade é possível mudar a cor com facilidade*/
+        } 
+       
+    </style>
+</head>
+
+
+<body>
+    <form>
+       <fieldset>
+        <legend>ACCENT COLOR</legend>
+      
+        <label>Possui CNG
+            <br>
+            <input type="radio" name="cng" id="cng_n" value="nao">
+            <label for="cng_n">NÃO</label>
+            <!-- Quando tem o mesmo name é a opção do radio é apenas uma  -->
+            <input type="radio" name="cng" id="cng_s" value="sim">
+            <label for="cng_s">SIM</label>
+        </label>
+        <br><br>
+        <legend>Área de interesse</legend>
+        <!-- value="" é o valor seramanda  BD  -->
+        <input type="checkbox" name="interesse" value="html" id="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" name="interesse" value="css" id="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" name="interesse" value="javac" id="javac">
+        <label for="javac">Javascript</label>
+
+        <input type="checkbox" name="interesse" value="py" id="py">
+        <label for="py">Python</label>
+
+        <input type="checkbox" name="interesse" value="java" id="java">
+        <label for="java">Java</label>
+
+        <br> <br>
+        <label for="temometro"> Qual é o grau do seu conhecimento
+            <br>
+            <input type="range" name="temometro" id="" min="0" max="10" step="2">
+
+        </label>
+
+
+        <br> <br>
+        <label for="temos">Eu aceito os termos
+            <!-- Quando esse checked te você não tem opção de não deixar sem selecionar -->
+            <input type="checkbox" name="temos" id="" checked>
+        </label>
+        
+        <br>
+        <h1>Progress</h1>
+        <progress max="100" value="60"> 60%</progress>
+        <progress></progress>
+        
+
+    </fieldset>
+    </form>
+
+</body>
+
+</html>
