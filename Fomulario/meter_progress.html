@@ -15,6 +15,23 @@
     <br>
     <h1>Progress</h1>
     <progress max="100" value="60"> 60%</progress>
-    
+    <br>
+    <div class="d-none d-sm-block">
+        Some Word
+    </div>
+    <br>
+    <br>
+    <!-- Apresentar um dado dinâmico -->
+     <form oninput="resulado.value =a.value * b.value">
+        <label for="a">valor
+            <input type="number" name="a" id="a">
+        </label>
+       
+        <label for="b">x
+            <input type="number" name="b" id="b">
+        </label>
+        <output name="resulado" for="a b">=</output> 
+        <!-- Serve para mostrar um dado valor para o usuário  -->
+     </form>
 </body>
 </html>
