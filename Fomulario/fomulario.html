@@ -5,21 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formiario</title>
+    <style>
+        textarea {
+            resize: none;
+            /*Tirando o redirecionamento da áreado usuário modificar*/
+        }
+    </style>
 </head>
+
 
 <body>
     <form>
         <fieldset>
 
             <legend>Introdução</legend>
-            
+
             <label for="email">E-mail</label>
             <br>
-            <input type="email" name="Email" id="email">
+            <!-- A dicapara usuário seguir (placeholder) -->
+            <input type="email" name="Email" id="email" placeholder="marilia@gamial.com">
             <br><br>
             <label for="qtd_f">Quantidade de filhoes</label>
-                <br>
-            <input type="number" name="qtd_f" id="qtd_f" min="0" max="40" >
+            <br>
+            <input type="number" name="qtd_f" id="qtd_f" min="0" max="40">
             <!-- (min"0")Não deixa colocarvalores abaixode zero pois foi você que atribuiuessa informação  -->
             <!--(max"100") Você também pode atribuir o máximo de caracteres que pode colocar-->
             <br><br>
@@ -29,19 +37,19 @@
 
             <br><br>
             <label>Possui CNG
-            <br>
-            <input type="radio" name="cng" id="cng_n" value="nao">
-            <label for="cng_n">NÃO</label>
-            <!-- Quando tem o mesmo name é a opção do radio é apenas uma  -->
-            <input type="radio" name="cng" id="cng_s" value="sim">
-            <label for="cng_s">SIM</label>
+                <br>
+                <input type="radio" name="cng" id="cng_n" value="nao">
+                <label for="cng_n">NÃO</label>
+                <!-- Quando tem o mesmo name é a opção do radio é apenas uma  -->
+                <input type="radio" name="cng" id="cng_s" value="sim">
+                <label for="cng_s">SIM</label>
             </label>
 
         </fieldset>
 
         <fieldset>
             <legend>Área de interesse</legend>
-             <!-- value="" é o valor seramanda  BD  -->
+            <!-- value="" é o valor seramanda  BD  -->
             <input type="checkbox" name="interesse" value="html" id="html">
             <label for="html">HTML</label>
 
@@ -56,12 +64,12 @@
 
             <input type="checkbox" name="interesse" value="java" id="java">
             <label for="java">Java</label>
-          <br><br>
-          <label> SELECT
-            <br>
-            <!-- mais deu uma  opição usando ( multiple) -->
-             <!--(size) Usando isso você pode escolher quantas linhas de rolagem pode ter -->
-                <select name="linguagen" id="" multiple size="3"> 
+            <br><br>
+            <label> SELECT
+                <br>
+                <!-- mais deu uma  opição usando ( multiple) -->
+                <!--(size) Usando isso você pode escolher quantas linhas de rolagem pode ter -->
+                <select name="linguagen" id="" multiple size="3">
                     <option>Selecione uma</option>
                     <optgroup label="frontend">
                         <option value="html">HTML</option>
@@ -72,28 +80,91 @@
                         <option value="py">Python</option>
                         <option value="java">Java</option>
                     </optgroup>
-                    
+
                 </select>
                 <br>
                 <br>
-                
-                    <input type="text" list="liguagemlista">
-                    <datalist id="liguagemlista">
-                        <option value="HTML"></option>
-                        <option value="CSS"></option>
-                        <option value="Javascript"></option>
-                        <option value="Java"></option>
-                        <option value="Python"></option>
-                        <option value="PHP"></option>
-                        </datalist>
-              
-        </label>
 
+                <input type="text" list="liguagemlista">
+                <datalist id="liguagemlista">
+                    <option value="HTML"></option>
+                    <option value="CSS"></option>
+                    <option value="Javascript"></option>
+                    <option value="Java"></option>
+                    <option value="Python"></option>
+                    <option value="PHP"></option>
+                </datalist>
+
+            </label>
 
         </fieldset>
+        <fieldset>
+            <legend>Mensagem</legend>
+            <br> <br>
+            <label for="msg">Esceva uma mensagem
+                <br>
+                <!-- Pode limitar o tamanhode caracteres do usuário (maxlength="200) -->
+                <textarea name="msg" id="msg" cols="30" rows="10" maxlength="200"></textarea>
+            </label>
+            <br>
+
+            <br>
+            <label for="texto">Texto dentro
+                <br>
+                <!-- textarea é um atributo só de leitura (readonly ou disabled )-->
+                <textarea name="texto" id="texto" cols="40" rows="10" disabled>
+                  Lorem ipsum dolor sit amet consectetur 
+                  adipisicing elit. Accusamus est, nemo, sapiente debitis at tenetur doloresunde 
+                  cumque amet aut consequuntur placeat eveniet pariatur quos eius numquam et qui harum!
+                 
+                </textarea>
+                <br>
+                <label for="evioa">Enviar aquivo
+                    <br>
+                    <input type="file" name="evioa" id="">
+                </label>
+            </label>
+            <!-- Dados escondiso do usario -->
+            <input type="hidden" name="ola" value="nome">
+
+            <!-- teg  button -->
+            <button type="submit">Envia os aquivos</button>
+            <!--Você pode fazer o button ter o comportamento de enviar formulários  -->
+            <br>
+            <br>
+            <label for="limpax">Escre texto mais lipa no x
+                <br>
+                <input type="search" name="limpax" id="">
+
+            </label>
+            <br> <br>
+            <label for="temometro"> Qual é o grau do seu conhecimento
+                <br>
+                <input type="range" name="temometro" id="" min="0" max="10" step="2">
+
+            </label>
+            <br> <br>
+            <label for="tempo">Quantas horas você faz de atividade física?
+                <br>
+                <input type="time" name="tempo" id="">
+            </label>
+            <br><br>
+            <label for="cor">Qual é a sua cor favorita?
+                <br>
+                <input type="color" name="cor" id="">
+            </label>
+            <br> <br>
+            <label for="temos">Eu aceito os termos
+                <!-- Quando esse checked te você não tem opção de não deixar sem selecionar -->
+                <input type="checkbox" name="temos" id="" checked>
+            </label>
+        </fieldset>
+
 
         <br><br><br>
-            <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar">
+        <!-- O button é usado mais para fazer ação  para Javascript-->
+        <input type="button" value="butoon">
     </form>
 
 </body>
