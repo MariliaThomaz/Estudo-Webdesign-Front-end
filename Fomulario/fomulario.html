@@ -56,6 +56,38 @@
 
             <input type="checkbox" name="interesse" value="java" id="java">
             <label for="java">Java</label>
+          <br><br>
+          <label> SELECT
+            <br>
+            <!-- mais deu uma  opição usando ( multiple) -->
+             <!--(size) Usando isso você pode escolher quantas linhas de rolagem pode ter -->
+                <select name="linguagen" id="" multiple size="3"> 
+                    <option>Selecione uma</option>
+                    <optgroup label="frontend">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javac">Javascript</option>
+                    </optgroup>
+                    <optgroup label="backend">
+                        <option value="py">Python</option>
+                        <option value="java">Java</option>
+                    </optgroup>
+                    
+                </select>
+                <br>
+                <br>
+                
+                    <input type="text" list="liguagemlista">
+                    <datalist id="liguagemlista">
+                        <option value="HTML"></option>
+                        <option value="CSS"></option>
+                        <option value="Javascript"></option>
+                        <option value="Java"></option>
+                        <option value="Python"></option>
+                        <option value="PHP"></option>
+                        </datalist>
+              
+        </label>
 
 
         </fieldset>
