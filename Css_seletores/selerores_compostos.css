@@ -1,0 +1,32 @@
+article{
+    outline: 4px solid black;
+}
+article a{
+/* Tome tua  está contido article fira vermelho */
+    color: red;
+}
+
+article a > b{
+    /* Foi selecionado somente  teg b filhos direto do elemento a */
+    color: green;
+}
+
+h3 + p{
+
+    /*  todo o parágrafo p  Próximo Ô irmão h3 */
+    background-color: rgb(164, 195, 53);
+
+}
+h3 ~ p{
+
+    /*Estou selecionando todos  P que vem depois H3 de */
+    border: 4px dashed rgb(102, 71, 255);
+}
+.destaque{
+    padding-left: 5em;
+}
+
+p:not(.destaque){
+    /* Deixando de pegar Elemento para fazer estilização */
+    background-color: rgb(191, 124, 195);
+}
