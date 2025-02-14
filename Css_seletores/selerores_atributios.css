@@ -1,0 +1,14 @@
+a[href="#"]{
+ background-color: rgb(163, 154, 205);
+}
+a[href^=http]{
+    /* come a  busca com (^=) */
+    color: crimson;
+}
+a[href$=".pdf"]{
+    /* teminas a  busca ($=) */
+    color: green;
+}
+a[target]{
+    text-decoration: none;
+}
