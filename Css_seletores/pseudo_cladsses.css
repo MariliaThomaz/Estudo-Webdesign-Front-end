@@ -1,0 +1,52 @@
+div :first-child{
+    /* espaço é Descendência  */
+    /* primeiro filho (first-child) */
+    /*é usado o : para pseudo classe pseudo */
+    /* : Isso quer de significado é sempre é o estado do elemento como Focus */
+    /* O exemplo acima significa que é a ordem do elemento  */
+     background-color: aqua;
+   /* first-child --> Quer dizer pegue qualquer elementodo primeiro filho de uma  DIV */
+}
+p:last-child{
+ /* O último parágrafo*/
+ background-color: orangered;
+}
+p:nth-child(2){
+/* segundo filho */
+/* nth-child() Pode escolher qual elemento pegar  */
+background-color: blue;
+}
+
+p:first-of-type{
+    /* O que está acontecendo que eu estou pegando o primeiro filho do p */
+    background-color: darkcyan;
+}
+p:last-of-type{
+    /* Pra pegar sempre o último parágrafo */
+    border: 2px solid rgb(71, 39, 39);
+
+}
+p:nth-of-type(2){
+    text-decoration: underline;
+}
+li:nth-child(1),
+li:nth-child(3),
+li:nth-child(5){
+    background-color: chartreuse;
+}
+
+li:nth-child(odd){
+    /*pegando a posição  etão no  valor  impar*/
+    text-decoration: underline;
+}
+
+li:nth-child(even){
+    /*pegando a posição  etão no  valor pares (EVEN)*/
+    /*poase ser  (2n)*/
+  background-color: brown;
+}
+
+li:nth-child(3n){
+  /* puando em 3 em  3 */
+  background-color: rgb(165, 159, 42);
+}
