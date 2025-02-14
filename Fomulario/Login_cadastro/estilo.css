@@ -78,4 +78,10 @@ font-weight: 300;
     font-size: .85rem;
     flex-grow: 1;
     text-align: right;
+    text-decoration: none;
+    color: red;
+}
+.form__action_aside a{
+    text-decoration: none;
+    color: inherit;
 }
