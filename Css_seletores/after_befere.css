@@ -1,0 +1,27 @@
+p::before{
+    /*pseudo elementoele precisasempre ter um conteúdo */
+    content: "Antes---- ";
+}
+p::after{
+    /*pseudo elementoele precisasempre ter um conteúdo */
+    content: "----Depois";
+}
+div{
+    border: 3px solid red;
+    padding: 1em;
+    position: relative;
+}
+p{
+    margin: 0;
+}
+div::before{
+    content: "";
+    /* por padão ele comportamento de  linha */
+    width: 1em;
+    height: 1em;
+    background-color:red;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
