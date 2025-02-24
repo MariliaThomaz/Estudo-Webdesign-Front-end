@@ -14,7 +14,7 @@ div{
 p{
     margin: 0;
 }
-div::before{
+div::after{
     content: "";
     /* por padão ele comportamento de  linha */
     width: 1em;
@@ -24,4 +24,10 @@ div::before{
     position: absolute;
     right: 0;
     bottom: 0;
+}
+div::before{
+    /* incluindo uma  imagem */
+    content: url(https://placehold.co/64/0000FF/fffffff);
+    float: left;
+    margin-right: 1em;
 }
