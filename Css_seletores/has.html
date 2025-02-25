@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Has</title>
+    <style>
+        p a{
+            color:red;
+            background-color: yellow;
+        }
+        p:has(a){
+            /*Eu posso selecionaro meu parágrafo com elemento a */
+            background-color: #ccc;
+        }
+        p:has(.teste){
+            /*Eu posso selecionaro meu parágrafo com elemento a */
+            background-color: #8e2a2a;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quasi maiores iusto ratione soluta eaque aspernatur. Dolore maxime, natus nam fugit quia necessitatibus, itaque voluptas alias id, iure rerum ad.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quasi maiores iusto ratione soluta eaque aspernatur. Dolore maxime, natus nam fugit quia necessitatibus,<a href="#">Clique aqui para saber  mais</a> itaque voluptas alias id, iure rerum ad.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quasi maiores iusto ratione soluta eaque aspernatur. Dolore maxime, natus nam fugit quia necessitatibus, itaque voluptas alias id, iure rerum ad.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab quasi maiores iusto ratione soluta eaque aspernatur. Dolore maxime, natus nam <a href="#" class="teste">Clique aqui para saber  mais</a>fugit quia necessitatibus, itaque voluptas alias id, iure rerum ad.</p>
+    
+</body>
+</html>

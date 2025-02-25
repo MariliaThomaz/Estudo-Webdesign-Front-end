@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peseudo Elementos</title>
+    <style>
+        /*O pseudo elemento serve para colocar elementos */
+        p::first-letter{
+            /*Seleciona a primeira letra (first-letter) */
+            color: red;
+            font-size: 4em ;
+            float: left;
+            margin-right: .2em;
+            line-height: 1;
+        }
+        p::first-line{
+            /*Ciona a primeira linha*/ 
+            color: aqua;
+        }
+        ::selection{
+            /*mudar Um modode selecionar texto web*/
+            background-color: rgb(100, 237, 130);
+        } 
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, unde mollitia laboriosam, adipisci non ipsa
+        magni eius aliquid ad deserunt
+         amet molestias totam exercitationem veniam officia dolore delectus iste quia.
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, unde mollitia laboriosam, adipisci non ipsa
+        magni eius aliquid ad deserunt amet molestias totam exercitationem veniam officia dolore delectus iste quia.
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, unde mollitia laboriosam, adipisci non ipsa
+        magni eius aliquid ad deserunt amet molestias totam exercitationem veniam officia dolore delectus iste quia.
+    </p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, unde mollitia laboriosam, adipisci non ipsa
+        magni eius aliquid ad deserunt amet molestias totam exercitationem veniam officia dolore delectus iste quia.
+    </p>
+</body>
+
+</html>
