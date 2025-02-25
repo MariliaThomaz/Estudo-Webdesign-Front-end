@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Has tabela</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #ddd;
+            padding: .5em;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e9e9e9;
+        }
+
+        tr:has(input[type="checkbox"]:checked) {
+            background-color: blueviolet;
+        }
+
+    </style>
+</head>
+
+<body>
+    <table>
+        <form action="ola">
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+
+
+                <td><input type="checkbox" name="gab" id="gab">
+                <label for="gab">Selecionar </label></td>
+
+                <td>Gabriela</td>
+                <td>gabriela@gamil.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="carol" id="carol">
+                <label for="carol">Selecionar </label></td>
+                <td>Carol</td>
+                <td>carol@gamil.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="paula" id="paula">
+                <label for="paula">Selecionar </label></td>
+                <td>Paula</td>
+                <td>paula@gamil.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="vick" id="vick">
+                <label for="vick">Selecionar</label></td>
+                <td>Vick</td>
+                <td>vick@gamil.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="fabio" id="fabio">
+                <label for="fabio">Selecionar </label></td>
+                <td>Fabio</td>
+                <td>fabio@gamil.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="thais" id="thais">
+                <label for="thais">Selecionar </label></td>
+                <td>Thais</td>
+                <td>thais@gamil.com</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="marcos" id="marcos">
+                <label for="marcos">Selecionar </label></td>
+                <td>Marcos</td>
+                <td>marcos@gamil.com</td>
+            </tr>
+
+
+        </form>
+    </table>
+</body>
+
+</html>
