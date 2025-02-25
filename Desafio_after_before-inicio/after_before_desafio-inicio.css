@@ -1,0 +1,19 @@
+a[href^=http]::after{
+    content: url(imagens/newWindow-icon.png);
+    margin-left: 5px;
+}
+
+
+a[href$=".pdf"]::before{
+    content: url(imagens/pdf-icon.gif);
+    margin-right: 5px;
+}
+
+input, progress{
+    accent-color:#008000;;
+/* A nova atualidade é possível mudar a cor com facilidade*/
+} 
+
+li:nth-child(4){
+background: violet;
+}
