@@ -1,4 +1,4 @@
-a[href^=http]::after{
+a[target="_blank"]::after{
     content: url(imagens/newWindow-icon.png);
     margin-left: 5px;
 }
@@ -9,11 +9,21 @@ a[href$=".pdf"]::before{
     margin-right: 5px;
 }
 
-input, progress{
-    accent-color:#008000;;
-/* A nova atualidade é possível mudar a cor com facilidade*/
-} 
+input[type="checkbox"]:checked+label{
+  color:#008000;;
 
-li:nth-child(4){
-background: violet;
+} 
+input[type="checkbox"]:not(:disabled)
++label{
+    color:#801e00;
+  
+  } 
+  input[type="checkbox"]:disabled
+  +label{
+      color:blue;
+    
+    }
+
+li li:nth-child(3){
+    background-color: blueviolet;
 }
