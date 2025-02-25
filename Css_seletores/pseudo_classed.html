@@ -1,81 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pseudo-classes</title>
     <style>
-        button{
+        button {
             background-color: chocolate;
-            color:wheat;
+            color: wheat;
             border: none;
             padding: 1em;
             margin-bottom: .5em;
         }
-        button:defined{
+
+        button:defined {
             opacity: .3;
         }
-        p:empty::before{
+
+        p:empty::before {
             /*Formatando os parágrafos que estão vazio*/
-         content: "Parágrafo vazio!!!!!!!!!";
-        } 
-        a:focus, a:hover{
+            content: "Parágrafo vazio!!!!!!!!!";
+        }
+
+        a:focus,
+        a:hover {
             background-color: aqua;
         }
-        input[type="text"]:read-write{
+
+        input[type="text"]:read-write {
             background-color: burlywood;
             padding: .5em;
         }
-        input[type="text"]:read-only{
+
+        input[type="text"]:read-only {
             background-color: rgb(135, 195, 222);
             padding: .5em;
         }
-        input[type="text"]::placeholder{
-          color: blue;
-        }
-        input[type="text"]:placeholder-shown{
-            background-color:blueviolet;
-            
+
+        input[type="text"]::placeholder {
+            color: blue;
         }
 
+        input[type="text"]:placeholder-shown {
+            background-color: blueviolet;
 
+        }
+
+        p:only-child {
+            /*Fica que eu quero selecionar um parágrafo de um único filho De um determinado pai  */
+            background-color: crimson;
+        }
+
+        p:read-write {
+            /*Editando o parágrafo que é editável*/
+            border-bottom: 2px solid red;
+
+        }
+        div:target{
+            border: 4px dashed rebeccapurple;
+
+        }
     </style>
 </head>
+
 <body>
-    <button>Vai</button>
+    <div id="top">
+        <a href="#titulo">Vai para  o titulo</a>
+        <br>
+        <button>Vai</button>
+        <br>
+        <br>
+        <button disabled> Vai disabled </button>
+    </div>
+   
     <br>
-    <br>
-    <button disabled> Vai disabled </button>
-    <br>
-    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, omnis! Modi ratione, itaque asperiores laudantium hic minima eos, in dignissimos quam enim natus sequi error ab perferendis dolores aliquam unde?</p>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, omnis! Modi ratione, itaque asperiores
+        laudantium hic minima eos, in dignissimos quam enim natus sequi error ab perferendis dolores aliquam unde?</p>
     <p></p>
-    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, omnis! Modi ratione, itaque asperiores laudantium hic minima eos, in dignissimos quam enim natus sequi error ab perferendis dolores aliquam unde?</p>
+    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, omnis! Modi ratione, itaque asperiores
+        laudantium hic minima eos, in dignissimos quam enim natus sequi error ab perferendis dolores aliquam unde?</p>
     <p></p>
 
-<ul>
-    <li><a href="#">LInk falso</a></li>
-    <li><a href="#">LInk falso</a></li>
-    <li><a href="#">LInk falso</a></li>
-    <li><a href="#">LInk falso</a></li>
-</ul>  
-<p tabindex="0">Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-<p>Lorem ipsum dolor sit amet.</p>
+    <ul>
+        <li><a href="#">LInk falso</a></li>
+        <li><a href="#">LInk falso</a></li>
+        <li><a href="#">LInk falso</a></li>
+        <li><a href="#">LInk falso</a></li>
+    </ul>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
 
-<form action="#">
-    
-    <input type="text" value="valor" inicial>
-    <br><br>
-    <input type="text" value="valor" disabled>
-    <br><br>
-    <input type="text" value="valor" readonly>
-    <br><br>
-    <input type="text" value="valor"placeholder>
-    <br><br>
-</form>
-<br>
+    <form action="#">
+
+        <input type="text" value="valor" inicial>
+        <br><br>
+        <input type="text" value="valor" disabled>
+        <br><br>
+        <input type="text" value="valor" readonly>
+        <br><br>
+        <input type="text" value="valor" placeholder>
+        <br><br>
+    </form>
+    <br>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <hr>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p contenteditable="">Lorem ipsum dolor sit amet.</p>
+        <!-- Isso significa que você pode editar o texto (contenteditable) -->
+    </div>
+    <h1 id="titulo"> titulo</h1>
+
 
 </body>
+
 </html>
