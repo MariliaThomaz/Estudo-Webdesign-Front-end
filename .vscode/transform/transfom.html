@@ -41,6 +41,26 @@
             /*Mas o diferencial queele usa o referencialde tamanho o paisobre ele no caso é div*/
             /*Usando transform ele não usaum referencialcomo pai ele usa a si mesmo como ponto de divisão*/
         }
+
+        .div3 .destaque {
+            transform: rotate(45deg);
+            /*Rotate é o 2D*/
+            /*A rotação é por grau é (45deg) = 45grau*/
+            /*Ele rotaciona a partir do seu ponto central*/
+
+        }
+
+        .div4 .destaque {
+            transform: scale(4,.5);
+            /*scale() é utilizado para escalar números amenta  objetos*/
+            /*scaleX() e  scaleY()  pode  maude  por eixo*/
+            /*Como você está mudando o eixo X eo eixo Y =  scale(4,.5)*/
+
+        }
+        .div5 .destaque{
+            transform: skewX(15deg);
+            /* Distorçãoeu */
+        }
     </style>
 </head>
 
@@ -58,7 +78,25 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
     </div>
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+    </div>
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+    </div>
 
+    <div class="div5">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, molestias?.</p>
+    </div>
 </body>
 
 </html>
