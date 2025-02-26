@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesting</title>
+</head>
+<style>
+    .div1 {
+        background-color: yellow;
+    }
+
+    .container {
+        /*Seletores a linha */
+        color: blue;
+
+        .div1 {
+            background-color: rgb(175, 163, 163);
+        }
+
+        .paragrafo {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 3em;
+
+            /*Ele repete o seletor parágrafo  é Nesting*/
+            &.destaque {
+                color: orangered;
+
+            }
+        }
+
+    }
+
+    a {
+        color: red;
+
+        &:hover {
+            color: green;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="div1">
+            <p class="paragrafo">Lorem, ipsum <b>dolor.</b></p>
+            <a href="#">Linnk</a>
+
+        </div>
+        <div class="div2">
+            <p class="paragrafo destaque">Lorem, <b>ipsum</b> dolor. Nesting</p>
+
+        </div>
+    </div>
+    <div class="div1">
+        <p>Lorem, ipsum <b>dolor.</b></p>
+
+    </div>
+    <div class="div2">
+        <p>Lorem, <b>ipsum</b> dolor.</p>
+
+    </div>
+
+
+</body>
+
+</html>
