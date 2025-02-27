@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <style>
+        input[type=checkbox] {
+            display: none;
+        }
+
+
+        input[type=checkbox]:checked+label samp {
+            background-color: aquamarine;
+            /*Maneira de formatar checkbox visualmente*/
+        }
+
+        label samp {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: red;
+        }
+
+
+        input[type=checkbox]:checked+label samp {
+           
+
+            &.divola {
+
+
+                border-bottom: 5px solid black;
+                transform: translate(50%);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Checkbox</h1>
+
+    <input type="checkbox" name="html" id="html" checked>
+    <label for="html">HTML
+        <samp>
+            <div class="divola"></div>
+        </samp>
+    </label>
+
+    <input type="checkbox" name="css" id="css">
+    <label for="css">CSS
+        <samp>
+            <div class="divola"></div>
+        </samp>
+    </label>
+
+    <input type="checkbox" name="js" id="js">
+    <label for="js">JavaScript
+        <samp>
+            <div class="divola"></div>
+        </samp>
+    </label>
+
+</body>
+
+</html>
