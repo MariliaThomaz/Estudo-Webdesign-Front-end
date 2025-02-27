@@ -14,6 +14,7 @@
         input[type=checkbox]:checked+label samp {
             background-color: aquamarine;
             /*Maneira de formatar checkbox visualmente*/
+            position: relative;
         }
 
         label samp {
@@ -24,16 +25,19 @@
         }
 
 
-        input[type=checkbox]:checked+label samp {
-           
+        input[type=checkbox]:checked+label samp::before {
+            content: "";
+            display: block;
+            border: 2px solid wheat;
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            right: 8px;
+            bottom: 8px;
+            transform: rotate(45deg);
+            border-left-color: transparent;
+            border-top-color: transparent;
 
-            &.divola {
-
-
-                border-bottom: 5px solid black;
-                transform: translate(50%);
-
-            }
         }
     </style>
 </head>
@@ -44,21 +48,21 @@
     <input type="checkbox" name="html" id="html" checked>
     <label for="html">HTML
         <samp>
-            <div class="divola"></div>
+
         </samp>
     </label>
 
     <input type="checkbox" name="css" id="css">
     <label for="css">CSS
         <samp>
-            <div class="divola"></div>
+
         </samp>
     </label>
 
     <input type="checkbox" name="js" id="js">
     <label for="js">JavaScript
         <samp>
-            <div class="divola"></div>
+
         </samp>
     </label>
 
