@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox2</title>
+    <style>
+        
+
+        /* Estiliza o span que será a caixinha do checkbox */
+        .lbl2 span {
+            display: inline-block;
+            font-size: 20px;
+            width: 1em;
+            height: 1em;
+            background-color: red;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        /* Quando o checkbox estiver marcado, muda a cor */
+        input[type=checkbox]:checked + span {
+            background-color: green;
+            position: relative;
+        }
+
+        /* Criando o "check" dentro da caixinha */
+        input[type=checkbox]:checked + span::before {
+            content: "";
+            display: block;
+            border: 0.087em solid wheat;
+            position: absolute;
+            top: 0.1em;
+            left: 0.35em;
+            width: 0.3em;
+            height: 0.6em;
+            transform: rotate(45deg);
+            border-left-color: transparent;
+            border-top-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Checkbox 2</h1>
+
+    <label for="html" class="lbl2">
+        <input type="checkbox" name="html" id="html">
+        <span></span> HTML
+    </label>
+    <label for="css" class="lbl2">
+        <input type="checkbox" name="css" id="css">
+        <span></span> CSS
+    </label>
+    <label for="js" class="lbl2">
+        <input type="checkbox" name="js" id="js">
+        <span></span> JavaScript
+    </label>
+    <br>
+
+  
