@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkbox2</title>
     <style>
-        
-
         /* Estiliza o span que será a caixinha do checkbox */
         .lbl2 span {
             display: inline-block;
@@ -20,13 +18,13 @@
         }
 
         /* Quando o checkbox estiver marcado, muda a cor */
-        input[type=checkbox]:checked + span {
+        input[type=checkbox]:checked+span {
             background-color: green;
             position: relative;
         }
 
         /* Criando o "check" dentro da caixinha */
-        input[type=checkbox]:checked + span::before {
+        input[type=checkbox]:checked+span::before {
             content: "";
             display: block;
             border: 0.087em solid wheat;
@@ -59,4 +57,6 @@
     </label>
     <br>
 
-  
+</body>
+
+</html>
