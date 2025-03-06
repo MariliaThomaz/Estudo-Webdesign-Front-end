@@ -1,6 +1,7 @@
 :root{
     ---primary-color :#FF7833;
     ---secondary-color: #31333B;
+    ---secondary-color-light: #444856;
 }
 html{
     font-size: 62.5%;
@@ -11,7 +12,24 @@ body{
     color: #e7e7e7e7;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     min-height: 100vh;
+    line-height: 1.7;
    
+}
+h1{
+    font-size: 4rem;
+    color: #c1bfbf;
+    margin-top: 3rem;
+}
+h2,h3,h4,h5, h6{
+    color: var(---primary-color);
+    margin: 0;
+}
+h2{
+    margin-top: 1rem;
+}
+article{
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .mai-header{
@@ -19,8 +37,9 @@ body{
     background-color: var(---secondary-color);
 }
 .main{
-    background-color: #444856;
+    background-color:var(---secondary-color-light);
     flex: 1 0;
+    padding: 6.5rem 6rem 7.5rem;
 }
 a{
     color:inherit ;
@@ -30,4 +49,28 @@ a{
 }
 .perfil-img{
     max-height: 10rem;
+}
+.main-nav{
+    text-align: right;
+    padding: 6.5rem 2.4rem 2.4rem;
+}
+.main-nav ul{
+    padding: 0;
+    list-style-type: none;
+}
+.main-nav ul a{
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    transition: padding-rigt .2s, backgroud-color .4s;
+    background-color: transparent;
+}
+.main-nav ul a:hover{
+    background-color: var(---secondary-color-light);
+    /* 1rem é  mesma coisa que 10px  */
+    padding-right: 1rem; 
+
+}
+.main-nav li{
+    border-bottom: 1px solid #7b7b7b;
 }
