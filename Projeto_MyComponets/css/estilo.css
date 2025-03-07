@@ -27,9 +27,15 @@ h2,h3,h4,h5, h6{
 h2{
     margin-top: 1rem;
 }
+.highlight{
+    border-left: 1px solid var(---primary-color);
+    font-size: 1.1em;
+    padding: 2em;
+    margin-bottom: 2.2em;
+}
 article{
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 .underline{
     text-decoration: red wavy underline;
@@ -68,7 +74,8 @@ a{
     transition: padding-rigt .2s, backgroud-color .4s;
     background-color: transparent;
 }
-.main-nav ul a:hover{
+.main-nav ul a:hover,
+.main-nav ul a:focus{
     background-color: var(---secondary-color-light);
     /* 1rem é  mesma coisa que 10px  */
     padding-right: 1rem; 
