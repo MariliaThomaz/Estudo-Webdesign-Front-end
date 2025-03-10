@@ -84,3 +84,18 @@ a{
 .main-nav li{
     border-bottom: 1px solid #7b7b7b;
 }
+.card{
+    max-width:740px;
+    background-color: var(---secondary-color);
+    padding: 0;
+}
+.card_content{
+    padding: 0.5em 1em 1em;
+}
+.card_content p, .card_title{
+    margin: 0;
+}
+.card_title{
+    font-size: 1.75em ;
+    margin-bottom: .25em;
+}
