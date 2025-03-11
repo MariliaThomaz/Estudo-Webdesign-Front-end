@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+
+<body>
+    <header class="mai-header">
+        <nav class="main-nav">
+            <a href="#">
+                <img src="imagens/perfil2.png" alt="Perfil homem barbudo" class="perfil-img">
+            </a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tipografia.html">Tipografia</a></li>
+                <li><a href="cads.html">Cards</a></li>
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="formulario.html">Formulario</a></li>
+                <li><a href="botoes.html">Botões</a></li>
+                <li><a href="tabelas.html">Tabelas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <h1>My Components</h1>
+
+        <section>
+            <h2>Entre em contato</h2>
+            <div class="row">
+                <form action="">
+                    <div class="row">
+                        <div>
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" placeholder="Nome completo">
+                        </div>
+                        <div>
+                            <label for="email">Emai-l</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                    </div>
+                    <label for="mensagem">Digite sua Mensagem</label>
+                    <textarea name="mensagem" id="mensagem" rows="6"></textarea>
+
+                    <input type="submit" value="Enviar" class="btn">
+
+
+                </form>
+                <address>
+                    <p> <b>Endereço</b>Rua dos Sonhos, 123, CEP:01234-567 Brasil</p>
+                        <p><b>Telefone</b> 000-000-000</p>
+                        <p><b>Email</b> procura@outro.com</p>
+                
+
+                </address>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
