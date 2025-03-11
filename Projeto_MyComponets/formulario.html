@@ -41,7 +41,7 @@
                         </div>
                         <div>
                             <label for="email">Emai-l</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" autocomplete="off">
                         </div>
                     </div>
                     <label for="mensagem">Digite sua Mensagem</label>
@@ -53,13 +53,51 @@
                 </form>
                 <address>
                     <p> <b>Endereço</b>Rua dos Sonhos, 123, CEP:01234-567 Brasil</p>
-                        <p><b>Telefone</b> 000-000-000</p>
-                        <p><b>Email</b> procura@outro.com</p>
-                
+                    <p><b>Telefone</b> 000-000-000</p>
+                    <p><b>Email</b> procura@outro.com</p>
+
 
                 </address>
             </div>
         </section>
+
+        <section>
+            <h2>Quiz</h2>
+            <form action="" class="form-quiz">
+                <label for="tecnologia">Qual é sua preferidade?</label>
+                <select name="tecnologia" id="tecnologia">
+                    <option value="null">Selecione</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">Javascript</option>
+
+                </select>
+                <label for="priodade">Baixa Prioridade
+                    <input type="radio" name="priodade" id="" value="baixa">
+                </label>
+                <label for="priodade">Média priodade
+                    <input type="radio" name="priodade" id="" value="media">
+                </label>
+                <label for="priodade">Alta prioridade
+                    <input type="radio" name="priodade" id="" value="alta">
+                </label>
+
+                <label for="cop">Envi-me  uma cópai
+                    <input type="checkbox" name="cop" id="" value="1">
+                </label>  
+                
+                <label for="humano">Sou humanos
+                    <input type="checkbox" name="humano" id="" value="1">
+                </label>  
+
+                <div class="row">
+                    <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar" class="btn btn-stroke">
+
+                </div>           
+            </form>
+        </section>
+
 
     </main>
 </body>
