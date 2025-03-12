@@ -11,12 +11,20 @@
     <!-- link para por icones -->
     <link rel="stylesheet" href="./assets/css/brands.css">
 
+    <!-- icones pelo outro lugar (icomoon.io) -->
+     <link rel="stylesheet" href="./assets/icone-svg/style.css">
+
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <style>
         .svg-teste {
             /*mudar cor da  imagem  do svgh*/
             fill: black;
+        }
+        .fa-brands{
+            /*icone  é  tratado como uma  fonte*/
+            font-size: 10rem;
+            color: chocolate;
         }
     </style>
 </head>
@@ -79,8 +87,12 @@
         <hr>
         <p>Aqui está o ícone usando o font-awesome v6 <i class="fa-brands fa-twitter"></i></p>
 
-
-
+       <hr>
+       <p>Aqui está  um icone usando SVG exteno do iconmoon</p>
+           <svg>
+            <use xlink:href="./assets/icone-svg/symbol-defs.svg#icon-twitter"></use>
+            <use xlink:href="./assets/icone-svg/symbol-defs.svg#icon-twitter"></use>
+           </svg>
     </main>
 
 </body>
