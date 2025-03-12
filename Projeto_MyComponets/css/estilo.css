@@ -15,11 +15,11 @@ body {
     display: flex;
     margin: 0;
     color: #e7e7e7;
-    background-color: #2b2a2a;
+    background-color: #ccc;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     min-height: 100vh;
     line-height: 1.7;
-    background-image: url(../imagens/bg-unsplash.png);
+    background-image: url(../imagens/fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -27,7 +27,7 @@ body {
 
 h1 {
     font-size: 4rem;
-    color: #201d1d;
+    color: #a9a7a7;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
@@ -67,13 +67,13 @@ section {
 
 .main-header {
     flex: 0 0 26rem;
-    background-color: rgba(20, 20, 20, 0.8);
+    background-color: rgba(49, 51, 59, .8);
 
 }
 
 .main {
     background-color: var(--secondary-color-light);
-    background-color: rgba(99, 103, 119, 0.6);
+    background-color: rgba(68, 72, 86, .6);
     flex: 1 0;
     padding: 6.5rem 6rem 100vh;
 }
@@ -119,7 +119,7 @@ a {
 }
 
 .main-nav li {
-    border-bottom: 1px solid #4c4b4b;
+    border-bottom: 1px solid #7b7b7b;
     padding: .4rem 0;
 }
 
@@ -133,17 +133,13 @@ a {
     padding: 0.5em 1em 1em;
 }
 
-.card_content p{
- font-size: 0.7em;
-}
-
 .card_content p,
 .card_title {
     margin: 0;
 }
 
 .card_title {
-    font-size: 1 em;
+    font-size: 1.75em;
     margin-bottom: .25em;
 }
 
@@ -187,7 +183,7 @@ a {
 }
 
 .list-emoji {
-    list-style-type: "\1F618";
+    list-style-type: "\1F602";
 }
 
 input,
