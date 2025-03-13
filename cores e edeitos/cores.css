@@ -1,8 +1,34 @@
 
-body {
+  
+    body {
+        /* Gradiente + imagem de fundo */
+        background-image: linear-gradient( to top, rgb(0 0 255/.9) 50%, red 50%,transparent ), url(imagem/funto.JPG);
+        background-attachment: fixed, scroll;
+        background-blend-mode:color;
+
+
+
+      /* Quando você coloca tipo rad e porcentagem você tá dizendo o quanto ela quer atingir */
+      /* Você colocou to had two top é a aonde vai começarno caso o gradiente   
+      E também dá pra você mudarnão só as posições mais o grau*/
+      /*background-image: linear-gradient( 72deg,transparent 30%, red, blue), url(imagem/funto.JPG);  */
+
+      /*Outra maneira de fazer transparência usando valores hexa decimal  #00f7 ( Cor 7 que deixa transparenteao contrário disso IA ser azul)*/
+      /*  background-image: linear-gradient( to top, #00f7 50%,transparent ), url(imagem/funto.JPG); */
+
+      /* Outra maneira usandotransparência mas agora com rgba  */
+      /*  background-image: linear-gradient( to top, rgba(0,0,255,.5) 50%,transparent ), url(imagem/funto.JPG); */
+      /* 255 é  cor total plenutudade */
+      /* (255,      255,   255, trapacia ) 
+          Vemenho, Verde,  Azul             */
+        
+    /*Outra maneira de fazer transparência é usando RGB  */
+    /* A diferença é que você tem outro tipo de cintarsintática  rgb(0 0 255/.5) */
+
+    /*   background-blend-mode: color; --> mesclando cores  com fundo*/
+  }
     
-    background-image: url(imagem/funto.JPG);
-}
+
 
 .cores{
     width: 80%;
@@ -24,4 +50,7 @@ section{
 }
 .cores::before{
     content: "[ " counter(cotador) " ]";
+    display: inline-block;
+    margin-bottom: 16px;
+    font-weight: bold;
 }
