@@ -1,39 +1,41 @@
-
-  
-    body {
-        /* Gradiente + imagem de fundo */
-        background-image: linear-gradient( to top, rgb(0 0 255/.9) 50%, red 50%,transparent ), url(imagem/funto.JPG);
-        background-attachment: fixed, scroll;
-        background-blend-mode:color;
+body {
+    /* Gradiente + imagem de fundo */
+    background-image: linear-gradient(to top, rgb(0 0 255/.9) 50%, red 50%, transparent), url(imagem/funto.JPG);
+    background-attachment: fixed, scroll;
+    background-blend-mode: color;
 
 
 
-      /* Quando você coloca tipo rad e porcentagem você tá dizendo o quanto ela quer atingir */
-      /* Você colocou to had two top é a aonde vai começarno caso o gradiente   
+    /* Quando você coloca tipo rad e porcentagem você tá dizendo o quanto ela quer atingir */
+    /* Você colocou to had two top é a aonde vai começarno caso o gradiente   
       E também dá pra você mudarnão só as posições mais o grau*/
-      /*background-image: linear-gradient( 72deg,transparent 30%, red, blue), url(imagem/funto.JPG);  */
+    /*background-image: linear-gradient( 72deg,transparent 30%, red, blue), url(imagem/funto.JPG);  */
 
-      /*Outra maneira de fazer transparência usando valores hexa decimal  #00f7 ( Cor 7 que deixa transparenteao contrário disso IA ser azul)*/
-      /*  background-image: linear-gradient( to top, #00f7 50%,transparent ), url(imagem/funto.JPG); */
+    /*Outra maneira de fazer transparência usando valores hexa decimal  #00f7 ( Cor 7 que deixa transparenteao contrário disso IA ser azul)*/
+    /*  background-image: linear-gradient( to top, #00f7 50%,transparent ), url(imagem/funto.JPG); */
 
-      /* Outra maneira usandotransparência mas agora com rgba  */
-      /*  background-image: linear-gradient( to top, rgba(0,0,255,.5) 50%,transparent ), url(imagem/funto.JPG); */
-      /* 255 é  cor total plenutudade */
-      /* (255,      255,   255, trapacia ) 
+    /* Outra maneira usandotransparência mas agora com rgba  */
+    /*  background-image: linear-gradient( to top, rgba(0,0,255,.5) 50%,transparent ), url(imagem/funto.JPG); */
+    /* 255 é  cor total plenutudade */
+    /* (255,      255,   255, trapacia ) 
           Vemenho, Verde,  Azul             */
-        
+
     /*Outra maneira de fazer transparência é usando RGB  */
     /* A diferença é que você tem outro tipo de cintarsintática  rgb(0 0 255/.5) */
 
     /*   background-blend-mode: color; --> mesclando cores  com fundo*/
-  }
-    
+}
 
 
-.cores{
-    /*boa  idade  quando tem cor  padão quer  faz algum efeito sei mudar ela*/
-    --teste: rgb(41, 85, 22);
-    background-color: color-mix(in srgb, var(--teste), transparent);
+section {
+    /* criando um contador */
+    counter-reset: cotador;
+}
+
+.cores {
+    /* encremetando o coantador +1  */
+    counter-increment: cotador;
+    /* -------------------------------------- */
 
     width: 80%;
     /* mistura  cores função nova  CSS */
@@ -42,44 +44,60 @@
     padding: 20px;
 
 }
-.cores p{
-    margin: 0;
-}
-section{
-    /* criando um contador */
-    counter-reset: cotador;
-}
-.cores{
-    /* encremetando o coantador +1  */
-    counter-increment: cotador;
-}
-.cores::before{
+
+.cores::before {
     content: "[ " counter(cotador) " ]";
     display: inline-block;
     margin-bottom: 16px;
     font-weight: bold;
 }
-.cores:nth-of-type(2){
+
+.cores p {
+    margin: 0;
+
+}
+
+.cores:nth-of-type(1) {
+    /*boa  idade  quando tem cor  padão quer  faz algum efeito sei mudar ela*/
+    --teste: rgb(41, 85, 22);
+    background-color: color-mix(in srgb, var(--teste), transparent);
+
+
+}
+
+.cores:nth-of-type(2) {
     background-color: rgb(86, 67, 172);
-    background-clip: content-box; 
+    background-clip: content-box;
     /* cobre  somete o conteudo: content-box;   */
 }
 
-.cores:nth-of-type(2){
+.cores:nth-of-type(2) {
     background-color: rgb(86, 67, 172);
-    background-clip: content-box; 
+    background-clip: content-box;
     /* cobre  somete o conteudo: content-box;   */
 }
-.cores:nth-of-type(3){
-    background-color:hsl(90deg, 100%, 50%);
-    background-clip: content-box; 
+
+.cores:nth-of-type(3) {
+    background-color: hsl(90deg, 100%, 50%);
+    background-clip: content-box;
     /* hsl  tem  vasriação de cores */
     /* hsl(90deg, 100%, 50%) */
     /*  cor, satutação , luminação*/
-    box-shadow: 10px 10px 6px -7px hsl(90deg, 100%, 10%) inset; 
+    box-shadow: 10px 10px 6px -7px hsl(90deg, 100%, 10%) inset;
     /* sombrada lado de dentro (inset) */
 
 }
-.cores:nth-of-type(3):hover{
-    background-color:hsl(90deg, 100%, 40%);
+
+.cores:nth-of-type(3):hover {
+    background-color: hsl(90deg, 100%, 40%);
+}
+
+
+.cores:nth-of-type(4) {
+    background-image: linear-gradient(70deg, blue, transparent),
+        linear-gradient(to bottom, rgb(255, 0, 119), transparent);
+    /* Quando esta trabalhando com gradiente tem usar=    background-image:   */
+
+    background-clip: content-box, padding-box;
+
 }
