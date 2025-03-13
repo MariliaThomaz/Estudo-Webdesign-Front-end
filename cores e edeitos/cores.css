@@ -101,3 +101,88 @@ section {
     background-clip: content-box, padding-box;
 
 }
+
+.cores:nth-of-type(5) {
+    background-image: radial-gradient(blue, red 10%, transparent);
+
+
+}
+
+.cores:nth-of-type(6) {
+    background-image: radial-gradient(circle, blue, #f008 10%, green);
+
+
+}
+
+.cores:nth-of-type(7) {
+    background-image: radial-gradient(circle at right, blue, green);
+
+
+}
+
+.cores:nth-of-type(8) {
+    background-image: radial-gradient(circle at 70% 30%, blue, green 10%);
+    /* movimeta  oa gradiente peloa cordenadas  por excho X e Y */
+
+
+}
+
+.cores:nth-of-type(9) {
+    background-image: radial-gradient(closest-corner at 70px 30px, yellow, magenta 10%);
+    /* movimeta  oa gradiente peloa cordenadas  por excho X e Y */
+    /* canto mais perto = closest-corner */
+
+}
+
+.cores:nth-of-type(10) {
+    background-image: radial-gradient(farthest-corner at 70px 30px, yellow, magenta 10%);
+    /* movimeta  oa gradiente peloa cordenadas  por excho X e Y */
+    /* tentativa de o gradiente  ir  ponto a  ponto =farthest-corner */
+
+}
+
+.cores:nth-of-type(11) {
+    background-image: radial-gradient(closest-side at 70px 30px, yellow, magenta 10%);
+    /* movimeta  oa gradiente peloa cordenadas  por excho X e Y */
+    /* tentativa de o gradiente  ir  lado mais peto =closest-side */
+
+}
+
+.cores:nth-of-type(12) {
+    background-image: radial-gradient(farthest-side at 70px 30px, yellow, magenta 10%);
+    /* movimeta  oa gradiente peloa cordenadas  por excho X e Y */
+    /* tentativa de o gradiente  ir  lado mais loge =farthest-side */
+
+}
+
+.cores:nth-of-type(13) {
+    background-image:
+        radial-gradient(farthest-side at 50px 20px, rgba(255, 255, 0, 0.504), rgba(255, 0, 255, 0.642)),
+        radial-gradient(circle farthest-corner at top right, rgba(0, 128, 0, 0.749), blue);
+
+    /* Movimenta o gradiente pelas coordenadas X e Y */
+    /* Tentativa de fazer o gradiente ir para o lado mais longe = farthest-side */
+}
+
+.cores:nth-of-type(14) {
+    background-image:
+        conic-gradient(from 45deg, orange, red, black);
+}
+
+.cores:nth-of-type(15) {
+    background-image:
+        conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+    /*filter: blur(10px); desfocar */
+    /*filter: grayscale(100%);  tom de cinzas */
+    /*filter: brightness(100%);brilo*/
+    /* filter: brightness(50%);  escurecer*/
+    /*filter: invert(100%); iveter cores do circulo cromatico*/
+    transition: filter 1s linear;
+    aspect-ratio: 1; /*amenatdo tela cofome ela tem espaço*/
+
+  
+
+}
+.cores:nth-of-type(15):hover{
+    filter: hue-rotate(360deg); /* muando a rotação circulo cromatico */
+}
