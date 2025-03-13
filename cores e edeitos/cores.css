@@ -1,0 +1,27 @@
+
+body {
+    
+    background-image: url(imagem/funto.JPG);
+}
+
+.cores{
+    width: 80%;
+    border: 8px dashed black;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+.cores p{
+    margin: 0;
+}
+section{
+    /* criando um contador */
+    counter-reset: cotador;
+}
+.cores{
+    /* encremetando o coantador +1  */
+    counter-increment: cotador;
+}
+.cores::before{
+    content: "[ " counter(cotador) " ]";
+}
