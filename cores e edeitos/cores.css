@@ -59,3 +59,27 @@ section{
     margin-bottom: 16px;
     font-weight: bold;
 }
+.cores:nth-of-type(2){
+    background-color: rgb(86, 67, 172);
+    background-clip: content-box; 
+    /* cobre  somete o conteudo: content-box;   */
+}
+
+.cores:nth-of-type(2){
+    background-color: rgb(86, 67, 172);
+    background-clip: content-box; 
+    /* cobre  somete o conteudo: content-box;   */
+}
+.cores:nth-of-type(3){
+    background-color:hsl(90deg, 100%, 50%);
+    background-clip: content-box; 
+    /* hsl  tem  vasriação de cores */
+    /* hsl(90deg, 100%, 50%) */
+    /*  cor, satutação , luminação*/
+    box-shadow: 10px 10px 6px -7px hsl(90deg, 100%, 10%) inset; 
+    /* sombrada lado de dentro (inset) */
+
+}
+.cores:nth-of-type(3):hover{
+    background-color:hsl(90deg, 100%, 40%);
+}
