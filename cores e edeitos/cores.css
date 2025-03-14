@@ -186,3 +186,52 @@ section {
 .cores:nth-of-type(15):hover{
     filter: hue-rotate(360deg); /* muando a rotação circulo cromatico */
 }
+
+.cores:nth-of-type(16){
+   background-image: repeating-linear-gradient(to right,white 0px,  white 5px, black 5px,black 10px);
+   /*repete corese */
+}
+.cores:nth-of-type(17){
+    background-image: 
+    repeating-radial-gradient(white 0px,  white 10px, black 10px,black 20px);
+    
+ }
+ .cores:nth-of-type(18){
+    background-image: 
+    repeating-conic-gradient(white 0deg,  white 10deg, black 10deg,black 20deg);
+    
+ }
+ /* ************************************ */
+ .cores:nth-of-type(19) {
+    background-image:
+        repeating-conic-gradient(transparent 0deg, transparent 10deg, black 10deg, black 20deg),
+        repeating-radial-gradient(red 0%, transparent, blue 20%);
+    background-attachment: fixed, scroll;
+
+}
+
+.cores:nth-of-type(20) {
+    background-image:
+        repeating-radial-gradient(red 0%, transparent, blue 20%),
+        repeating-linear-gradient(red, blue);
+    background-attachment: scroll, fixed;
+
+}
+
+.cores:nth-of-type(21) {
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, .8);
+}
+
+.cores:nth-of-type(22 ) {
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .8));
+}
+
+.cores:nth-of-type(23) {
+    background-image: linear-gradient(to top right, transparent 50%, red 50%);
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, .8);
+}
+
+.cores:nth-of-type(24) {
+    background-image: linear-gradient(to top right, transparent 50%, red 50%);
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .8));
+}
