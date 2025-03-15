@@ -1,24 +1,30 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(147, 91, 46);
+    margin-bottom: 50vh;
 }
 h1{
     font-size: 48px;
     font-weight: lighter;
+    text-align: center;
 }
 
 
 .card{
-    width: 350px;
+    /* width: 320px; */
+    /* flex-basis: calc(33% - 25px); */
+    flex-basis: clamp(300px, calc(33% - 25px), 400px);
+    flex-grow: 1;
     background-image: linear-gradient(135deg, transparent 25px, white 25px);
     filter: drop-shadow(0 0 5px black);
     padding: 40px 30px 30px 50px;
     box-sizing: border-box;
-    margin-bottom: 20px;
+   
+   
 
 }
 .card_dois{
-    width: 350px;
+    /* width: 350px; */
     background-image:
         linear-gradient(135deg, transparent 25px, rgb(153, 153, 153) 25px),
         linear-gradient(135deg, transparent 25px, white 25px);
@@ -30,12 +36,11 @@ h1{
 
 }
 .card_tres{
-    width: 350px;
+    /* width: 350px; */
     background-image: linear-gradient(135deg, transparent 25px, white 25px);
     filter: drop-shadow(0 0 5px black);
     padding: 40px 30px 30px 50px;
     box-sizing: border-box;
-    margin-bottom: 20px;
     position: relative;
 
 }
@@ -53,4 +58,12 @@ h1{
 .card_title{
     margin: 0;
     font-weight: lighter;
+}
+.cards-container{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    /* outline: 2px solid black; */
 }
