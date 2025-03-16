@@ -1,0 +1,69 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(147, 91, 46);
+    margin-bottom: 50vh;
+}
+h1{
+    font-size: 48px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.card {
+    width: 320px;
+    background-color: white;
+    flex-basis: clamp(300px, calc(33% - 25px), 400px);
+    flex-grow: 1;
+
+    padding: 40px 30px 30px 50px;
+    box-sizing: border-box;
+
+    margin-bottom: 3px;
+    margin-top: 3px;
+
+    position: relative; /* Necessário para o ::before */
+   
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0px;  /* Afasta do topo para ficar dentro do card */
+    left: 0px; /* Afasta da esquerda para ficar dentro do card */
+
+    width: 0;
+    height: 0;
+
+    border-top: 10px solid rgb(147, 91, 46);
+    border-right: 10px solid  rgb(142, 148, 138);;
+    border-left: 10px solid rgb(147, 91, 46);
+    border-bottom: 10px solid rgb(142, 148, 138);
+
+    z-index: 10; /* Mantém visível dentro do card */
+
+}
+
+.card_title{
+    margin: 0;
+    font-weight: lighter;
+}
+.exemplo{
+    width:0;
+    height: 0;
+    
+    border-top: 10px solid transparent;
+    border-right: 10px solid rgb(191, 24, 113);
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid rgb(65, 158, 15);
+
+}
+.clippath>div{
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    background-image: repeating-linear-gradient(45deg, yellow 10%, orange 20%);
+}
+.d1 {
+    clip-path: polygon(0% 0%, 100% 30%, 0% 100%);
+    /*                 x   y |  x   y | x   y   */
+}
