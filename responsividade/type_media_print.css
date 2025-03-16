@@ -1,0 +1,15 @@
+/* @media print { 
+    body .only-prin{
+        color: black;
+        font-family: serif;
+    }
+ } */
+.only-print{
+    color: rgb(118, 31, 31);
+    font-family: serif;
+}
+a::after{
+    content: "(" attr(href) ")";
+    display: inline-block ;
+    margin-left: .5em;
+}
