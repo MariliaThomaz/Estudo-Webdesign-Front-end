@@ -67,3 +67,21 @@ h1{
     clip-path: polygon(0% 0%, 100% 30%, 0% 100%);
     /*                 x   y |  x   y | x   y   */
 }
+.d2{
+    clip-path: circle(100px at center);
+    /* 100px é o ario do circulo  */
+}
+.d3{
+    clip-path: ellipse(50% 25% at center);
+   
+}
+.d4{
+    clip-path: inset(20px 30px);
+    /* recote para dentro do elemento */
+   
+}
+.d5{
+    clip-path: inset(20px round 10px);
+    /* recote para dentro do elemento  canto aredondados*/
+   
+}
