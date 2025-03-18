@@ -52,6 +52,7 @@ main {
 .card_wrapper {
     /* container-name: cardWrapper; */
     container: cardWrapper / inline-size;
+    /* Deteminado o contener */
 }
 
 main {
