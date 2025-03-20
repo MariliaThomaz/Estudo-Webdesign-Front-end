@@ -17,6 +17,7 @@ html{
 .top_header_nav ul{
     list-style-type: none;
     padding: 0;
+    margin-bottom: 0;
 }
 .top_header_nav a{
     color: white;
@@ -50,4 +51,18 @@ html{
         background-color: color-mix(in srgb, var(--primary-color), white 85%)
     
     }
+}
+.heroBanner{
+text-align: center;
+background-color: #f6f6f6;
+padding: 1em;
+}
+
+.heroBanner_iconPlay{
+    height: 5em;
+    width: 5em;
+    display: none;
+}
+.heroBanner_iconPlay img{
+    width: 100%;
 }
