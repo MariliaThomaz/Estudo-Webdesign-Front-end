@@ -6,6 +6,7 @@ html{
 }
 .maxWidth{
     max-width: 70.25em;
+    margin: auto;
 }
 .top_header{
     text-align: center;
