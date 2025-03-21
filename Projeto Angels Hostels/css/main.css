@@ -172,3 +172,28 @@ h4 {
     }
 
 }
+.middleContent{
+    background-color:#f6f6f6 ;
+    text-align: center;
+}
+.middleContent a{
+    color: inherit;
+    text-decoration:  none;
+}
+.middleContent_title{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 1.25em;
+
+}
+.middleContent span[class^="icon-"]{
+    color: var(--primary-color);
+    font-size: 3.5em;
+}
+.middleContent p{
+    line-height: 1.5;
+}
+/* min-width: 0        -> col-sm
+   min-width: 48.75em  -> col-md
+   min-width: 56.25em  -> col-lg
+   min-width: 74em     -> col-xl*/
