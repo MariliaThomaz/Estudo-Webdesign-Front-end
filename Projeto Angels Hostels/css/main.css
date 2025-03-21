@@ -111,51 +111,64 @@ h4 {
     color: white;
     border-radius: 5px;
 }
+/* md */
 @media screen and (min-width: 48.75em) {
-    .heroBanner{
+    .heroBanner {
         background-color: var(--primary-color);
         color: white;
     }
-    .heroBanner_title .heroBanner_subtitle{
+
+    .heroBanner_title .heroBanner_subtitle {
         color: white;
     }
-    .heroBanner_iconPlay{
+
+    .heroBanner_iconPlay {
         display: block;
         margin: auto;
     }
 }
-@media screen and (min-width: 46.25em) {
-    .heroBanner{
+/* lg */
+@media screen and (min-width: 56.25em) {
+    .heroBanner {
         background-image: url(../images/bg_topo_1198x670.jpg);
         /* ir  almentar comfome  o tamanho de  imaguem */
         /* aspect-ratio: 1198/670; */
-        display:  flex;
+        display: flex;
         justify-content: center;
         align-items: flex-end;
     }
-    .heroBanner .maxWidth{
+
+    .heroBanner .maxWidth {
         margin: initial;
         margin-bottom: 4em;
         width: 75%;
     }
 
 }
+/* xl */
 @media screen and (min-width: 74em) {
-    .heroBanner{
-        background-image: url(../images/bg_topo_1600x1374.jpg);
-      background-position: center top;
-      background-color: var(--primary-color);
-      background-repeat: no-repeat;
+    .heroBanner {
+        background-image: linear-gradient(transparent, var(--primary-color)), url(../images/bg_topo_1600x1374.jpg);
 
-      max-height: 80vh;
-      width: 100;
+        background-blend-mode: soft-light;
+        background-position: center top;
+        background-color: var(--primary-color);
+        background-repeat: no-repeat;
+
+        max-height: 80vh;
+        width: 100;
     }
-    .heroBanner .maxWidth{
+
+    .heroBanner .maxWidth {
         width: 50%;
     }
-    .heroBanner_iconPlay{
+
+    .heroBanner_iconPlay {
         width: 7em;
         height: 7em;
     }
-  
+    .heroBanner_title, .heroBanner_subtitle{
+        text-shadow: 4px 4px 2 px rgb(0 0 0/.8);
+    }
+
 }
