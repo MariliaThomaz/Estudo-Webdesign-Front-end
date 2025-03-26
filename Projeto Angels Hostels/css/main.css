@@ -230,3 +230,42 @@ h4 {
         width: calc(50% - var(--default-gap));
     }
 }
+.mainContet{
+    padding: 2em;
+}
+.mainContet p{
+    line-height: 1.2;
+}
+.mainContet_img img{
+    width: 100%;
+}
+.mainContet_title{
+ text-transform: uppercase;
+ color: var(--primary-color);
+ font-weight: normal;
+ font-size: 1.25 em;
+ letter-spacing: .2em;
+}
+.mainContet .row{
+    row-gap: 4em;
+}
+
+.mainContent_articl{
+    container: main-content / inline-size;
+}
+@media screen and (min-width: 500px) {
+    .mainContet_container{
+        display: flex;
+        gap: var(--default-gap);
+    }
+    .mainContet_title{
+        margin-top: 0;
+    }
+  
+} 
+.footer{
+    background: #25303e;
+    color: #83969f;
+    text-align: center;
+    padding: 2em;
+}
