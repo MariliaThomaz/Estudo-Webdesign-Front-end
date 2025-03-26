@@ -79,6 +79,8 @@ h4 {
     text-align: center;
     background-color: #f6f6f6;
     padding: 1em;
+    /* margin-bottom: 3em; */
+   
 }
 
 .heroBanner_iconPlay {
@@ -175,6 +177,7 @@ h4 {
 .middleContent{
     background-color:#f6f6f6 ;
     text-align: center;
+    margin-top: 2em;
 }
 .middleContent a{
     color: inherit;
@@ -197,3 +200,33 @@ h4 {
    min-width: 48.75em  -> col-md
    min-width: 56.25em  -> col-lg
    min-width: 74em     -> col-xl*/
+   .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--default-gap);
+}
+
+.col {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.col-sm-12 {
+    width: 100%;
+}
+
+@media screen and (min-width: 48.75em) {
+    .col-md-6 {
+        width: calc(50% - var(--default-gap));
+    }
+}
+
+@media screen and (min-width: 74em) {
+    .col-xl-3 {
+        width: calc(25% - var(--default-gap));
+    }
+
+    .col-xl-6 {
+        width: calc(50% - var(--default-gap));
+    }
+}
