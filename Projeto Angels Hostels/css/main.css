@@ -261,6 +261,15 @@ h4 {
     .mainContet_title{
         margin-top: 0;
     }
+    .mainContet_img img{
+        width: 20.22em;
+    }
+    .mainContet_img{
+        flex: 0 0 25% ;
+    }
+    .mainContet_text{
+        flex-grow: 1;
+    }
   
 } 
 .footer{
