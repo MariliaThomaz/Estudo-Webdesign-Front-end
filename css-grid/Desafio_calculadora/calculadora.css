@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;   /* centraliza horizontalmente */
+    align-items: center;       /* centraliza verticalmente */
+    height: 100vh;             /* ocupa 100% da altura da tela */
+    background: #f0f0f0; 
+}
+
+  /*GRID*/
+.gridContainer {
+    
+    display: grid;
+    width: 300px;
+    height: 400px;
+    background:  #756e6e;
+    gap: 10px;
+    grid-template-areas:
+    "v   v   v    v" 
+    "ac  po   x    d" 
+    "n7  n8   n9   i"
+    "n4  n5   n6   s" 
+    "n1  n2   n3   m" 
+    "n0  n0  vir   m" ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 60px);
+  
+
+}
+.gridContainer_art {
+
+    padding: 20px;
+    background-color:  #756e6e;
+    display: inline-block;   
+    border-bottom: 8px solid #756e6e;
+
+
+}
+
+.gridItem {
+    background-color: black;
+    padding: 15px;
+    font-family: sans-serif;
+    color: white;
+
+}
+.ItemVisor{ 
+    grid-area: v; 
+    text-align: right;
+}
+.ItemAc           { grid-area: ac; }
+.ItemPorsetagem   { grid-area: po; }
+.ItemMultiplicacao { grid-area: x; }
+.ItemDividir      { grid-area: d; }
+.Item7            { grid-area: n7; }
+.Item8            { grid-area: n8; }
+.Item9            { grid-area: n9; }
+.ItemIgual        { grid-area: i; }
+.Item4            { grid-area: n4; }
+.Item5            { grid-area: n5; }
+.Item6            { grid-area: n6; }
+.ItemSubitracao   { grid-area: s; }
+.Item1            { grid-area: n1; }
+.Item2            { grid-area: n2; }
+.Item3            { grid-area: n3; }
+.ItemMais{
+    grid-area: m; 
+    text-align: center;       
+    display: flex;            
+    justify-content: center; 
+    align-items: center; 
+}
+.Item0{ 
+    grid-area: n0; 
+    text-align: center; }
+.ItemVigula{ 
+    grid-area: vir; 
+    text-align: center;
+ }
