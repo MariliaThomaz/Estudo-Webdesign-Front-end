@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* nav 200px, main pega o resto */
+    grid-template-rows: 100px 1fr;    /* header 100px, o resto embaixo */
+    grid-template-areas: 
+        "nav header"
+        "nav main";
+    height: 100vh;
+    width: 100vw;
+    gap: 1em;
+    background: #ccc;
+}
+
+.gridItem {
+    background-color: orange;
+    padding: 15px;
+    font-family: sans-serif;
+}
+
+/* Áreas nomeadas */
+.header {
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.main {
+    grid-area: main;
+}
