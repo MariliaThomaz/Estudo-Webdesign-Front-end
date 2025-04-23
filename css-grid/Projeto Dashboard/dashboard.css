@@ -1,23 +1,33 @@
+html,
 body {
     margin: 0;
-    height: 100vh;
+    height: 100%;
+    background-color: #9a9898;
+    /* mesma cor da gridContainer */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
 }
+
 
 .gridContainer {
     display: grid;
-    grid-template-columns: 200px 1fr; /* nav 200px, main pega o resto */
-    grid-template-rows: 100px 1fr;    /* header 100px, o resto embaixo */
-    grid-template-areas: 
+    grid-template-columns: 200px 1fr;
+    /* nav 200px, main pega o resto */
+    grid-template-rows: 100px 1fr;
+    /* header 100px, o resto embaixo */
+    grid-template-areas:
+
         "nav header"
         "nav main";
     height: 100vh;
     width: 100vw;
     gap: 1em;
-    background: #ccc;
+    background: #9a9898;
 }
 
 .gridItem {
-    background-color: orange;
+    background-color: rgb(237, 236, 236);
     padding: 15px;
     font-family: sans-serif;
 }
@@ -29,8 +39,131 @@ body {
 
 .nav {
     grid-area: nav;
+
+}
+
+.logo {
+    text-transform: uppercase;
+  
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+
+}
+
+nav a {
+    text-decoration: none;
+    /* tira o sublinhado */
+    color: black;
+    /* muda a cor azul padrão dos links */
+}
+
+nav li {
+    margin-bottom: 15px;
+    /* espaço entre os itens */
 }
 
 .main {
     grid-area: main;
+}
+
+.gridContainer_article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+        "dados dados"
+        "img1 img1"
+        "img2 img3";
+
+}
+
+.dados {
+    grid-area: dados;
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.img3 {
+    grid-area: img3;
+}
+
+.gridItem_img {
+    background-color: #9a9898;
+    padding: 15px;
+    text-align: center;
+    /* centraliza o conteúdo dentro da grid */
+}
+
+.gridItem_img img {
+    max-width: 100%;
+    /* faz com que as imagens ocupem todo o espaço da grid */
+    height: auto;
+    /* mantém a proporção das imagens */
+    border-radius: 8px;
+    /* borda arredondada para as imagens */
+}
+
+.dados {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.dados .dados_item1 {
+    flex-grow: 1;
+}
+
+.dados .dados_item2 {
+    flex-grow: 1;
+}
+
+.dados .dados_item3 {
+    flex-grow: 1;
+}
+
+.dados .dados_item4 {
+    justify-content: flex-end;
+    flex-grow: 9;
+}
+
+.gridItem_heder{
+    display: flex;
+}
+.botao_header {
+    display: flex;           /* Define o container como flexível */
+    list-style: none;
+    flex-grow: 1;        /* Remove os marcadores da lista */
+  
+}
+
+.botao_header li {
+    margin-right: 20px;      /* Espaçamento entre os itens da lista */
+}
+
+.botao_header a {
+    text-decoration: none;   /* Remove o sublinhado do link */
+    color: black;    
+    
+}
+
+.apretacao{
+    flex-grow: -1;
+    margin-right: 20px;
 }
