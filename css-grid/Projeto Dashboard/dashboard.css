@@ -8,7 +8,14 @@ body {
 
 
 }
-
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
 
 .gridContainer {
     display: grid;
@@ -23,10 +30,11 @@ body {
     height: 100vh;
     width: 100vw;
     gap: 1em;
-    background: #9a9898;
+    
 }
 
 .gridItem {
+
     background-color: rgb(237, 236, 236);
     padding: 15px;
     font-family: sans-serif;
@@ -35,6 +43,7 @@ body {
 /* Áreas nomeadas */
 .header {
     grid-area: header;
+    background-color: rgb(237, 236, 236);
 }
 
 .nav {
@@ -44,22 +53,24 @@ body {
 
 .logo {
     text-transform: uppercase;
+    flex-grow: 1;
   
 }
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-around;
+.icon{
+    justify-content: flex-start;
     align-items: flex-start;
-
-
+    margin-right: 5px;
 }
-
+.nav_Item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ou center, se quiser tudo centralizado */
+    flex-grow: 1;
+  }
+  
+.nav_Item li{
+    list-style: none;
+}
 nav a {
     text-decoration: none;
     /* tira o sublinhado */
@@ -71,7 +82,17 @@ nav li {
     margin-bottom: 15px;
     /* espaço entre os itens */
 }
-
+.logar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    margin-top: auto;
+    cursor: pointer;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+    flex-grow: -1;
+}
 .main {
     grid-area: main;
 }
@@ -104,6 +125,7 @@ nav li {
 }
 
 .gridItem_img {
+    /*  */
     background-color: #9a9898;
     padding: 15px;
     text-align: center;
@@ -123,7 +145,10 @@ nav li {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: white;
+    background-color: rgb(237, 236, 236);
+}
+.dados b{
+    color: rgb(16, 79, 172);
 }
 
 .dados .dados_item1 {
@@ -141,6 +166,17 @@ nav li {
 .dados .dados_item4 {
     justify-content: flex-end;
     flex-grow: 9;
+    
+}
+.btn_dados{
+    all: unset; /* remove toda a estilização padrão do navegador */
+    background-color: rgb(16, 79, 172);
+    color: white;
+    padding: 1em 1em;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
 }
 
 .gridItem_heder{
@@ -151,6 +187,9 @@ nav li {
     list-style: none;
     flex-grow: 1;        /* Remove os marcadores da lista */
   
+}
+.botao_header a{
+    font-size: 20px;
 }
 
 .botao_header li {
@@ -166,4 +205,16 @@ nav li {
 .apretacao{
     flex-grow: -1;
     margin-right: 20px;
+}
+
+.apretacao h3 {
+    margin: 0;
+    padding-top: 1em;
+}
+.apretacao p {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    text-align: center;
+
 }

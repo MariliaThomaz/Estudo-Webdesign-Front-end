@@ -5,16 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+     
+
+    <link rel="stylesheet" href="assets/style.css">
+
     <link rel="stylesheet" href="dashboard.css">
+  
 </head> <!-- ← aqui fecha corretamente o head -->
 
 <body>
     <div class="gridContainer">
         <header class="header gridItem_heder">
-         
+
             <ul class="botao_header">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Setting</a></li>
+                <li>
+                    <span class="icon-user"></span>
+                    <a href="#">Profile</a>
+                </li>
+                <li>
+                    <span class="icon-cog"></span>
+                    <a href="#">Setting</a>
+                </li>
             </ul>
             <div class="apretacao">
                 <h3>Marilia Thomaz</h3>
@@ -23,28 +34,49 @@
         </header>
         <nav class="nav gridItem">
             <h1 class="logo">dashoard</h1>
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Announced</a></li>
-                <li><a href="#">Preparation</a></li>
-                <li><a href="#">Soted</a></li>
-                <li><a href="#">Distributed</a></li>
-            </ul>
+            <div class="nav_Item">
+                <ul>
+                    
+                    <li> 
+                    <span class="icon-home3"></span>
+                      
+                    <a href="#">Dashboard</a></li>
+                    <li> 
+                        <span class="icon icon-folder-download"></span>
+                        <a href="#">Announced</a>
+                    </li>
+                    <li> <span class="icon icon-pencil"></span>
+                        <a href="#">Preparation</a>
+                    </li>
+                    <li> <span class="icon icon-list-numbered"></span>
+                        <a href="#">Soted</a>
+                    </li>
+                    <li> <span class="icon icon-compass"></span>
+                        <a href="#">Distributed</a>
+                    </li>
+                </ul>
+                
+                <div class="logar">
+                    <span class="icon-exit"></span>
+                    <p>Logar</p>
+                </div>
+            </div>
         </nav>
         <main class="main gridItem">
             <article class="gridContainer_article">
                 <section class="section gridItem_img dados">
                     <div class="dados dados_item1">
-                        <p>Announced Today |</p> <b> 23520</b>
+                        <p>Announced Today</p><samp>|</samp><b> 23520</b>
                     </div>
                     <div class="dados dados_item2">
-                        <p>Prepared Today | </p> <b> 15004</b>
+                        <p>Prepared Today</p><samp>|</samp> <b> 15004</b>
                     </div>
                     <div class="dados dados_item3">
-                        <p>Sorted Today | </p> <b> 250</b>
+                        <p>Sorted Today</p><samp>|</samp> <b> 250</b>
                     </div>
                     <div class="dados dados_item4">
-                        <button>See more</button> <!-- Corrigi de "Serr" para "See" -->
+
+                        <button class="btn_dados">See more</button> <!-- Corrigi de "Serr" para "See" -->
                     </div>
                 </section>
                 <section class="section gridItem_img img1">
