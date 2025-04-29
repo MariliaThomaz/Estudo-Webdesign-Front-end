@@ -1,44 +1,51 @@
 :root {
     --primary-color: #004EDA;
-    --grey: #f2f2f8;
+    --grey: #F2F2F8;
     --default-padding: 2rem;
+    --middle-padding: calc(var(--default-padding) / 2);
     --black: #111;
-    --color-text: #5a5a5f;
+    --color-text: #5A5A5F;
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 0;
+    font-family: 'Poppins', sans-serif;
     color: var(--color-text);
-
     display: grid;
-    grid-template-columns: 240px 1fr;
-    grid-template-rows: 64px auto;
+    grid-template-columns: max-content 1fr;
+    /* grid-template-rows: 64px auto; */
+    grid-template-rows: 4rem minmax(calc(100vh - 4rem), auto);
+    margin: 0;
+}
 
+img {
+    max-width: 100%;
 }
 
 .mainNav {
-    background-color: white;
     grid-row: 1 / -1;
     grid-column: 1 / 2;
+    background-color: white;
     display: flex;
     flex-direction: column;
+    max-height: 100vh;
+    position: sticky;
+    top: 0;
+    /* padding-right: var(--default-padding); */
 }
 
 .topnav {
-    background-color: #b9b7b7;
     grid-row: 1 / 2;
     grid-column: 2 / -1;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 main {
-    background-color: var(--grey);
     grid-row: 2 / -1;
     grid-column: 2 / -1;
+    background-color: var(--grey);
 
     display: grid;
     gap: var(--default-padding);
@@ -47,13 +54,16 @@ main {
 
     padding: var(--default-padding);
 }
-main>*{
+
+main>* {
     grid-column: span 2;
 }
-main> .grid-half{
+
+main>.grid-half {
     grid-column: span 1;
 }
-main>figure{
+
+main>figure {
     margin: 0;
 }
 
@@ -65,35 +75,35 @@ main>figure{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.5rem;
-
+    padding-right: var(--default-padding);
 }
 
 .mainNav_menu,
-.topnav_meu {
+.topnav_menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     padding-left: var(--default-padding);
-
 }
 
-.topnav_meu {
-    display: flex;
-    gap: var(--default-padding);
-    align-items: center;
-
-
+.mainNav_menu {
+    padding-right: var(--default-padding);
 }
 
 .mainNav_menu a,
-.topnav_meu a {
+.topnav_menu a {
     text-decoration: none;
-    color: #5a5a5f;
-
+    color: #5A5A5F;
 }
-.mainNav_menu sgv,
-.topnav_meu svg {
+
+.mainNav_menu svg,
+.topnav_menu svg {
     vertical-align: bottom;
+}
+
+.topnav_menu {
+    display: flex;
+    gap: var(--default-padding);
 }
 
 .mainNav_menus {
@@ -102,6 +112,19 @@ main>figure{
     justify-content: space-between;
     flex-grow: 1;
     padding-top: var(--default-padding);
+}
+
+.mainNav_menu li {
+    margin-top: 1rem;
+}
+
+.mainNav_menu:last-child {
+    padding-bottom: var(--default-padding);
+}
+
+.mainNav_menu:not(:last-child) {
+    border-bottom: 2px solid var(--grey);
+    padding-bottom: var(--default-padding);
 }
 
 .perfil {
@@ -113,31 +136,65 @@ main>figure{
 
 .perfil_thumb {
     height: 100%;
-    margin-right:calc(var(--default-padding)/2);
     padding-top: .5rem;
     padding-bottom: .5rem;
+    margin-right: var(--middle-padding);
     box-sizing: border-box;
-
 }
 
 .perfil_thumb img {
     height: 100%;
-   
 }
 
 .perfil_name {
     font-size: .8rem;
     font-weight: 600;
     color: var(--black);
-
 }
 
 .perfil_rule {
     font-size: .7rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: color-mix(in srgb, var(--grey, transparent 60%));
+    color: color-mix(in srgb, var(--black), transparent 60%);
 }
-.summary{
+
+.summary {
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--middle-padding) var(--default-padding);
+    border-radius: 4px;
+}
+
+.summary article {
+    padding: var(--middle-padding) 0;
+}
+
+.summary_number {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-left: var(--middle-padding);
+}
+
+.summary_separated {
+    width: 2px;
+    background-color: var(--grey);
+    align-self: stretch;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: calc(var(--middle-padding) / 2) var(--default-padding);
+}
+
+.summary_btn {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
 }
