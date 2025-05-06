@@ -15,14 +15,20 @@ body {
 }
 
 .content-wrapper-center {
-    padding: 1rem;
-}
+    padding: 3rem 1rem 2rem;
+    max-width: 67.25rem;
+    margin: auto;
 
+}
+.hero_title{
+    margin-top: 0;
+
+}
 .header-menu {
     list-style-type: none;
     padding: 0;
     text-align: right;
-    /* tudo: funcionar com hambuguer menu */
+    
     display: none;
 }
 
@@ -97,8 +103,11 @@ img {
     height: 1px;
     width: 1px;
     overflow: hidden;
+    display: none;
 }
-
+.menu-btn:checked ~ .header-menu {
+    display: block;
+}
 .testemunho {
     background-color: var(--gray);
     border-radius: 5px;
@@ -152,43 +161,76 @@ img {
 .row{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 3rem;
+    gap: .5rem;
+    grid-auto-flow: dense;
+}
+.row .testemunhos_wrapper{
+    /* distancia  de uma linha  e  outra */
+    row-gap: 3rem;
+}
+.row .contato{
+    padding-top: 4rem;
+    padding-bottom:4rem;
+
+}
+.contato_title{
+    margin-top: 0;
 }
 /* celetor de  filho direto */
-/* classe ms-mobole */
+/* classe sm-mobole */
 /* clase lg- desktop */
-.row > .sm-12{
+.row >.sm-12{
  grid-column: 1 / 13;
 }
 @media screen and (min-width: 46.25em) {
-    .row > .md-3{
+
+    .header-menu{
+        display: block;
+    }
+
+
+    .row{
+        gap: 1rem;
+    }
+    .row>.md-3{
         grid-column: span 3;
     }
-    .row > .md-4{
+    .row>.md-4{
         grid-column: span 4;
     }
-    .row > .md-9{
+    .row>.md-6{
+        grid-column: span 6;
+    }
+    .row>.md-9{
         grid-column: span 9;
     }
-    
+    .row> .md-1-6{
+        grid-column:1/7;
+
+    }
+    .row> .md-7-12{
+        grid-column:7/13;
+
+    }
 }
-.testemunho {
-    border: 1px solid red;
-}
+
 @media screen and (min-width: 90em) {
-    .row >.lg-3 {
+    .row{
+        gap: 3rem;
+    }
+    .row>.lg-3 {
         grid-column: span 3;
     }
 
-    .row >.lg-4 {
+    .row>.lg-4 {
         grid-column: span 4;
     }
 
-    .row >.lg-5 {
+    .row>.lg-5 {
         grid-column: span 5;
     }
 
-    .row >.lg-6 {
+    .row>.lg-6 {
         grid-column: span 6;
     }
 
