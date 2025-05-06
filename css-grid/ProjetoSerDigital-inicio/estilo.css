@@ -11,6 +11,11 @@ body {
     color: var(--dark);
     text-align: center;
     margin: 0;
+
+    background-image:
+     radial-gradient(circle at left top, rgb(142 173 213 /.3), transparent 800px),
+     radial-gradient(circle at right center, rgb(142 173 213 /.3), transparent 800px)
+    ;
 }
 
 .content-wrapper-center {
