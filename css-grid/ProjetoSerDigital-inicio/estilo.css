@@ -1,4 +1,3 @@
-
 :root {
     --dark: #272D38;
     --light: #FFF;
@@ -20,15 +19,20 @@ body {
     margin: auto;
 
 }
-.hero_title{
+.imagem{
+    text-align: center;
+}
+
+.hero_title {
     margin-top: 0;
 
 }
+
 .header-menu {
     list-style-type: none;
     padding: 0;
     text-align: right;
-    
+
     display: none;
 }
 
@@ -105,15 +109,23 @@ img {
     overflow: hidden;
     display: none;
 }
-.menu-btn:checked ~ .header-menu {
+
+.menu-btn:checked~.header-menu {
     display: block;
 }
+
 .testemunho {
     background-color: var(--gray);
     border-radius: 5px;
     padding: 1rem;
+
+    container: testemunhoCard / inline-size;
 }
 
+.testemunho_thumb {
+    width: 8.125rem;
+    height: 8.125rem;
+}
 .contato {
     background-color: var(--gray);
     border-radius: 5px;
@@ -127,7 +139,7 @@ img {
 
 .footer {
     background-color: var(--gray);
-    padding: 3rem 0;
+   
 }
 
 .footer ul {
@@ -158,66 +170,104 @@ img {
     margin-top: 6rem;
     margin-bottom: 6rem;
 }
-.row{
+
+.row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: .5rem;
     grid-auto-flow: dense;
 }
-.row .testemunhos_wrapper{
+
+.row .testemunhos_wrapper {
     /* distancia  de uma linha  e  outra */
     row-gap: 3rem;
 }
-.row .contato{
+
+.row .contato {
     padding-top: 4rem;
-    padding-bottom:4rem;
+    padding-bottom: 4rem;
 
 }
-.contato_title{
+
+.contato_title {
     margin-top: 0;
 }
+
 /* celetor de  filho direto */
 /* classe sm-mobole */
 /* clase lg- desktop */
-.row >.sm-12{
- grid-column: 1 / 13;
+.row>.sm-12 {
+    grid-column: 1 / 13;
 }
-@media screen and (min-width: 46.25em) {
 
-    .header-menu{
+@media screen and (min-width: 46.25em) {
+    .body{
+        text-align: left;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-menu {
+        display: block;
+        margin: 0;
+    }
+
+
+    .header-menu li {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+    .header-menu a{
+        padding: 1rem;
+    }
+    .testemunho{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+    .contato_image{
         display: block;
     }
 
-
-    .row{
+    .row {
         gap: 1rem;
     }
-    .row>.md-3{
+
+    .row>.md-3 {
         grid-column: span 3;
     }
-    .row>.md-4{
+
+    .row>.md-4 {
         grid-column: span 4;
     }
-    .row>.md-6{
+
+    .row>.md-6 {
         grid-column: span 6;
     }
-    .row>.md-9{
+
+    .row>.md-9 {
         grid-column: span 9;
     }
-    .row> .md-1-6{
-        grid-column:1/7;
+
+    .row>.md-1-6 {
+        grid-column: 1/7;
 
     }
-    .row> .md-7-12{
-        grid-column:7/13;
+
+    .row>.md-7-12 {
+        grid-column: 7/13;
 
     }
 }
 
 @media screen and (min-width: 90em) {
-    .row{
+    .row {
         gap: 3rem;
     }
+
     .row>.lg-3 {
         grid-column: span 3;
     }
@@ -250,4 +300,3 @@ img {
         grid-column: 8 / 13;
     }
 }
-
