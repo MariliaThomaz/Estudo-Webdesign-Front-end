@@ -38,7 +38,7 @@ body {
     padding: 0;
     text-align: right;
 
-    display: none;
+    /* display: none; */
 }
 
 .header-menu a {
@@ -114,12 +114,10 @@ img {
     height: 1px;
     width: 1px;
     overflow: hidden;
-    display: none;
+   
 }
 
-.menu-btn:checked~.header-menu {
-    display: block;
-}
+
 
 .testemunho {
     background-color: var(--gray);
@@ -243,14 +241,17 @@ img {
     h2 {
         font-size: 2.875rem;
     }
-    .header {
-        display: flex;
-        justify-content: space-between;
+    .header{
         align-items: center;
+
+    }
+    .menu-btn, .menu-icon{
+        display: none;
     }
 
+
     .header-menu {
-        display: block;
+        /* display: block; */
         margin: 0;
     }
 
@@ -339,4 +340,61 @@ img {
     .row>.lg-8-12 {
         grid-column: 8 / 13;
     }
+}
+/* hamburguer menu */
+.header {
+    display: flex;
+    justify-content: space-between;
+
+}
+.header-menu{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+
+    /* max-height: 100vh; */
+}
+@media screen and (min-width: 46.25em) {
+    .header-menu{
+        position: static;
+        /* o initial volta  para o padrão de fabrica */
+        max-height: initial;
+        background-color: initial;
+    }
+}
+.header nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.menu-icon{
+    position: relative;
+    cursor:pointer;
+    /* user-select: none; */
+}
+.nav-icon{
+    background-color: #3f3f3f;
+    display: inline-block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+}
+.nav-icon::after, .nav-icon::before{
+    content: "";
+    background-color: #3f3f3f;
+    display: inline-block;
+    height: 2px;
+    width: 24px;
+}
+.nav-icon::after{
+    transform: translateY(8px);
+    background-color: blue;
+}
+.nav-icon::before{
+    background-color: aqua;
+    transform: translateY(-8px);
 }
