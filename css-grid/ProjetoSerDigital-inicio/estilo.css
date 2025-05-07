@@ -84,7 +84,9 @@ h2 {
 img {
     max-width: 100%;
 }
-
+.brands{
+    text-align: center;
+}
 
 .brands h2 {
     font-size: 1rem;
@@ -212,7 +214,16 @@ img {
     align-items: center;
     text-align: center;
 }
-@container testemunhoCard (min-width: 675px){
+.icons li{
+    display: inline-block;
+    margin-left:1rem;
+    font-size: 2rem;
+
+}
+.icons li + li{
+    margin-left:1rem;
+}
+@container testemunhoCard (min-width: 42.187em){
     .testemunho_card{
         flex-direction:row;
        text-align: left;
