@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação 04</title>
+    <style>
+        @keyframes anda{
+            from{
+                transform: translate(0);
+                background-color: yellow;
+            }
+            50%{
+                background-color: green;
+               
+            }
+            to{
+                transform: translate(300px);
+                background-color: blue;
+            }
+        }
+        @keyframes altura{
+            /*Maneira de  deixa  menor o codico*/
+            0%, 100%{
+                height: 80px;
+            }
+            20%, 80%{
+                height: 120px;
+            }
+            /*80%{
+                height: 120px;
+            }*/
+           /* 100%{
+                height: 80px;
+            }*/
+        }
+        @keyframes largura{
+            0%{
+                width: 100px;
+            }
+            100%{
+                width: 400px;
+            }
+        }
+
+        #anima{
+            outline: 3px solid red;
+            width: 400px;
+        }
+
+        #anima div{
+            width: 100px;
+            height: 50px;
+            background-color:green;
+            margin-bottom: 10px;
+        }
+
+      
+        #anima div:nth-child(1){
+            animation-name: anda; /*nome da animação*/
+            animation-duration: 2s; /*tempo da animação 2 segundo*/
+            animation-iteration-count:6;/*pode pedi para repeti mais animação no caso foi duas veses*/
+            animation-timing-function: linear;/* Não haverá nenhum tipo de aceleração oudiminui são*/
+            /*animation-direction: reverse; - revete  A ordem de começar */
+            animation-direction: alternate; /*Ele alternaa ordem de começar a animação como temos 2 passagens*/
+            
+        }
+        #anima div:nth-child(2){
+            animation: anda 2s linear 2s 2 alternate;
+            animation-fill-mode: backwards; /*Ele pega a primeira propriedade da função dali da animação*/
+            animation-play-state:running ; /*não muda nada*/
+             
+         }
+         #anima div:nth-child(2):hover{
+            animation-play-state: paused; /*O quando você 
+            passa o mouse sobre a área em movimento ela irá pausar usando hover e esta função*/
+
+         }
+         #anima div:nth-child(3){
+           /* animation: anda 2s ease-in-out 0s infinite alternate, 
+            altura 2s linear 1 normal forwards; /*colou mais de  uma  animação em  uma  DIV*/
+              */
+            /*Quando você está vendo que o navegador está tendo dificuldade
+             você pode usar um precursore é somente indicá-lo*/
+           
+            /* will-change: height; não abuse*/
+         
+         }
+
+         #anima div:nth-child(4){
+            animation: largura 5s;
+            animation-timing-function: steps(5, jump-end);
+            /*stps ele é uma  função*/
+            /*Você pode informar com o steps() quantos frames(espis) você quer */
+            /*steps(5, jump-end)  pualando final passo */
+
+         }
+         #anima div:nth-child(5){
+            animation: largura 5s;
+            animation-timing-function: steps(5, jump-start);
+            /*stps ele é uma  função*/
+            /*Você pode informar com o steps() quantos frames(espis) você quer */
+            /*steps(5, jump-start)  pualando primero passo */
+
+         }
+         #anima div:nth-child(6){
+            animation: largura 5s;
+            animation-timing-function: steps(5, jump-none);
+            /*stps ele é uma  função*/
+            /*Você pode informar com o steps() quantos frames(espis) você quer */
+            /*steps(5, jump-none)  Não haverá Salto no começo e nem no final  */
+
+         }
+         #anima div:nth-child(7){
+            animation: largura 5s;
+            animation-timing-function: steps(5, jump-both);
+            /*stps ele é uma  função*/
+            /*Você pode informar com o steps() quantos frames(espis) você quer */
+            /*steps(5, jump-both)  Meu primeiro step último step  */
+
+         }
+
+         
+    </style>
+</head>
+<body>
+    <div id="anima">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>end</div>
+        <div>start</div>
+        <div>none</div>
+        <div>both</div>
+
+    </div>
+    
+</body>
+</html>
