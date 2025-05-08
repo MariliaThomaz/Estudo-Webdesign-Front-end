@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação GATO</title>
+    <style>
+        .cat {
+            width: 400px;
+            height: 200px;
+            background-color: #ccc;
+            background-image: url(walking_sprite.png);
+            background-position: 0 0;
+            /*Ficar no canto esquerdo*/
+            background-repeat: no-repeat;
+            /*Imagem não se duplique */
+
+            animation: anda 2s steps(12) infinite;
+        }
+
+        @keyframes anda {
+            0% {
+                background-position: 0 0;
+            }
+            100%{
+                background-position: 0 -2390px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cat">
+
+
+    </div>
+</body>
+
+</html>
