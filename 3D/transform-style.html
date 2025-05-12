@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Preserve 3D</title>
+    <style>
+        body{
+            margin: 100px;
+        }
+        .cena{
+            border: 2px solid #ccc;
+            width: 300px;
+            aspect-ratio: 1;
+        }
+        .plano{
+            background-color: rgb(0 0 0 / .3);
+            width: 200px;
+            aspect-ratio: 1;
+        }
+        #cena1{
+            perspective: 500px;
+
+        }
+        .cena1a{
+            transform: rotateY(45deg);
+            /*Por padrão usamos o (transform-style: flat) Canto ele não mostraexatamenteo que está ocorrendoa transformação */
+            transform-style: preserve-3d; /*e irápreservar ao que está pedindo*/
+        }
+        .cena1b{
+            transform: rotateX(55deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cena" id="cena1">
+        <div class="cena1a plano">
+            <div class="cena1b plano">1 B</div>
+        </div>
+    </div>
+</body>
+</html>
