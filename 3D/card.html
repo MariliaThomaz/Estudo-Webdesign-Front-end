@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 3D</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .cena{
+            border: 2px solid #ccc;
+            width: 300px;
+            height: 400px;
+            margin: 60px;
+            perspective: 600px;
+        }
+        .card{
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+        
+           
+        }
+        .cena:hover .card{ 
+            transform: rotateY(180deg);
+        }
+        .card_face{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             transition: 1s transform;
+        }
+        .card_face-front{
+            background-color: rgb(131, 5, 5);
+        }
+        .card_face-back{
+            background-color: rgb(6, 6, 147);
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="cena">
+        <div class="card">
+            <div class="card_face card_face-front">Frontal</div>
+            <div class="card_face card_face-back">Costas</div>
+        </div>
+    </div>
+</body>
+</html>
