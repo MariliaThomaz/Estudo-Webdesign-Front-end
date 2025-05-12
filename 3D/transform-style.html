@@ -1,43 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Preserve 3D</title>
     <style>
-        body{
-            margin: 100px;
+        body {
+            margin-bottom: 100vh;
+            margin-left: 10vh;
         }
-        .cena{
+
+        .cena {
             border: 2px solid #ccc;
             width: 300px;
             aspect-ratio: 1;
+            margin-bottom: 30px;
         }
-        .plano{
+
+        .plano {
             background-color: rgb(0 0 0 / .3);
             width: 200px;
             aspect-ratio: 1;
         }
-        #cena1{
+
+        #cena1 {
             perspective: 500px;
 
         }
-        .cena1a{
+
+        .cena1a {
             transform: rotateY(45deg);
             /*Por padrão usamos o (transform-style: flat) Canto ele não mostraexatamenteo que está ocorrendoa transformação */
-            transform-style: preserve-3d; /*e irápreservar ao que está pedindo*/
+            transform-style: preserve-3d;
+            /*e irápreservar ao que está pedindo*/
         }
-        .cena1b{
+
+        .cena1b {
             transform: rotateX(55deg);
         }
 
+
+        .cena2a {
+            /*A ordem das transformaçõesaltera o resultado */
+           transform: rotateY(45deg) translateX(100px);
+            transform-style: preserve-3d;
+
+        }
+
+        .cena2b {
+           transform: translateZ(120px) rotateX(50deg);
+        }
+
+        .cena3a {
+            transform: translateX(100px) rotateY(45deg);
+            transform-style: preserve-3d;
+
+        }
+
+        .cena3b {
+         
+           transform: rotateX(50deg) translateZ(120px) ;
+        }
+
+        /*Ao observar cena2 e cena3 a ordem deles do 
+         cena3 -translateX(100px) rotateY(45deg) 
+         cena2 -rotateY(45deg) translateX(100px);
+        Sendo mesmos valores portantoresultados diferentes */
+         
+        .cena4a {
+            transform: translateX(100px) rotateY(45deg);
+            transform-style: preserve-3d;
+
+        }
+
+        .cena4b {
+         
+           transform: rotateX(50deg) translateZ(120px) Scale3d(1, 2, 3) ;
+           /*vetor usando Scale3d*/
+        }
     </style>
 </head>
+
 <body>
     <div class="cena" id="cena1">
         <div class="cena1a plano">
             <div class="cena1b plano">1 B</div>
         </div>
     </div>
+    <div class="cena" id="cena2">
+        <div class="cena2a plano">
+            <div class="cena2b plano">2 B</div>
+        </div>
+    </div>
+
+    <div class="cena" id="cena3">
+        <div class="cena3a plano">
+            <div class="cena3b plano">3 B</div>
+        </div>
+    </div>
+     <div class="cena" id="cena4">
+        <div class="cena4a plano">
+            <div class="cena4b plano">4 B</div>
+        </div>
+    </div>
 </body>
+
 </html>
