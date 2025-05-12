@@ -44,29 +44,46 @@
 
         }
 
-        #cena3, #cena4 {
+        #cena3,
+        #cena4,
+        #cena6 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
 
         }
 
-        #cena3 .plano, #cena4 .plano {
+        #cena3 .plano,
+        #cena4 .plano, 
+        #cena6 .plano {
             margin: 1rem;
         }
 
-        #cena3{
+        #cena3 {
             perspective: 600px;
-           /* perspective-origin: left top;*/
+            /* perspective-origin: left top;*/
         }
-        #cena3 .plano{
+
+        #cena3 .plano {
             /*Estão compartilhando o mesmo ponto de vista */
             transform: rotateY(45deg);
         }
 
-        #cena4 .plano{
+        #cena4 .plano {
             /*Nesse caso cada um tem a sua própria perspectiva*/
             transform: perspective(600px) rotateY(45deg);
 
+        }
+
+       
+        #cena6 {
+            perspective: 600px;
+            /* perspective-origin: left top;*/
+        }
+
+        #cena6 .plano {
+           
+            transform: rotateY(85deg);
+            backface-visibility: hidden; /*não veja o verso*/
         }
     </style>
 </head>
@@ -81,7 +98,7 @@
 
     </div>
     <h4>cena3</h4>
-    <div class="cena" id="cena3"> 
+    <div class="cena" id="cena3">
         <div class="plano">plano1</div>
         <div class="plano">plano2</div>
         <div class="plano">plano3</div>
@@ -94,6 +111,18 @@
     </div>
     <h4>cena4</h4>
     <div class="cena" id="cena4">
+        <div class="plano">plano1</div>
+        <div class="plano">plano2</div>
+        <div class="plano">plano3</div>
+        <div class="plano">plano4</div>
+        <div class="plano">plano5</div>
+        <div class="plano">plano6</div>
+        <div class="plano">plano7</div>
+        <div class="plano">plano8</div>
+        <div class="plano">plano9</div>
+    </div>
+
+    <div class="cena" id="cena6">
         <div class="plano">plano1</div>
         <div class="plano">plano2</div>
         <div class="plano">plano3</div>
