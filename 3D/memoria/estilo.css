@@ -75,3 +75,31 @@ main:has(#ckec16:checked) .game .card16 {
 
     transform: rotateY(180deg);
 }
+main:has(#ckec1:focus) .game .card1, 
+main:has(#ckec2:focus) .game .card2, 
+main:has(#ckec3:focus) .game .card3, 
+main:has(#ckec4:focus) .game .card4, 
+main:has(#ckec5:focus) .game .card5, 
+main:has(#ckec6:focus) .game .card6, 
+main:has(#ckec7:focus) .game .card7, 
+main:has(#ckec8:focus) .game .card8,
+main:has(#ckec9:focus) .game .card9,
+main:has(#ckec10:focus) .game .card10, 
+main:has(#ckec11:focus) .game .card11, 
+main:has(#ckec12:focus) .game .card12, 
+main:has(#ckec13:focus) .game .card13, 
+main:has(#ckec14:focus) .game .card14, 
+main:has(#ckec15:focus) .game .card15, 
+main:has(#ckec16:focus) .game .card16 {
+
+    outline: 2px solid red;
+    outline-offset: 2px;
+}
+.controls{
+    /* tirando o checked box */
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);/*crinado uma mascara*/
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
