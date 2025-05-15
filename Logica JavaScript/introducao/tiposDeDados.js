@@ -77,3 +77,11 @@ console.log(typeof null) // object
 // 10 é um número, mas o método toString() é chamado em um número
 // e retorna uma string
 console.log("método: "+  typeof(10 .toString())) // "10"
+
+console.log("--------Desafio  de contenação----------") 
+//Desafio  de contenação
+let varivel = "Ba"
+
+ varivel += parseInt(varivel)
+ console.log('letra:' +varivel.toLocaleLowerCase +"a ") // "Ba0a"
+//toLocaleLowerCase levará a string para minúsculas
