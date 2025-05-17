@@ -85,3 +85,9 @@ let varivel = "Ba"
  varivel += parseInt(varivel)
  console.log('letra:' +varivel.toLocaleLowerCase +"a ") // "Ba0a"
 //toLocaleLowerCase levará a string para minúsculas
+
+
+
+
+
+
