@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if e else 3</title>
+</head>
+
+<body>
+    <script>
+        console.log("-------------Desafio 3---------------------")
+
+        let numero1 = prompt("1- Digite um número entre 0 e 10: ")
+        numero1 = parseFloat(numero1); // converte string para número
+        let numero2 = prompt("2- Digite um número entre 0 e 10: ")
+        numero2 = parseFloat(numero2); // converte string para número
+
+        if ((numero1 >= 0 && numero1 <= 10) && (numero2 >= 0 && numero2 <= 10)) {
+
+
+           let  media = (numero1 + numero2) / 2;
+
+            if ((media > 4) && (numero1 > 0 && numero2 > 0)) {
+                //
+                alert("APROVADO")
+            } else {
+                alert("REPROVADO")
+            }
+
+        }
+        else {
+            alert("Número inválido")
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
