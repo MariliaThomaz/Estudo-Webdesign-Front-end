@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+</head>
+
+<body>
+    <h1>Tabuada com For</h1>
+    <script>
+        let numero = parseInt(prompt("Digite um número "));
+
+        if (!isNaN(numero) && numero <= 1000) {
+            // a vaivel (i) vai ser inicializada com 0
+            // o laço vai ser executado enquanto (i) for menor ou igual a 10
+            // o (i) vai ser incrementado em 1 a cada execução do laço
+            for (let i = 0; i <= 10; i++) {
+                // o resultado da multiplicação vai ser mostrado na tela
+                document.write(numero + " x " + i + ": " + numero * i + "<br>");
+
+            }
+        } else {
+            // se o número for inválido ou maior que 1000
+            alert("Número inválido, digite um número menor ou igual a 1000")
+        }
+
+    </script>
+</body>
+
+</html>

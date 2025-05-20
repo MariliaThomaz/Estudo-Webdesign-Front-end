@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio com laço de repeitção</title>
+</head>
+
+<body>
+    <h1>Dado Prf - Do while</h1>
+    <script>
+
+        dado1 = 2
+        dado2 = 2
+        contador = 1
+        do {
+            document.write("Dado 1: " + dado1 + "<br>");
+            document.write("Dado 2: " + dado2 + "<br>");
+            contador++
+            dado1 = parseInt(Math.random() * 6) + 1;
+            dado2 = parseInt(Math.random() * 6) + 1;
+
+        } while (dado1 !== dado2) {
+            document.write("Dado 1: " + dado1 + "<br>");
+            document.write("Dado 2: " + dado2 + "<br>");
+            contador++
+            dado1 = parseInt(Math.random() * 6) + 1;
+            dado2 = parseInt(Math.random() * 6) + 1;
+
+        }
+
+        document.write("Número de tentativas: " + contador + " ,numero repetido: " + dado1 + "<br>");
+
+
+    </script>
+</body>
+
+</html>
