@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Duplicada</title>
+</head>
+
+<body>
+    <h1>Array duplicada</h1>
+
+    <script>
+        let numeros = [1, 2, 3, 4, 5];
+        let numeroMutiplicado = [];
+
+        for (let i = 0; i < numeros.length; i++) {
+            let valor = numeros[i] * 2;
+            numeroMutiplicado.push(valor);
+            // o push adiciona um novo elemento no final do array
+
+            console.log("O número " + numeros[i] + " multiplicado por 2 é: " + numeroMutiplicado[i]);
+            // o length retorna o tamanho do array
+        }
+        // o array é dinâmico, ou seja, ele pode crescer
+
+        console.log(numeroMutiplicado);
+        document.write("<h2>Array Duplicada</h2>"); 
+    </script>
+
+</body>
+
+</html>

@@ -10,6 +10,7 @@
 <body>
     <h1>Arrays</h1>
     <script>
+        
         // Definindo um array
         let nomes = ["João", "Maria", "José", "Ana"];
         // a sintaxe literal é usado os colchetes []
@@ -24,13 +25,21 @@
         // new retorna um novo objeto é do tipo Array
         // esta sintaxe  é  chamda  de função construtora
         console.log(nomes2);
-
+         let nome = prompt("Digite seu nome: ");
+        //addisionar um novo elemento no array
+        nomes[4] = "Lucas";
+        // o array é dinâmico, ou seja, ele pode crescer
+        nomes[nomes.length] = nome;
+        // o length retorna o tamanho do array
+        // o array é dinâmico, ou seja, ele pode crescer
+        console.log(nomes);
         for (let i = 0; i < nomes.length; i++) {
             // o length retorna o tamanho do array
             // o for é usado para percorrer o array
-            document.write("<p>" +"usando o for: "+ nomes[i] + "</p>");
-        }   
+            document.write("<p>" + "usando o for: " + nomes[i] + "</p>");
 
+        }
+        document.write("<p>" + "A lista de  nomes  possui: " + nomes.length + "</p>");
     </script>
 </body>
 
