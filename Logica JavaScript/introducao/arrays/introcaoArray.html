@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays</h1>
+    <script>
+        // Definindo um array
+        let nomes = ["João", "Maria", "José", "Ana"];
+        // a sintaxe literal é usado os colchetes []
+        document.write("<h2>Array de Nomes</h2>");
+        document.write("<p>" + nomes + "</p>");
+        //pegar po indice 
+        document.write("<h2>Nome no índice 0</h2>");
+        document.write("<p>" + nomes[0] + "</p>");
+
+        let nomes2 = new Array("João", "Maria", "José", "Ana");
+        // a sintaxe construtora é usado o new Array()
+        // new retorna um novo objeto é do tipo Array
+        // esta sintaxe  é  chamda  de função construtora
+        console.log(nomes2);
+
+        for (let i = 0; i < nomes.length; i++) {
+            // o length retorna o tamanho do array
+            // o for é usado para percorrer o array
+            document.write("<p>" +"usando o for: "+ nomes[i] + "</p>");
+        }   
+
+    </script>
+</body>
+
+</html>
