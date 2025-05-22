@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <h1>Arrays</h1>
+
+    <script>
+
+        const diasSemana = ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"]
+        //   0          1         2         3         4
+
+        const hoje = new Date()
+        //  new Date() retorna a data atual
+
+        // .getDay() retorna o dia da semana atual
+        // .getDay() retorna um número de 0 a 6  
+        const diaSemanaHoje = hoje.getDay()
+      
+
+     
+
+        alert("Olá, hoje é " + diasSemana[diaSemanaHoje])
+
+        /*  new Date().getDay()
+            0 - domingo
+            1 - segunda
+            2 - terça
+            3 - quarta
+            4 -  quinta
+            5 - sexta
+            6 - sabado
+        */
+
+
+    </script>
+</body>
+
+</html>

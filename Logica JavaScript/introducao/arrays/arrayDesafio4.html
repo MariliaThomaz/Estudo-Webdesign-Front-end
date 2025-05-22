@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Array</title>
+</head>
+
+<body>
+    <h1>Numeros e soma Array 4</h1>
+    <script>
+        const arry = [18.12, "22", 73, "ma", 35, false, 47, null, 69, NaN, 100, 1.12, 33, ];
+        const ary = [];
+         let metade = 0  
+
+        for (let i = 0; i < arry.length; i++) {
+            if (typeof arry[i] === "number" && Number.isFinite(arry[i])) {
+                ary.push(arry[i]);
+            
+             metade = Math.floor(ary.length / 2);
+                // o Math.floor arredonda para baixo
+                // o Math.ceil arredonda para cima
+                // o Math.round arredonda para o inteiro mais próximo
+                // o Math.trunc remove a parte decimal
+                // o Math.abs retorna o valor absoluto
+                // o Math.sqrt retorna a raiz quadrada
+                // o Math.pow retorna a potência
+                // o Math.random retorna um número aleatório entre 0 e 1
+                // o Math.PI retorna o valor de pi
+           
+            }
+
+        }
+        console.log("O a metadade: " + metade);
+        console.log("O array é: " + ary);
+         console.log("A metade do array é: " + ary[metade]);
+         console.log("tamnaho do array: " + ary.length);
+
+
+
+
+    </script>
+</body>
+
+</html>
