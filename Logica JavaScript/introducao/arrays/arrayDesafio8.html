@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Array</title>
+</head>
+
+<body>
+    <h1>Numeros e soma Array 8</h1>
+    <script>
+        const nomes = ["Lucas", "Ana", "Pedro", "Maria", "João", "Carla", "Rafael", "Fernanda", "Gustavo", "Juliana"];
+        const nomeReverso = []
+
+
+        //(let i = 0; i < arry.length; i++)
+        for (let i = nomes.length - 1; i >= 0; i--) {
+            // eu  cria  laço de repitição percorrendo o array de trás para frente
+            // e adicionando os nomes no array nomeReverso
+
+            nomeReverso.push(nomes[i]);
+
+        }
+        console.log("Nomes em ordem reversa: " + nomeReverso);
+    </script>
+</body>
+
+</html>

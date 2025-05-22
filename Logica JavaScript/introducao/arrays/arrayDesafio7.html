@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Array</title>
+</head>
+
+<body>
+    <h1>Numeros e soma Array  7</h1>
+    <script>
+        const arry = [18.12, "22", 73, "ma", 35, false, 47, null, 69, NaN];
+     let encontrou = false;
+
+        for (let i = 0; i < arry.length; i++) {
+             let n = arry[i];
+            if (n === null || n === undefined || n === NaN) {
+            encontrou = true
+            break
+
+            }
+        }
+
+        console.log("Encontrou um valor inválido: " + encontrou);
+    </script>
+</body>
+
+</html>
