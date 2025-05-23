@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obejtoa</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <script>
+        //PROBLEMA 1
+
+        // Objeto é uma coleção de propriedades
+        // e métodos que representam um objeto do mundo real.
+        const caneta = {
+            nome: "Caneta",
+            preco: 2,
+            quantidade: 10,
+        }
+        document.write("<p>O nome do produto é: " + caneta.nome + "</p>");
+        document.write("<p>O preço do produto é: " + caneta.preco + "</p>");    
+        document.write("<p>A quantidade do produto é: " + caneta.quantidade + "</p>");
+        //interpolação
+        document.write(`<p>O nome do produto é: ${caneta.nome}</p>`); 
+
+        //PROBLEMA 2
+        // Objeto é uma coleção de propriedades
+        const carro = {
+            modelo: "Uno",
+            ano: 2023,
+            km: 10000,
+            combustivel: "Gasolina",
+            litrosConsumidos: 625
+        }
+        carro.marca = "Fiat";
+         document.write(`<p>O carro ${carro.marca} ${carro.modelo} de ${carro.ano} fez ${carro.km} km com ${carro.litrosConsumidos} litros de ${carro.combustivel}</p><br>`);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obejtoa</title>
+</head>
+
+<body>
+    <h1>Pessoa</h1>
+    <script>
+
+        let nome = "João";
+        //eu colocando o valor de nome dentro do objeto pessoa
+        //não é necessário colocar o valor de nome dentro do objeto pessoa
+
+        const carro = {
+            marca: "Fiat",
+            modelo: "Uno",
+            ano: 2020,
+            cor: "preto",
+        }
+
+        const endereco = {
+            rua: "Rua das Flores",
+            numero: 123,
+
+        };
+        const pessoa = {
+            nome,
+            sobrenome: "Silva",
+            endereco: endereco,
+            //colocanos o objeto endereco dentro do objeto pessoa
+            carro //colocanos o objeto carro dentro do objeto pessoa
+
+        };
+        document.write("<p>O " + pessoa.nome +
+            " mora na :  " + pessoa.endereco.rua + "no numero: " + pessoa.endereco.numero + "</p>");
+        console.log(pessoa);
+        // loop  for  que  serve  para interagir com os objetos
+        //for in  é um laço de repetição que percorre as propriedades de um objeto
+        for (let prop in pessoa) {
+            console.log("loop: "+pessoa[prop]);
+        }
+        //1 - "nome" - pessoa.nome - pessoa["nome"]
+        //2 - "sobrenome" - pessoa.sobrenome - pessoa["sobrenome"]
+        //3 - "endereco" - pessoa.endereco - pessoa["endereco"]
+    </script>
+
+</body>
+
+</html>
