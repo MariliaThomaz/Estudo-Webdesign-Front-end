@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+</head>
+
+<body>
+    <!-- o id é um atributo que identifica um elemento único no documento HTML -->
+    <!-- id não pode ser repetido pois ele é um valor de idetificação -->
+    <!-- DOM ele  para No browser navegador  -->
+
+    <h1 id="titulo">Título original</h1>
+    <p id="paragrafo">Texto de exemplo</p>
+
+
+
+
+    <script>
+        // Selecionando o elemento pelo ID
+        // O DOM (Document Object Model) é uma interface de programação para documentos HTML e XML.
+
+        const titulo = document.getElementById('titulo');
+        const paragrafo = document.getElementById('paragrafo');
+
+        // Modificando o conteúdo do elemento
+        titulo.textContent = 'Título modificado';
+        paragrafo.textContent = 'Texto modificado com JavaScript';
+
+
+    </script>
+</body>
+
+</html>
