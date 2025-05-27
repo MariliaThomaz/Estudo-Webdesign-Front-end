@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+  <script defer src="introducao.js"></script>
 
 </head>
 
@@ -14,24 +15,37 @@
     <!-- DOM ele  para No browser navegador  -->
 
     <h1 id="titulo">Título original</h1>
-    <p id="paragrafo">Texto de exemplo</p>
+    <p id="paragrafo"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere adipisci, ipsam accusamus magnam veritatis, autem, quas optio quis deleniti provident error assumenda excepturi obcaecati cum. Autem, neque. Voluptatum, facere repudiandae.</p>
 
-
-
-
+    <hr>
+    <input type="text" id="user" value="Digite seu nome">
+    <hr>
+    <h2>Lista de  tarefas</h2>
+    <ol id="lista-tarefas">
+        <li>Estudar JavaScript</li>
+        <li>Praticar exercícios</li>
+        <li>Revisar conceitos</li>
+      
+    </ol>
     <script>
         // Selecionando o elemento pelo ID
         // O DOM (Document Object Model) é uma interface de programação para documentos HTML e XML.
 
         const titulo = document.getElementById('titulo');
-        const paragrafo = document.getElementById('paragrafo');
+      
 
         // Modificando o conteúdo do elemento
         titulo.textContent = 'Título modificado';
-        paragrafo.textContent = 'Texto modificado com JavaScript';
-
+    
+        // Selecionando o input pelo ID
+        //user é o id que é (value) do input
+        user.value = 'João';
+        // com value você consegue pegar o valor do input
+        console.log(user.value);
 
     </script>
+
+   <script src="introducao.js"></script>
 </body>
 
 </html>
