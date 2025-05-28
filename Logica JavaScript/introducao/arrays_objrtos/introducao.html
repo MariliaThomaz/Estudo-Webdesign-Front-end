@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Desafio</h1>
+    <ul id="listasPessoas">
+        <li>Raquel: raquel@faria.com</li>
+        <li>Paula: Paula@garuti</li>
+        <li>Natalha Natalha@rovani</li>
+        <li>Beatris beatris@pereira</li>
+        <li>Carol carol@lopis</li>
+    </ul>
+
+    <script>
+        const usuarios = [
+            { nome: 'Maria', email: 'maria@faria.com' },
+            { nome: 'Jonatas', email: 'jonatas@garuti' },
+            { nome: 'Vitor', email: 'vitor@rovani' },
+            { nome: 'Gabril', email: 'gabril@pereira' },
+            { nome: 'Livia', email: 'livia@lopis' }
+        ]
+        const lista = document.getElementById('listasPessoas');
+         for (let i = 0; i < usuarios.length; i++) {
+            const usuario = usuarios[i];
+            lista.innerHTML += `<li>${usuario.nome}: ${usuario.email}</li>`;
+         }
+    </script>
+</body>
+
+</html>

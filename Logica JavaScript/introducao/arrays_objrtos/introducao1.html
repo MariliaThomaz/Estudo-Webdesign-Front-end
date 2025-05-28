@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+           border:  1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }   
+    </style>
+</head>
+
+<body>
+    <h1>Desafio 2</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>preço</th>
+                <th>quantidade</th>
+            </tr>
+        </thead>
+
+        <tbody id="produtos">
+            <tr>
+                <td>Arroz</td>
+                <td>10.00</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Feijão</td>
+                <td> 8.00</td>
+                <td>1</td>
+            </tr>
+            <!-- Os dados serão inseridos aqui pelo JavaScript -->
+        </tbody>
+    </table>
+    <script>
+        const produtos = [
+            { nome: "Macarrão", preco:28.30, quantidade: 3 },
+            { nome: "Óleo", preco: 7.00, quantidade: 1 },
+            { nome: "Açúcar", preco: 4.00, quantidade: 2 }
+        ];
+
+        const tabelaProdutos = document.getElementById('produtos');
+
+        for (let i = 0; i < produtos.length; i++) {
+            const produto = produtos[i];
+            tabelaProdutos.innerHTML += `<tr>
+                <td>${produto.nome}</td>
+                <td>${produto.preco.toFixed(2)}</td>
+                <td>${produto.quantidade}</td>
+            </tr>`;
+        }
+    </script>
+</body>
+
+</html>
