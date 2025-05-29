@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do cisrcilo</title>
+</head>
+
+<body>
+    <h1>Area so Circilo</h1>
+    <input type="number" name="numero1" id="numero1" title="Raio do círculo" placeholder="Raio do círculo">
+    <button onclick="calculandoCirculo()">Calcular</button>
+
+    <p id="resultado"></p>
+    <script>
+        function calculandoCirculo() {
+            const raio = parseFloat(document.getElementById('numero1').value);
+            const area = Math.PI * Math.pow(raio, 2);
+
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = `A área do círculo é: ${area.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+
+</html>
