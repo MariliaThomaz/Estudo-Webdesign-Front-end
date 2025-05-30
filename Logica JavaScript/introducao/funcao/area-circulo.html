@@ -17,6 +17,9 @@
         function calculandoCirculo() {
             const raio = parseFloat(document.getElementById('numero1').value);
             const area = Math.PI * Math.pow(raio, 2);
+            //Math.PI é uma constante que representa o valor de pi (π), aproximadamente 3.14159.
+            //Math.pow é  valor elevado a um expoente, neste caso, o raio ao quadrado. ou seja, raio * raio. Tambem poderia ser usado raio ** 2.
+            //O resultado é a área do círculo, que é calculada multiplicando pi pelo quadrado do raio.
 
             const resultado = document.getElementById('resultado');
             resultado.innerHTML = `A área do círculo é: ${area.toFixed(2)}`;

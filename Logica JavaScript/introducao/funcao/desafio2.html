@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 2</title>
+</head>
+
+<body>
+    <input type="number" name="valor" id="numero1" placeholder="Digite o primeiro número"
+        title="Digite o primeiro número">
+    <input type="number" name="valor" id="numero2" placeholder="Digite o primeiro número"
+        title="Digite o primeiro número">
+    <br>
+    <br>
+    <label for="operador "> Digite o perador +, -, *, /
+        <br>
+        <input type="text" name="operador" id="operador">
+    </label>
+    <button onclick="calcular()">Calcular</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    const numero1 = document.getElementById('numero1');
+    const numero2 = document.getElementById('numero2');
+    const resultado = document.getElementById('resultado');
+    const operador = document.getElementById('operador');
+
+
+    function calcular() {
+        const n1 = parseFloat(numero1.value);
+        const n2 = parseFloat(numero2.value);
+        const op = operador.value;
+        let resultadoConta = 0
+        switch (op) {
+            case '+':
+                resultadoConta = n1 + n2;
+                break;
+            case '-':
+                resultadoConta = n1 - n2;
+                break;
+            case '*':
+                resultadoConta = n1 * n2;
+                break;
+            case '/':
+                if (n2 !== 0) {
+                    resultadoConta = n1 / n2;
+                } else {
+                    resultado.innerHTML = 'Divisão por zero não é permitida.';
+                    return;
+                }
+                break;
+            default:
+                resultado.innerHTML = 'Operador inválido. Use +, -, * ou /.';
+                return;
+        }
+
+        resultado.innerHTML = `O resultado da operação é: ${resultadoConta}`;
+
+    }
+</script>
+
+</html>

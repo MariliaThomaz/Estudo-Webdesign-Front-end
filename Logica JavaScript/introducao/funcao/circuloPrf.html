@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>função area do triangulo</title>
+</head>
+
+<body>
+    <h1>Função area do Círculo</h1>
+
+    <label>Raio
+        <input type="number" id="raio">
+    </label>
+
+    <button onclick="mostrarArea()">Calcular a área</button>
+    <br>
+    <output id="output"></output>
+
+    <script>
+        const raio = document.getElementById("raio")
+        const output = document.getElementById("output")
+
+        function mostrarArea() {
+            let raioValue = parseFloat(raio.value)
+            const pi = Math.PI
+            let area = pi * raioValue * raioValue // raioValue ** 2
+            //Math.PI é uma constante que representa o valor de pi (π), aproximadamente 3.14159.
+            //Math.pow é  valor elevado a um expoente, neste caso, o raio ao quadrado. ou seja, raio * raio. Tambem poderia ser usado raio ** 2.
+            //O resultado é a área do círculo, que é calculada multiplicando pi pelo quadrado do raio.
+            output.innerHTML = `A área da circunferência de raio ${raioValue} é ${area}`
+        }
+    </script>
+</body>
+
+</html>

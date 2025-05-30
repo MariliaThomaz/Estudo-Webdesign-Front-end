@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio soma</title>
+</head>
+
+<body>
+    <h1>Soma</h1>
+    <input type="number" name="valor" id="numero1" placeholder="Digite o primeiro número"
+        title="Digite o primeiro número">
+    <input type="number" name="valor" id="numero2" placeholder="Digite o primeiro número"
+        title="Digite o primeiro número">
+    <button onclick="soma()">Somar</button>
+    <p id="resultado"></p>
+   <script>
+  const numero1 = document.getElementById('numero1');
+  const numero2 = document.getElementById('numero2');
+  const resultado = document.getElementById('resultado');
+
+  function soma() {
+    const n1 = parseFloat(numero1.value);
+    const n2 = parseFloat(numero2.value);
+
+    const resultadoSoma = n1 + n2;
+    resultado.innerHTML = `A soma é: ${resultadoSoma}`;
+  }
+</script>
+</body>
+
+</html>
