@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolrando</title>
+</head>
+
+<body>
+    <h1>Boolleano</h1>
+    <input type="number" name="numero" id="numero" placeholder="Digite um número" title="Digite um número">
+    <button onclick="verificarPar()">Verificar Par</button>
+    <p id="resultado"></p>
+
+
+    <script>
+        const numero = document.getElementById('numero');
+        const resultado = document.getElementById('resultado');
+
+        function verificarPar() {
+            const n = parseInt(numero.value);
+
+            if (isNaN(n)) {
+                resultado.innerHTML = 'Por favor, digite um número válido.';
+                return;
+            }
+
+            if (n % 2 === 0) {
+                resultado.innerHTML = `${n} é um número par.`;
+            } else {
+                resultado.innerHTML = `${n} é um número ímpar.`;
+            }
+        }
+    </script>
+</body>
+
+</html>
