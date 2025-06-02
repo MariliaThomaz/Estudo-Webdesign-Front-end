@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch</title>
+</head>
+
+<body>
+    <h1>try ... catch(error)</h1>
+
+    <div id="blabla"></div>
+
+    <script>
+
+        let obj = { nome: "Daniel", email: "daniel@server.com" }
+
+        // obj = null
+
+        try {
+            //vendo se o objeto é nulo
+            //se for nulo, lança um erro
+            document.getElementById("output").innerHTML = `Nome: ${obj.nome} - Email: ${obj.email}`
+            // se  uma  linha de código falhar, o fluxo do programa é interrompido
+            // e o controle é passado para o bloco catch
+        } catch (e) {
+            //trasformando o erro em uma string
+            // tra infomando o erro da  linha que  verifica no objeto esta  no try
+            // e o erro é passado como parâmetro para o catch
+            console.log(e)
+            // oque é o e?
+            // é o objeto que represa o erro que contém informações sobre o erro que ocorreu
+            console.log(e.message)
+            // oque é o e.message?
+            // é uma propriedade do objeto de erro que contém uma mensagem descritiva do erro
+            alert("deu ruim !!!" + e.message)
+        } finally {
+            // o bloco finally é executado sempre, independentemente de um erro ter 
+            //ocorrido ou não
+            // é útil para liberar recursos ou realizar ações de limpeza
+            //alert("fim do programa")
+        }
+
+
+
+    </script>
+    <script src="areas.js"></script>
+    <script>
+        try {
+            
+            console.log(calcularAreaRetangulo(2, 6))
+            console.log(calcularAreaTriangulo(2, 3))
+            console.log(calcularAreaCirculo(2))
+        } catch (e) {
+            console.error("Erro ao calcular área:", e.message)
+        }
+       
+    </script>
+</body>
+
+</html>

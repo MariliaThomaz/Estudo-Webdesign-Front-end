@@ -32,6 +32,7 @@ function soma(a, b) {
 // Saída: 15 (o terceiro argumento é ignorado)
 
 //usnado o retono
+// a e b  é pametro 
 function soma2(a, b) {
     let soma = a + b;
     return soma; // Retorna o resultado da soma
