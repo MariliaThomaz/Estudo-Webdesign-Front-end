@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var vs let const</title>
+</head>
+
+<body>
+    <!-- explicando as difereças  de tipos  variavel -->
+    <h1>var vs let const</h1>
+    <script>
+        //verção do  JS
+        //ES5 < 2015
+        //ES6 - ES20215
+        //ES7 - ES2016
+
+        //ES5  var
+        //ES6 let const 
+
+        let novo = true
+        // ao usar a  var pode  delar varivel com mesmo nome
+        var teste = "maça"
+        var teste = 1000
+        // questão problematica  em usar  o (var) é perder controle sobre  ter varivel
+        //  com memos nome  porem  sem ver esta  atribuindo  valor difentes fazendo mudar  escopo dela
+        //  let novo = false  em  usar  tip (let) ele não permite cria vaivel mesmo nome apresta  um erro
+
+        console.log(teste)
+
+        function minhaFunctio() {
+            const arr = [1, 2]
+            let i = arr.length
+
+            for (let i = 0; i < 5; i++) {
+                console.log(i)
+
+            }
+            console.log("i let: ", i)
+            // A  usar  o  tipo (let) é  um 
+            // gera  um escpo de bloco
+
+
+        }
+
+        minhaFunctio()
+
+        function minhaFunctioV() {
+            const arr = [1, 2]
+            var i = arr.length
+
+            for (var i = 0; i < 5; i++) {
+                console.log(i)
+
+            }
+            console.log("i var: ", i)
+            //as variveis que  são  criadas com tipo  var
+            // elas são  modificada  pelo  escopo que  ela  se 
+            // encontra no estado explo  esta  dentro escpo 
+            //da função 
+
+        }
+
+
+
+        minhaFunctioV()
+
+        let valor2 = 100
+        valor2 = "mari"
+         console.log("o valor let: " + valor2)
+         // ele se  motidica com sua  necidade
+        const valor3 = 100
+        valor3 = 200
+        console.log("o valor Const: " + valor3)
+        // ele  não muda seu dado atribuido incialmete 
+    </script>
+</body>
+
+</html>
