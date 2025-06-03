@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curto Cicuito</title>
+</head>
+
+<body>
+    <h1>Curto Cicuito</h1>
+
+    <script>
+
+        true || console.log("passou")
+        // v ou f = verdade
+
+        false || console.log(" fasse passou")
+        // f ou  f = falso
+
+        true && console.log(" v passou")
+        //O que está acontecendo que quando
+        // se trata do true primeira vez o código não
+        // precisa mais saberdo outro parâmetro pois o 
+        //primeiro já é verdade sendo que se trata de uma 
+        //operador lógicoenão necessita dooutro parâmetro de outro
+        // dadopara a execução mas no caso quese o primeiro dadofor
+        // falso não irá executar poisem uma operação lógica esomente 
+        //para ser verdade tem que tarcontudo verdade 
+        false && console.log(" f passou")
+
+        let n = 0
+        n = n && 10
+        console.log("numero de && n: " + n)
+
+        let b = 20
+        b = b || 10
+        console.log("numero de || b: " + b)
+
+        let n2 = 20
+        n2 = n2 && 10
+        console.log("numero de && n2: " + n2)
+        //Passe curto serve para deteminar valores padrões 
+
+         g = 10 
+        g = g.toString()
+          
+        console.log(g, typeof g)
+        g=10
+
+        
+        g = g.toString(2)          
+        console.log(g, typeof g)
+
+        function teste(param){
+            param = param !== undefined? param: 10
+        }
+        teste(10)
+        // meto toString pode  receber um parametro
+        //toString pode mudar  a  base do numero mais  isto é  opsional
+        // transfomando o valor  em binario colocando  n = n.toString(2)
+        // represetação dos  numero natual decima
+        /*
+        0 em decimal é 0 em binário.
+
+            1 em decimal é 1 em binário.
+
+            2 em decimal é 10 em binário.
+
+            3 em decimal é 11 em binário.
+
+            4 em decimal é 100 em binário.
+
+            5 em decimal é 101 em binário.
+
+            6 em decimal é 110 em binário.
+
+            7 em decimal é 111 em binário.
+
+            8 em decimal é 1000 em binário.
+
+            9 em decimal é 1001 em binário.
+
+           Aqui estão as representações em hexadecimal dos números naturais de 0 a 9:
+
+            0 em decimal é 0 em hexadecimal.
+
+            1 em decimal é 1 em hexadecimal.
+
+            2 em decimal é 2 em hexadecimal.
+
+            3 em decimal é 3 em hexadecimal.
+
+            4 em decimal é 4 em hexadecimal.
+
+            5 em decimal é 5 em hexadecimal.
+            10 em decimal é A em hexadecimal.
+
+            11 em decimal é B em hexadecimal.
+
+            12 em decimal é C em hexadecimal.
+
+            13 em decimal é D em hexadecimal.
+
+            14 em decimal é E em hexadecimal.
+
+            15 em decimal é F em hexadecimal.
+        */
+      
+
+    </script>
+
+
+</body>
+
+</html>
