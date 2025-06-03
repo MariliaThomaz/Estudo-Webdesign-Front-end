@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos Primitivos</title>
+</head>
+
+<body>
+    <h1>Tipos Primitivos em JavaScript</h1>
+    <ul>
+        <li>String</li>
+        <li>Number</li>
+        <li>Boolean</li>
+        <li>Undefined</li>
+        <li>Null</li>
+        <li>Symbol</li>
+        <li>BigInt</li>
+    </ul>
+    <script>
+        // Exemplos de tipos primitivos
+        const texto = "Olá, mundo!"; // String
+        const numero = 42; // Number
+        const booleano = true; // Boolean
+        let indefinido; // Undefined
+        const nulo = null; // Null
+        const simbolo = Symbol('simbolo'); // Symbol
+        const bigInt = 1234567890123456789012345678901234567890n; // BigInt
+
+        console.log(typeof texto, texto);
+        console.log(typeof numero, numero);
+        console.log(typeof booleano, booleano);
+        console.log(typeof indefinido, indefinido);
+        console.log(typeof nulo, nulo);
+        console.log(typeof simbolo, simbolo);
+        console.log(typeof bigInt, bigInt);
+    </script>
+    <!-- Primitovs  passado por  valores -->
+    <!-- Objetos passado por referencia -->
+
+    <script>
+
+        let n = 20
+
+        function teste(n) {
+            console.log("n interno funcao teste", ++n)
+        }
+
+        teste(n) // valor 20
+
+        console.log("n externo", n)
+
+        const arr = [1, 2, 3] // endenreco na memoria ax123
+        const arr2 = [4, 5, 6] // ax124
+
+        function adicionarNaArray(valor, arr) {
+            arr[arr.length] = valor
+        }
+
+        function limpaArray(arr) {
+            arr.length = 0
+        }
+
+        // adicionarNaArray("novo valor", [1,2,3]) X
+        // adicionarNaArray("novo valor", ax123)
+
+        console.log(arr)
+
+        limpaArray(arr)
+        adicionarNaArray("novo valor", arr)
+
+
+        console.log(arr)
+
+        const obj = { nome: "Daniel" }
+
+        function adicionaPropEmObjeto(prop, valor, obj) {
+            if (obj[prop] === undefined) {
+                obj[prop] = valor
+            }
+        }
+
+        adicionaPropEmObjeto("sobrenome", "maria", obj)
+
+        console.log(obj)
+
+/*
+        Objetos — Passagem por Referência
+O que são?
+Objetos incluem:
+
+{} (objetos literais)
+
+arrays []
+
+funções
+
+datas (new Date())
+
+qualquer coisa criada com new
+
+Como funciona a passagem por referência?
+Quando você atribui um objeto a uma variável, o que é armazenado não é o valor do objeto, mas sim uma referência (endereço) para aquele objeto na memória. Se você copiar essa variável para outra, as duas 
+apontam para o mesmo objeto.
+        */
+
+        let obj1 = { nome: "Maria" };
+        let obj2 = obj1; // obj2 aponta para o mesmo objeto de obj1
+
+        obj2.nome = "João";
+
+        console.log(obj1.nome); // João (foi alterado)
+        console.log(obj2.nome); // João
+
+    </script>
+</body>
+
+</html>
