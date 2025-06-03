@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Função em JavaScript</title>
+</head>
+
+<body>
+    <h1>Tipos de Função em JavaScript</h1>
+    <script>
+        // 1. Declaração de função (Function Declaration)
+        function saudacao(nome) {
+            return `Olá, ${nome}!`;
+        }
+        console.log(saudacao("Maria"));
+
+        // 2. Expressão de função (Function Expression)
+        //uma  varivel que  armazena  uma referecia para memoria que  a ponta  para função
+        const soma = function (a, b) {
+            return a + b;
+        };
+        console.log(soma(2, 3));
+
+        // 3. Arrow Function
+        const multiplicar = (a, b) => a * b;//função apenas  uma  limnha
+        console.log(multiplicar(4, 5));
+
+           const cubo= a  => a ** 2;//função apenas  uma  limnha
+        console.log("cubo "+cubo(4));//quando um valor sem paretes
+
+
+
+        // 4. Função Anônima (usada como callback)
+        const arr = [saudacao, soma, function(){console.log("função anonima dentro de array executada")}]
+       
+        console.log('arr '+arr[1](2,8))
+        console.log('arr ' +arr[0]("Marilia"))
+        console.log(arr[2]())
+
+
+    </script>
+</body>
+
+</html>
