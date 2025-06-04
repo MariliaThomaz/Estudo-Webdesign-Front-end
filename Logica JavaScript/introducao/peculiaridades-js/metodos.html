@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos</title>
+</head>
+
+<body>
+    <h1>Métodos</h1>
+    <script>
+        const protuto = {
+            nome: "caneta",
+            quantidade: 10,
+            //comprar é predade
+            comprar: function (qtd) {
+                // é  uma função atrelada a proedade então é metodo 
+                if (qtd > this.quantidade) {
+                    console.log("quantidade invalidade")
+                    return null
+                }
+                console.log(`compar caneta`)
+                // palavra resevada  this ela faz refencia a objeto dado nome produto
+                this.quantidade -= qtd
+
+
+
+            },
+            //maneira  mais sucinta par  cria metodos
+            teste2() {
+                console.log("teste2")
+                console.log(this)
+            }
+
+
+
+            /*
+            //problema  NÃO usa  Função ARROW
+            teste1: () => {
+                console.log("teste1")
+                console.log(this)
+
+            }
+                */
+        }
+
+
+        //faezendo venda  da  caneta
+        // protuto.quantidade -= 3
+        console.log(protuto)
+
+        protuto.comprar(3)
+        console.log(protuto)
+
+        //protuto.teste1() -- erro
+
+    </script>
+</body>
+
+</html>
