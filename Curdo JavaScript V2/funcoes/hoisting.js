@@ -23,3 +23,13 @@ const teste  = function teste(){
     console.log("testes")
 }
     */
+
+//uma função São auto invocável 
+(function(){
+    //Tudo o que foi criado dentro dessa função será anônima
+    let isValid  = false
+    console.log("opa: ", +isValid)
+})() 
+// estas função ela é alto executavel
+// na  hora que JS for fazer analize do
+//codico ele  ira  sera  execultado
