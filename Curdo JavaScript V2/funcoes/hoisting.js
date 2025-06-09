@@ -12,24 +12,32 @@ console.log(a); // Saída: undefined
 var a = 10;
 console.log(a); // Saída: 10
 
-// Variável declarada com let/const: não é içada (gera erro se acessada antes da declaração)
-
-let b = 20;
-console.log(b); // Saída: 20
+// let/const não são içadas — tentar acessar antes da declaração gera erro
 /*
-teste()
- //Variável declarada com let/const: não é içada (gera erro se acessada antes da declaração)
-const teste  = function teste(){
-    console.log("testes")
-}
-    */
+teste(); // ReferenceError: Cannot access 'teste' before initialization
 
-//uma função São auto invocável 
+const teste = function() {
+    console.log("testes");
+};
+*/
+
+// Função autoexecutável (IIFE)
 (function(){
-    //Tudo o que foi criado dentro dessa função será anônima
-    let isValid  = false
-    console.log("opa: ", +isValid)
-})() 
-// estas função ela é alto executavel
-// na  hora que JS for fazer analize do
-//codico ele  ira  sera  execultado
+    let isValid  = false;
+    console.log("opa:", isValid); // Saída: opa: false
+})();
+
+// Passando parâmetro para uma função auto-invocável (IIFE)
+//Função anônima
+(function(n1, n2){
+    let soma = n1 + n2;
+    console.log("soma:", soma); // soma: 5
+
+    function init(){
+        console.log("função interna");
+    }
+    init();
+})(3, 2);
+/*
+Reprodução auto invocável é usada para evitar poluição  escopo global  
+*/
