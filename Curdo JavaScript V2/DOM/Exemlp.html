@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JS</title>
+</head>
+
+<body>
+    <h1 id="titulo1">Curso de JS</h1>
+    <main class="cmain" id="idmain">
+        <h2>subtitulo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </main>
+    <section class="csection" id="idsections">
+        <h3 id="titulo2">subtitulo</h3>
+        <p class="paragrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p class="paragrafo2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+
+    <script>
+        //muando  o texto usando DOM
+        // A proedade .textContent que  faz  mudar o texto
+        // isto é  um metodo getElementById
+        // document.getElementById("titulo1") infomando onde esekecinado o dado
+        document.getElementById("titulo1").textContent = "novo texto"
+
+        //mnado usando o querySelector
+        document.querySelector("#titulo2").textContent =
+            "texto novo usando querySelector "
+
+        //muando usando outro metodo mas   por  classe
+        document.getElementsByClassName("paragrafo2")[0].textContent = "testo clase1 "
+        //neste  caso tem  que  coloar indexe poisa simula  uma arry
+        document.getElementsByClassName("paragrafo2")[1].textContent = "testo clase2 "
+        
+        // ao usar metodo querySelectorAll tem que  usar  como é seleciona no CSS
+        //
+        document.querySelectorAll(".paragrafo2")[0].textContent = "editado"
+
+        //navegando sobre DOM
+        let text =  document.getElementById("idmain")
+
+        //pegando o paragrafo que esta dentro do  Main
+        //Isto é navegar sobre a estrutura hiraquica do DOM
+        // quando recemosa  uma coleção temos que  passa o idexe
+        text.getElementsByTagName("p")[0].textContent =" vamos ver masterchafe"
+
+        // outras  modo é usar  
+        document.querySelector("#idmain p").textContent= "muda novamete  mas com outra forma"
+ 
+    </script>
+
+</body>
+
+</html>
