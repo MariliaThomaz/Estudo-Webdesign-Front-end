@@ -16,6 +16,6 @@
         const elementoPai = elemento.parentElement
         elementoPai.removeChild(elemento) //para remover o elemento do pai
     console.log("O elemento foi escondido"+elemento)
-
+    }
 })()
 
