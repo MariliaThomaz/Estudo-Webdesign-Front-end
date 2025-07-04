@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fom e of</title>
+    <!--Estudando arrays from() e of()
+        O from() e  of() sao uma função construtora de arrays que permite criar um novo array a partir de um array-like ou iterable object.
+       eles  usado em navegares mais atigos  Array.from() e Array.of() são métodos estáticos da classe Array que permitem criar arrays de maneira mais flexível. 
+     -->
+</head>
+
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum recusandae deleniti sint culpa totam ex debitis
+        nemo nam tempora dicta minus molestiae doloremque beatae reprehenderit, vero amet dignissimos magni cupiditate!
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum recusandae deleniti sint culpa totam ex debitis
+        nemo nam tempora dicta minus molestiae doloremque beatae reprehenderit, vero amet dignissimos magni cupiditate!
+    </p>
+    <p>Lorem ipsum dolor, sit amet consDectetur adipisicing elit. Laborum recusandae deleniti sint culpa totam ex
+        debitis nemo nam tempora dicta minus molestiae doloremque beatae reprehenderit, vero amet dignissimos magni
+        cupiditate!</p>
+    <p>Lorem ipsum dolor, sit amet consDectetur adipisicing elit. Laborum recusandae deleniti sint culpa totam ex
+        debitis nemo nam tempora dicta minus molestiae doloremque beatae reprehenderit, vero amet dignissimos magni
+        cupiditate!</p>
+    <script>
+        const arr1 = new Array(1, 2, 3);
+        console.log(arr1); // [1, 2, 3]
+        const arr2 = Array.from(arr1);
+        arr2.push(4, 5, 6);
+        console.log(arr2); // [1, 2, 3, 4, 5, 6]
+        // O método from() cria um novo array a partir de um array-like ou iterable object.
+        // Ele pode ser usado para converter objetos como NodeLists, Strings e outros iteráveis em arrays.
+        // Exemplo de uso do from() com uma string
+        const str = 'Hello';
+        const arr3 = Array.from(str);
+        console.log(arr3); // ['H', 'e', 'l', 'l', 'o']
+
+
+        // O método of() cria um novo array a partir de valores passados como argumentos.
+        const arr4 = Array.of(1, 2, 3);
+        console.log(arr4); // [1, 2, 3] 
+        // Ele é útil quando você deseja criar um array com valores específicos, sem precisar passar um array-like ou iterable object.
+        // Exemplo de uso do of() com valores específicos
+
+        const arrA = new Array(3)
+        console.log(arrA); // [empty × 3]
+        const arrB = Array.of(3)
+        console.log(arrB); // [3]
+        // O método of() também pode ser usado para criar arrays com valores específicos, como números, strings ou objetos.
+        // Ele é útil quando você deseja criar um array com valores específicos, sem precisar passar um
+
+        let paragraphs = document.querySelectorAll('p');
+       
+        paragraphs = Array.from(paragraphs);
+        // ao usar o Array.from() para converter a NodeList em um array, podemos usar métodos de array como map(), filter(), etc.
+        // O método querySelectorAll() retorna uma NodeList, que é um array-like object
+        
+        paragraphs.map((p,i) => {
+            // o método map() parece uma ser uma arrys, mas na verdade é um método de array que cria um novo array com os resultados da chamada de uma função para cada elemento do array original.
+            // Ele é usado para transformar ou processar os elementos de um array, retornando um novo array com os resultados.
+            // Neste caso, estamos iterando sobre cada parágrafo e aplicando uma função que adicion
+            //o map() é usado para iterar sobre cada elemento do array e aplicar uma função a cada um deles.
+            // Neste caso, estamos adicionando um texto ao conteúdo de cada parágrafo e alterando
+            p.textContent = `Parágrafo ${i + 1}: ${p.textContent}`;
+            p.style.color = 'blue';
+        });
+    </script>
+</body>
+
+</html>
