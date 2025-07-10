@@ -138,41 +138,57 @@
 
   <!--JavaScript at end of body for optimized loading-->
   <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
- <script src="js/calc.js"></script>
-<script>
-  const INDICES_NOTAS = {
-  n1: 1, // Índice da Nota 1
-  n2: 2, // Índice da Nota 2        
-  n3: 3, // Índice da Nota 3
-  n4: 4, // Índice da Nota 4
-  m: 5  // Índice da Média
-  };
-(function () {
-  // Seleciona todas as linhas da tabela, exceto o cabeçalho
-  const rows = document.querySelectorAll('tbody tr');
-  let x = 0;
-  let media;
+  <script src="js/calc.js"></script>
+  <script>
 
-  while (rows[x]) {
-    console.log(rows[x]);
-    // Seleciona todas as células da linha atual  
-    const tds = rows[x].querySelectorAll('td');
-    console.log(tds);
-    // Verifica se a linha tem células suficientes para calcular a média  
-    media = avarege(
-      parseFloat(tds[INDICES_NOTAS.n1].textContent),
-      parseFloat(tds[INDICES_NOTAS.n2].textContent),
-      parseFloat(tds[INDICES_NOTAS.n3].textContent),
-      parseFloat(tds[INDICES_NOTAS.n4].textContent)
-    );
-    // Atualiza a célula da média com o valor calculado
-    if (tds.length > 5) {
-      tds[5].textContent = media.toFixed(2); // Formata a média com duas casas decimais
-    }
-    x++;
-  }
-})();
-</script>
+    (function () {
+
+      function pegaIndice(indice){
+        const trHeader = document.querySelector('thead tr');
+        const trsHeader = trHeader.querySelectorAll('th');
+
+        const th = trHeader.querySelector(`th[aluno-nota="${indice}"]`);
+
+        //trsHeader.indexOF(th);
+        //const i = Array.prototype.indexOf.call(trsHeader, th);
+        //const i[...thsHeader].indexOf(th);
+        return Array.from(trsHeader).indexOf(th);
+        
+      }
+      const INDICES_NOTAS = {
+        n1: 1, // Índice da Nota 1
+        n2: 2, // Índice da Nota 2        
+        n3: 3, // Índice da Nota 3
+        n4: 4, // Índice da Nota 4
+        m: 5  // Índice da Média
+      };
+
+
+      // Seleciona todas as linhas da tabela, exceto o cabeçalho
+      const rows = document.querySelectorAll('tbody tr');
+      let x = 0;
+      let media;
+
+      while (rows[x]) {
+        console.log(rows[x]);
+        // Seleciona todas as células da linha atual  
+        const tds = rows[x].querySelectorAll('td');
+        console.log(tds);
+        // Verifica se a linha tem células suficientes para calcular a média  
+        media = avarege(
+          parseFloat(tds[INDICES_NOTAS.n1].textContent),
+          parseFloat(tds[INDICES_NOTAS.n2].textContent),
+          parseFloat(tds[INDICES_NOTAS.n3].textContent),
+          parseFloat(tds[INDICES_NOTAS.n4].textContent)
+        );
+        // Atualiza a célula da média com o valor calculado
+        if (tds.length > 5) {
+          tds[5].textContent = media.toFixed(2); // Formata a média com duas casas decimais
+        }
+        x++;
+      }
+    })();
+  </script>
 
 </body>
 
