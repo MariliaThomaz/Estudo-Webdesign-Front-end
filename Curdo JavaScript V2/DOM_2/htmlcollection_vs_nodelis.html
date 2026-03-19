@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul id = "list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+
+        </ul>
+    </div>
+
+    <script>
+        const nodeList = document.querySelectorAll("#list li");
+        //const colletion = document.getElementsByTagName("li");
+        const colletion = document.getElementById("list").getElementsByTagName("li");
+
+        //qual são as diferenças entre os dois? 
+        //NodeList é uma coleção de nós retornada por métodos como querySelectorAll,
+        // enquanto HTMLCollection é uma coleção de elementos HTML retornada por métodos
+        // como getElementsByTagName. NodeList pode conter qualquer tipo de nó, enquanto
+        // HTMLCollection contém apenas elementos HTML. NodeList é estático, ou seja, não
+        // se atualiza automaticamente quando o DOM muda, enquanto HTMLCollection é dinâmica 
+        //e se atualiza automaticamente.
+
+        //profesor: a difença entre HTMLCollection ele  é vivo e o NodeList é estatico, 
+        //ou seja, se voce adicionar um novo elemento a sua lista, o HTMLCollection
+        // vai atualizar automaticamente, enquanto o NodeList não vai atualizar.
+        console.log(nodeList);
+        console.log(colletion);
+
+        document.querySelector("#list").innerHTML += "<li>Item 5</li>";
+
+         console.log(nodeList);
+        console.log(colletion);
+    </script>
+</body>
+</html>
