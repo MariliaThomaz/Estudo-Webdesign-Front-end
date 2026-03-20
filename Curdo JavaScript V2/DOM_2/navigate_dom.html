@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Navigate DOM</h1>
+    <div class="container">
+        <p>Teste 1</p>
+        <p>Lorem ipsum dolor sit amet con <a href="#"> link</a></p>
+        <p>Teste 3</p>
+
+        <h2>Lista</h2>
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2
+                <ul>
+                    <li>Item 2.a</li>
+                    <li>Item 2.b</li>
+                    <li>Item 2.c</li>
+                </ul>
+
+
+            </li>
+            <li>item <a href="#"> link</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // Cria um novo elemento <h1> no DOM
+    const title = document.createElement("h1");
+
+    // Cria um atributo (no caso, um 'id') para o elemento
+    const atribute = document.createAttribute("id");
+    // Define o valor do atributo 'id'
+    atribute.value = "title1";
+    // Associa o atributo (id) ao elemento <h1>
+    title.setAttributeNode(atribute);
+
+    // Adiciona um atributo 'title' com uma descrição
+    title.setAttribute("title", "title inserido diretamente");
+
+    // Define o estilo do elemento diretamente (cor vermelha e tamanho de fonte 30px)
+    title.style.color = "red";
+    title.style.fontSize = "30px";
+
+    // Cria um nó de texto (mas essa linha será sobrescrita depois, então serve mais como exemplo)
+    // const text = document.createTextNode("criar nós DOM");
+    // Adiciona o texto ao <h1> (mas vai ser sobrescrito depois)
+    // title.appendChild(text);
+
+    // Sobrescreve o texto do <h1> com um novo texto
+    title.textContent = "texto inserido com textContent Marilia";
+
+    // Mostra o elemento no console (para debug)
+    console.log(title);
+
+    // Adiciona o <h1> criado dentro da div com classe 'container' do HTML
+
+    //document.querySelector(".container").prepend(title);
+
+    //o prepend adiciona o elemento no início da div, enquanto o append adiciona no final da div
+    //document.querySelector(".container").append(title);
+
+    //o apend adiciona o elemento no final da div, enquanto o prepend adiciona no início da div
+
+    //document.querySelector(".container").append(title, "texto inserido com append");
+
+    // com metodo append voce pode adicionar mais de um elemento, ou seja, voce pode adicionar 
+    //o elemento e um texto ao mesmo tempo, enquanto o prepend só aceita um elemento, 
+    //ou seja, voce não pode adicionar um texto com o prepend, apenas um elemento.
+    // o append e o prepend aceitam nós, ou seja, voce pode adicionar um elemento ou um texto, 
+    //mas o prepend só aceita um elemento, enquanto o append aceita um elemento ou um texto.
+    // questão problemática é que eles  não aceitos en todos  browsers, ou seja,
+    // o prepend e o append não são suportados em todos os navegadores,
+
+    document.querySelector(".container").appendChild(title);
+
+    const title2 = document.createElement("h2");
+    title2.textContent = "titulo 2";
+    const list = document.querySelector("ul");
+
+    document.querySelector(".container").insertBefore(title2, list);
+    // o insertBefore insere um elemento antes de outro elemento, ou seja,
+    // ele insere o title2 antes da lista (ul) dentro da div com classe 'container'.
+    // ele aceitas  (nós) elementos, ou seja, voce pode inserir um elemento antes de outro elemento,
+    // mas voce não pode inserir um texto antes de outro elemento, apenas um elemento.
+
+    //maneira de navegar sobre documet e acessar os elementos do DOM, ou seja, 
+    //voce pode acessar os elementos do DOM usando as propriedades de navegação,
+    //como parentNode, childNodes, firstChild, lastChild, nextSibling, previousSibling, etc.
+    // por exemplo, para acessar o primeiro filho da div com classe 'container', voce pode usar:
+
+    const container = document.querySelector(".container");
+
+    container.insertBefore(title2, list);
+    container.insertBefore(title2, container.firstChild);
+    // o firstChild retorna o primeiro filho do elemento, ou seja, ele retorna 
+    //o primeiro nó filho do elemento, que pode ser um elemento, um texto, um comentário, etc.
+
+    //fazendo copia de um elemento do DOM, ou seja, voce pode usar o
+    // método cloneNode para criar uma cópia de um elemento do DOM,
+
+    let sublevel = document.querySelector("ul ul");
+    sublevel = sublevel.cloneNode(true);
+    // o cloneNode(true) cria uma cópia profunda do elemento, ou seja, ele
+    //copia o elemento e todos os seus filhos, enquanto o cloneNode(false)
+    // cria uma cópia superficial do elemento, ou seja, ele copia apenas o elemento,
+    // mas não copia os seus filhos.
+    const h2 = document.querySelector("h2");
+
+    container.insertBefore(sublevel, h2.nextElementSibling);
+
+
+
+</script>
+
+</html>

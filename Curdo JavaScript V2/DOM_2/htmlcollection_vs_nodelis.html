@@ -19,7 +19,8 @@
     <script>
         const nodeList = document.querySelectorAll("#list li");
         //const colletion = document.getElementsByTagName("li");
-        const colletion = document.getElementById("list").getElementsByTagName("li");
+        const colletion = document.getElementById("list")
+        .getElementsByTagName("li");
 
         //qual são as diferenças entre os dois? 
         //NodeList é uma coleção de nós retornada por métodos como querySelectorAll,
@@ -35,7 +36,8 @@
         console.log(nodeList);
         console.log(colletion);
 
-        document.querySelector("#list").innerHTML += "<li>Item 5</li>";
+        document.querySelector("#list")
+        .innerHTML += "<li>Item 5</li>";
 
          console.log(nodeList);
         console.log(colletion);
