@@ -15,12 +15,43 @@
             border: 1px solid red;
             padding: 10px;
             margin: 15px;
+<<<<<<< HEAD
         }
     </style>
 
+=======
+
+        }
+    </style>
+>>>>>>> 54a0c0030095c13408e8842fdbf869d171c23cd6
 </head>
 
-<body>
+
+    const container2 = document.querySelector(".container2");
+
+    container2.insertAdjacentHTML("beforeend", "<p>paragrafo 4</p>");
+    // o insertAdjacentHTML insere um elemento ou um texto em uma posição específica em relação
+    //ao elemento, ou seja, ele aceita dois argumentos: a posição e o conteúdo a ser inserido,
+
+    container2.insertAdjacentHTML("afterend", "<B>paragrafo 5</B>");
+    container2.insertAdjacentHTML("beforebegin", "<B>paragrafo 6</B>");
+    container2.insertAdjacentHTML("afterbegin", "<B>paragrafo 7</B>");
+    // as posições aceitas pelo insertAdjacentHTML são:
+    // beforebegin: insere o conteúdo antes do elemento
+    // afterbegin: insere o conteúdo dentro do elemento, antes do primeiro filho do elemento
+    // beforeend: insere o conteúdo dentro do elemento, depois do último filho do elemento
+    // afterend: insere o conteúdo depois do elemento
+
+
+
+    container2.insertAdjacentText("beforeend", "texto inserido com insertAdjacentText");
+    // o insertAdjacentText insere um texto em uma posição específica em relação ao elemento,
+
+    const em  =document.createElement("em");
+    em.textContent = " texto inserido com insertAdjacentElement ";
+
+   container2.insertAdjacentElement("beforeend" , em);
+    // o insertAdjacentElement insere um elemento em uma posição específica em relação ao elemento,
     <h1>Navigate DOM</h1>
     <div class="container2">
         <p>paragrafo 1</p>
@@ -143,9 +174,42 @@
 
     segundoParagrafo.after("texto inserido com after");
     // o after insere um elemento ou um texto depois do elemento, ou seja,
+<<<<<<< HEAD
 
     segundoParagrafo.before("texto inserido com before");
     // o before insere um elemento ou um texto antes do elemento, ou seja,
+=======
+
+    segundoParagrafo.before("texto inserido com before");
+    // o before insere um elemento ou um texto antes do elemento, ou seja,
+
+    const container2 = document.querySelector(".container2");
+
+    container2.insertAdjacentHTML("beforeend", "<p>paragrafo 4</p>");
+    // o insertAdjacentHTML insere um elemento ou um texto em uma posição específica em relação
+    //ao elemento, ou seja, ele aceita dois argumentos: a posição e o conteúdo a ser inserido,
+
+    container2.insertAdjacentHTML("afterend", "<B>paragrafo 5</B>");
+    container2.insertAdjacentHTML("beforebegin", "<B>paragrafo 6</B>");
+    container2.insertAdjacentHTML("afterbegin", "<B>paragrafo 7</B>");
+    // as posições aceitas pelo insertAdjacentHTML são:
+    // beforebegin: insere o conteúdo antes do elemento
+    // afterbegin: insere o conteúdo dentro do elemento, antes do primeiro filho do elemento
+    // beforeend: insere o conteúdo dentro do elemento, depois do último filho do elemento
+    // afterend: insere o conteúdo depois do elemento
+
+
+
+    container2.insertAdjacentText("beforeend", "texto inserido com insertAdjacentText");
+    // o insertAdjacentText insere um texto em uma posição específica em relação ao elemento,
+
+    const em  =document.createElement("em");
+    em.textContent = " texto inserido com insertAdjacentElement ";
+
+   container2.insertAdjacentElement("beforeend" , em);
+    // o insertAdjacentElement insere um elemento em uma posição específica em relação ao elemento,
+
+>>>>>>> 54a0c0030095c13408e8842fdbf869d171c23cd6
 
     const container2 = document.querySelector(".container2");
 
