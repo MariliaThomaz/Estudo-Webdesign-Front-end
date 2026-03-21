@@ -171,6 +171,31 @@
     container2.insertAdjacentElement("beforeend", em);
     // o insertAdjacentElement insere um elemento em uma posição específica em relação ao elemento, 
 
+    // --> list.remove();
+    // o remove remove o elemento do DOM, ou seja, ele remove o elemento
+    // e todos os seus filhos do DOM, enquanto o removeChild remove um elemento filho do
+    // elemento pai, ou seja, ele remove um elemento filho específico do elemento pai,
+    // mas não remove o elemento pai do DOM.
+
+    parentNode.removeChild(list);
+    
+    list.parentElement.removeChild(list);
+    // o parentElement retorna o elemento pai do elemento, ou seja, ele retorna o elemento  
+    //pai do elemento, e depois o removeChild remove o elemento filho do elemento pai, ou seja,
+    //ele remove o elemento filho específico do elemento pai, mas não remove o elemento pai do
+    //funiona em todos os browsers, ou seja, o parentElement e o removeChild 
+    //são suportados em todos os navegadores,
+
+    const parent = document.body;
+    const newchild = container.querySelector("h1").cloneNode(true);
+    const oldchild = document.querySelector("h1");
+    parent.replaceChild(newchild, oldchild);
+    // o replaceChild substitui um elemento filho do elemento pai por outro elemento,
+    // ou seja, ele aceita dois argumentos: o novo elemento e o elemento a ser substituído, e
+    // substitui o elemento a ser substituído pelo novo elemento no DOM.
+
+    
+
 </script>
 
 </html>
