@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introdução aos Eventos</h1>
+
+    <button id="btn1">Clique em mim</button>
+    <button id="btn2">Clique em mim também</button>
+    <button id="btn3">Clique em mim também</button>
+    <button id="btn4" onclick="alert('Você clicou no botão 4, Dom no nivevl 0')">Clique em mim também 4</button>
+
+    <script>
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');       
+        const btn3 = document.getElementById('btn3');
+        const btn4 = document.getElementById('btn4');
+
+
+        //criar função para cada botão
+        function handleClick1() {
+            alert('não é recomendado criar uma função para cada botão, Dom no nivevl 0');
+        }
+
+        // Dom no nivevl 0
+        btn1.onclick = function() {
+            alert('Você clicou no botão 1, Dom no nivevl 0');
+        }
+       
+      btn1.onclick = handleClick1; // Dom no nivevl 0  
+      
+      // não é recomendado criar uma função para cada botão, Dom no nivevl 0
+        
+      btn1.onclick = handleClick1// Dom no nivevl 0, sobrescreve a função anterior
+
+    btn2.addEventListener('click', handleClick1); // D om no nivevl 2
+
+    btn3.addEventListener('click', function() {
+        alert('Você clicou no botão 3, Dom no nivevl 2 (função anônima)');
+        //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
+    }); // D om no nivevl 2
+
+    btn4.addEventListener('click', function() {
+        alert('Você clicou no botão 4, Dom no nivevl 2 (função anônima)');
+        //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
+    }); // D om no nivevl 2
+    
+
+    </script>
+</body>
+</html>
