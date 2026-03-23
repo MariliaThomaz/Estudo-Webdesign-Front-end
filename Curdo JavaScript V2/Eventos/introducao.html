@@ -10,22 +10,22 @@
 <body>
     <h1>Introdução aos Eventos</h1>
     <div class="container">Study event objects, propagation, and use of stopImmediatePropagation in the DOM.
-    <p> </p>
-    <button id="btn1">Clique em mim</button>
-    <button id="btn2">Clique em mim também</button>
-    <button id="btn3">Clique em mim também</button>
-    <button id="btn4" onclick="alert('Você clicou no botão 4, Dom no nivevl 0')">Clique em mim também 4</button>
-    <button id="btn5">Clique em mim também 5</button>
-    <button id="btn6">Clique em mim também 6</button>
-  </div>
+        <p> </p>
+        <button id="btn1">Clique em mim</button>
+        <button id="btn2">Clique em mim também</button>
+        <button id="btn3">Clique em mim também</button>
+        <button id="btn4" onclick="alert('Você clicou no botão 4, Dom no nivevl 0')">Clique em mim também 4</button>
+        <button id="btn5">Clique em mim também 5</button>
+        <button id="btn6">Clique em mim também 6</button>
+    </div>
 
-  <hr>
-  <h1>Delagação de eventos</h1>
-  <div class="container2">
-    <button>Botão 1</button>
-    <button>Botão 2</button>
-    <button>Botão 3</button>
-  </div>
+    <hr>
+    <h1>Delagação de eventos</h1>
+    <div class="container2">
+        <button>Botão 1</button>
+        <button>Botão 2</button>
+        <button>Botão 3</button>
+    </div>
 
     <script>
         const btn1 = document.getElementById('btn1');
@@ -98,7 +98,7 @@
         // que é opcional, por padrão é false, se for true, o evento será capturado na fase de captura, se for false, o evento será capturado na fase de bolha
 
         const container2 = document.querySelector('.container2');
-       const btns = document.querySelectorAll('.container2 button');
+        const btns = document.querySelectorAll('.container2 button');
 
         // Delegação de eventos, é uma técnica onde um único elemento pai é 
         //responsável por lidar com os eventos de seus elementos filhos, em vez 
@@ -112,6 +112,42 @@
                 // textContent é o texto do botão
             }
         }); // Dom no nivevl 2, captura o clique em qualquer botão dentro do container2
+
+
+        document.addEventListener('click', function (envent) {
+            console.log('clicou no documento, Dom no nivevl 2');
+            console.log(envent.target);
+            console.log(envent.currentTarget);
+            console.log(this);  
+            // o event.target é o elemento que foi clicado, e o event.currentTarget é
+            // o elemento que está ouvindo o evento, no caso, o documento, Dom no nivevl 2
+
+        }, false);
+        container2.addEventListener('click', function (event) {
+            console.log('clicou no container2, Dom no nivevl 2');
+            console.log(event.target);
+            console.log(event.currentTarget);
+            console.log(this); // o this é o elemento que está ouvindo o evento, no caso, o container2, Dom no nivevl 2
+            //this é  dinâmico, ele pode mudar dependendo do contexto, no caso, o this é o container2, porque é o elemento que está ouvindo o evento, Dom no nivevl 2
+            // o event.target é o elemento que foi clicado, e o event.currentTarget é
+
+        });
+        /*
+         container2.addEventListener('click',  (event) => {
+            console.log('clicou no container2, Dom no nivevl 2');
+            console.log(event.target);
+            console.log(event.currentTarget);
+            console.log(this); 
+            // o this é neste caso ele não é  mais dinâmico, ele é o elemento global,
+            // porque a função é uma arrow function, e as arrow functions 
+            //não tem o this, então o this é o elemento global, Dom no nivevl 2
+            // this não sera  mais alterado, ele sempre será o elemento global, 
+            //mesmo que o evento seja disparado em um elemento diferente, Dom no nivevl 2
+            // this ele estatico, ele não muda, ele é o elemento global, mesmo que o evento 
+            //seja disparado em um elemento diferente, Dom no nivevl 2
+            // o event.target é o elemento que foi clicado, e o event.currentTarget é
+
+        */
     </script>
 </body>
 
