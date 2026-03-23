@@ -9,13 +9,23 @@
 
 <body>
     <h1>Introdução aos Eventos</h1>
-
+    <div class="container">Study event objects, propagation, and use of stopImmediatePropagation in the DOM.
+    <p> </p>
     <button id="btn1">Clique em mim</button>
     <button id="btn2">Clique em mim também</button>
     <button id="btn3">Clique em mim também</button>
     <button id="btn4" onclick="alert('Você clicou no botão 4, Dom no nivevl 0')">Clique em mim também 4</button>
     <button id="btn5">Clique em mim também 5</button>
     <button id="btn6">Clique em mim também 6</button>
+  </div>
+
+  <hr>
+  <h1>Delagação de eventos</h1>
+  <div class="container2">
+    <button>Botão 1</button>
+    <button>Botão 2</button>
+    <button>Botão 3</button>
+  </div>
 
     <script>
         const btn1 = document.getElementById('btn1');
@@ -86,6 +96,22 @@
 
         }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
         // que é opcional, por padrão é false, se for true, o evento será capturado na fase de captura, se for false, o evento será capturado na fase de bolha
+
+        const container2 = document.querySelector('.container2');
+       const btns = document.querySelectorAll('.container2 button');
+
+        // Delegação de eventos, é uma técnica onde um único elemento pai é 
+        //responsável por lidar com os eventos de seus elementos filhos, em vez 
+        //de adicionar um ouvinte de evento para cada elemento filho individualmente.
+
+        container2.addEventListener('click', function (event) {
+            if (event.target.tagName === 'BUTTON') {
+                alert('Você clicou no ' + event.target.textContent);
+                //isto é delegação de eventos, o evento é capturado no container2,
+                // e o event.target é o elemento que foi clicado, que é o botão, e o
+                // textContent é o texto do botão
+            }
+        }); // Dom no nivevl 2, captura o clique em qualquer botão dentro do container2
     </script>
 </body>
 
