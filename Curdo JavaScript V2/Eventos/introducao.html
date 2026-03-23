@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Introdução aos Eventos</h1>
 
@@ -13,12 +15,15 @@
     <button id="btn3">Clique em mim também</button>
     <button id="btn4" onclick="alert('Você clicou no botão 4, Dom no nivevl 0')">Clique em mim também 4</button>
     <button id="btn5">Clique em mim também 5</button>
+    <button id="btn6">Clique em mim também 6</button>
 
     <script>
         const btn1 = document.getElementById('btn1');
-        const btn2 = document.getElementById('btn2');       
+        const btn2 = document.getElementById('btn2');
         const btn3 = document.getElementById('btn3');
         const btn4 = document.getElementById('btn4');
+        const btn5 = document.getElementById('btn5');
+        const btn6 = document.getElementById('btn6');
 
 
         //criar função para cada botão
@@ -27,47 +32,61 @@
         }
 
         // Dom no nivevl 0
-        btn1.onclick = function() {
+        btn1.onclick = function () {
             alert('Você clicou no botão 1, Dom no nivevl 0');
         }
-       
-      btn1.onclick = handleClick1; // Dom no nivevl 0  
-      
-      // não é recomendado criar uma função para cada botão, Dom no nivevl 0
-        
-      btn1.onclick = handleClick1// Dom no nivevl 0, sobrescreve a função anterior
 
-    btn2.addEventListener('click', handleClick1); // D om no nivevl 2
+        btn1.onclick = handleClick1; // Dom no nivevl 0  
 
-    btn3.addEventListener('click', function() {
-        alert('Você clicou no botão 3, Dom no nivevl 2 (função anônima)');
-        //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
-    }); // D om no nivevl 2
+        // não é recomendado criar uma função para cada botão, Dom no nivevl 0
 
-    btn4.addEventListener('click', function() {
-        alert('Você clicou no botão 4, Dom no nivevl 2 (função anônima)');
-        //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
-    }); // D om no nivevl 2
+        btn1.onclick = handleClick1// Dom no nivevl 0, sobrescreve a função anterior
 
-    btn5.addEventListener('click', function() {
-         console.log('Você clicou no botão 5, Dom no nivevl 2 (função anônima)');
-        //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
+        btn2.addEventListener('click', handleClick1); // D om no nivevl 2
 
-    }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
-    // que é opcional, por padrão é false, se for true, o evento será capturado na fase de
-    // captura, se for false, o evento será capturado na fase de bolha
-     
-    document.addEventListener('click', function() {
-        console.log('clicou no documento, Dom no nivevl 2');
-         // Dom no nivevl 2, captura o clique em qualquer lugar do documento
+        btn3.addEventListener('click', function () {
+            alert('Você clicou no botão 3, Dom no nivevl 2 (função anônima)');
+            //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
+        }); // D om no nivevl 2
 
-    }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
-    // que é opcional, por padrão é false, se for true, o evento será
-    // capturado na fase de captura, se for false, o evento será capturado na fase de bolha
+        btn4.addEventListener('click', function () {
+            alert('Você clicou no botão 4, Dom no nivevl 2 (função anônima)');
+            //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
+        }); // D om no nivevl 2
 
-// então estudo foi sobre  o 3 parâmetro do addEventListener, que é o useCapture,
-// que é opcional, por padrão é false, se for true, o evento será capturado na
-// fase de captura, se for false, o evento será capturado na fase de bolha
+        btn5.addEventListener('click', function () {
+            console.log('Você clicou no botão 5, Dom no nivevl 2 (função anônima)');
+            //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
+
+        }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
+        // que é opcional, por padrão é false, se for true, o evento será capturado na fase de
+        // captura, se for false, o evento será capturado na fase de bolha
+
+        document.addEventListener('click', function () {
+            console.log('clicou no documento, Dom no nivevl 2');
+            // Dom no nivevl 2, captura o clique em qualquer lugar do documento
+
+        }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
+        // que é opcional, por padrão é false, se for true, o evento será
+        // capturado na fase de captura, se for false, o evento será capturado na fase de bolha
+
+        // então estudo foi sobre  o 3 parâmetro do addEventListener, que é o useCapture,
+        // que é opcional, por padrão é false, se for true, o evento será capturado na
+        // fase de captura, se for false, o evento será capturado na fase de bolha
+
+        btn6.addEventListener('click', function (event) {
+            console.log('Você clicou no botão 6, Dom no nivevl 2 (função anônima)');
+
+            console.log(event); // o objeto do evento, que contém informações sobre o evento, como o tipo de evento, o elemento alvo, etc.
+
+            event.stopImmediatePropagation(); // impede que outros eventos sejam executados, Dom no nivevl 2
+
+            console.log("ola"); // esse console.log não será executado, porque o stopImmediatePropagation impede que outros eventos sejam executados, Dom no nivevl 2
+            console.log("ola 2"); // esse console.log também não será executado, porque o stopImmediatePropagation impede que outros eventos sejam executados, Dom no nivevl 2
+
+        }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
+        // que é opcional, por padrão é false, se for true, o evento será capturado na fase de captura, se for false, o evento será capturado na fase de bolha
     </script>
 </body>
+
 </html>
