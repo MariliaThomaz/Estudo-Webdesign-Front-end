@@ -12,6 +12,7 @@
     <button id="btn2">Clique em mim também</button>
     <button id="btn3">Clique em mim também</button>
     <button id="btn4" onclick="alert('Você clicou no botão 4, Dom no nivevl 0')">Clique em mim também 4</button>
+    <button id="btn5">Clique em mim também 5</button>
 
     <script>
         const btn1 = document.getElementById('btn1');
@@ -47,8 +48,26 @@
         alert('Você clicou no botão 4, Dom no nivevl 2 (função anônima)');
         //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
     }); // D om no nivevl 2
-    
 
+    btn5.addEventListener('click', function() {
+         console.log('Você clicou no botão 5, Dom no nivevl 2 (função anônima)');
+        //est é função anônima, não tem nome, não pode ser reutilizada, mas é útil para eventos simples, Dom no nivevl 2
+
+    }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
+    // que é opcional, por padrão é false, se for true, o evento será capturado na fase de
+    // captura, se for false, o evento será capturado na fase de bolha
+     
+    document.addEventListener('click', function() {
+        console.log('clicou no documento, Dom no nivevl 2');
+         // Dom no nivevl 2, captura o clique em qualquer lugar do documento
+
+    }, false); // Dom no nivevl 2, o terceiro parâmetro é o useCapture,
+    // que é opcional, por padrão é false, se for true, o evento será
+    // capturado na fase de captura, se for false, o evento será capturado na fase de bolha
+
+// então estudo foi sobre  o 3 parâmetro do addEventListener, que é o useCapture,
+// que é opcional, por padrão é false, se for true, o evento será capturado na
+// fase de captura, se for false, o evento será capturado na fase de bolha
     </script>
 </body>
 </html>
