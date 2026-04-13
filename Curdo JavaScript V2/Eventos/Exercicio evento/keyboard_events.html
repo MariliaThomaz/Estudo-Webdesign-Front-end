@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eventos de teclado</h1>
+    <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+
+    <script>
+        const msg = document.getElementById('msg');
+
+        msg.addEventListener('keypress', keypress)
+        msg.addEventListener('keydown', keydown)
+        msg.addEventListener('keyup', keyup)
+
+        function keypress(event) {
+            console.log('keypress')
+            console.log(this.value)
+            console.log(event.key)
+            console.log(event.keyCode)
+        }
+        function keydown(event) {
+            console.log('keydown')
+             console.log(this.value)
+            console.log(event.key)
+            console.log(event.keyCode)
+        }
+        function keyup(event) {
+            console.log('keyup')
+             console.log(this.value)
+            console.log(event.key)//o key é a tecla que foi pressionada, é uma string, pode ser usada para verificar qual tecla foi pressionada
+            console.log(event.keyCode)//o keyCode é o código da tecla que foi pressionada, é um número, não é recomendado usar, pois pode variar entre navegadores, o key é mais recomendado usar
+        }
+
+    </script>
+</body>
+</html>
