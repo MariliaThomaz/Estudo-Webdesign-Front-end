@@ -1,6 +1,6 @@
 (function () {
     'use strict'
-
+    const btn = document.getElementById('btn')
     const txtTitulo = document.getElementById('txtTitulo')
     const txtDescricao = document.getElementById('txtDescricao')
     const contadorContainer = document.getElementById('contador')
@@ -25,24 +25,54 @@
 
         event.preventDefault()
 
-        console.log(txtTitulo.value)
-
         if (!txtTitulo.value.trim()) {
-            // o que é trim? Ele remove os espaços em branco do início e do fim da string. Assim, se o usuário digitar apenas espaços, o valor será considerado vazio.
-            alert('Falta preencher o título')
-            event.preventDefault() // impede o comportamento padrão do evento, que seria enviar o formulário e recarregar a página. Assim, o usuário pode corrigir os erros sem perder os dados já preenchidos.   
+            showErrorMessage('Falta preencher o título', focarTexto)
             return
         }
 
         if (!txtDescricao.value.trim()) {
-            alert('Falta preencher a descrição')
+            showErrorMessage('Falta preencher a descrição')
             return
         }
 
-        alert('Tarefa salva com sucesso!')
-
+        showErrorMessage('Tarefa salva com sucesso!')
     })
 
+    function focarTexto() {
+        txtTitulo.focus()
+    }
+
+
+
+    const feedbackMessage = document.getElementById('feedbackMessage')
+    const feedbackMessageCloseBtn = feedbackMessage.getElementsByTagName('button')[0]
+
+    function showErrorMessage(msg, cd) {
+        feedbackMessage.classList.add('show')
+        feedbackMessage.getElementsByTagName("p")[0].textContent = msg
+
+        function hideErrorMessage() {
+            feedbackMessage.classList.remove('show')
+            feedbackMessageCloseBtn.removeEventListener('click', hideErrorMessage)
+            feedbackMessageCloseBtn.removeEventListener('keyup', pressedKeyboardOnBtn)
+
+            if (typeof cd === 'function') {
+                cd()
+            }
+        }
+
+        function pressedKeyboardOnBtn(event) {
+            console.log(event.key)
+            console.log(event.keyCode)
+
+            if (event.key === 'Enter' || event.keyCode === 27) {
+                hideErrorMessage()
+            }
+        }
+
+        feedbackMessageCloseBtn.addEventListener('click', hideErrorMessage)
+        feedbackMessageCloseBtn.addEventListener('keyup', pressedKeyboardOnBtn)
+    }
     contadorContainer.removeAttribute('style')
 
     //Fazer evento
@@ -74,5 +104,19 @@
         resta.textContent = n
     }
     txtDescricao.addEventListener("input", checkLength)
+
+    btn.disabled = true
+    //o que é o disabled? Ele é um atributo booleano que desabilita um
+    //  elemento, ou seja, impede que o usuário interaja com ele.+
+    //  No caso do botão "Salvar", ele começa desabilitado para garantir 
+    // que o usuário só possa clicar nele depois de aceitar os termos.
+    //  Quando o usuário marca a caixa de seleção "Aceito os termos", 
+    // o evento "change" é disparado, e a função associada a esse evento 
+    // habilita o botão, permitindo que o usuário clique nele para salvar
+    //  a tarefa.
+    const chkAceito = document.getElementById('chkAceito')
+    chkAceito.addEventListener('change', function () {
+        btn.disabled = !chkAceito.checked
+    })
 
 })()
